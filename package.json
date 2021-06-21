@@ -1,0 +1,21 @@
+{
+  "name": "Eve-Wings",
+  "version": "1.0.0",
+  "description": "<!--\r **Eve-Wings/Eve-Wings** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eve-Wings/Eve-Wings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eve-Wings/Eve-Wings/issues"
+  },
+  "homepage": "https://github.com/Eve-Wings/Eve-Wings#readme"
+}
