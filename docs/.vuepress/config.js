@@ -62,7 +62,11 @@ module.exports = {
         '',
         '声明提升',
         '原型与原型链',
-      ]
+      ],
+      '/guide/technical-docs/Bootstrap/': [
+        '',
+        '网格系统'
+      ],
     },
     // 页面滚动
     smoothScroll: true
