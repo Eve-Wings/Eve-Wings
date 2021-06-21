@@ -1,19 +1,22 @@
 ---
 home: true
-# heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
-features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+heroImage: /assets/img/HP.jpg
+heroText: 羽翼丶年华
+tagline: 羽落凡尘，翼展年华
+actionText: 技术分享 →
+actionLink: /guide/technical-docs/
+footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 ---
 
-# Hello VuePress
+# 欢迎来到羽翼的博客
+
+::: tip Welcome
+
+我将在这里记录我的学习、我的生活、我的创作。
+
+我也乐于分享我的知识与生活乐趣
+
+希望您能从中获取些什么，也希望您阅览愉快√
+
+:::
 

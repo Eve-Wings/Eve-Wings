@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Eve-Wings/Eve-Wings/issues"
   },
-  "homepage": "https://github.com/Eve-Wings/Eve-Wings#readme"
+  "homepage": "https://github.com/Eve-Wings/Eve-Wings#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2"
+  }
 }
