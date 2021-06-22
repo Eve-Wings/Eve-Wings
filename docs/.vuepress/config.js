@@ -1,10 +1,17 @@
 module.exports = {
   title: '羽翼丶年华',
   description: '一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作',
+  // =================================================//
+  // head设置
+  head:[
+    {rel: 'icon', href:'favicon.icon'}
+  ],
+  //=================================================//
+  // 主题设置
   themeConfig: {
     lastUpdated: '更新时间',
     // logo设置
-    logo: '/assets/img/hero.png',
+    logo: '/assets/img/icon.png',
     // 导航标签设置：
     nav: [
       { text: '主页', link: '/' },
@@ -42,6 +49,7 @@ module.exports = {
       {
         text: '技术分享',
         items: [
+          { text: '总目录', link: '/guide/technical-docs/'},
           { text: 'HTML', link: '/guide/technical-docs/HTML/' },
           { text: 'CSS', link: '/guide/technical-docs/CSS/' },
           { text: 'JavaScript', link: '/guide/technical-docs/JavaScript/' },
@@ -54,21 +62,50 @@ module.exports = {
       },
       { text: '日常随笔', link: '/guide/informal-essay/' },
       { text: '个人作品', link: '/guide/personal-works/' },
-      { text: '关于我', link: '/guide/AboutMe' },
-      { text: '本博客开发文档', link: '/guide/Blog-build-docs' }
+      { text: '关于', link: '/guide/About/' },
+      { text: '文档日志', link: '/guide/journal' },
+      { text: 'github', link: 'https://github.com/Eve-Wings'}
     ],
+    // 侧边导航栏
     sidebar: {
+      '/guide/About/':[
+        '',
+        'AboutMe',
+        'info'
+      ],
+      '/guide/technical-docs/Bootstrap/':[
+        '',
+        '网格系统',
+      ],
+      '/guide/technical-docs/CSS/':[
+        ''
+      ],
+      '/guide/technical-docs/Element-ui/':[
+        ''
+      ],
+      '/guide/technical-docs/HTML/':[
+        ''
+      ],
       '/guide/technical-docs/JavaScript/': [
         '',
         '声明提升',
         '原型与原型链',
       ],
-      '/guide/technical-docs/Bootstrap/': [
-        '',
-        '网格系统'
+      '/guide/technical-docs/JQuery/':[
+        ''
       ],
+      'guide/technical-docs/Mockjs/':[
+        ''
+      ],
+      'guide/technical-docs/Vue/':[
+        ''
+      ]
     },
-    // 页面滚动
     smoothScroll: true
-  }
+  },
+
+  //============================================//
+  // 插件配置
+  plugins:[['@vuepress/back-to-top'],['@vuepress/medium-zoom']]
+
 }
