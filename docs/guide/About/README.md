@@ -1,8 +1,7 @@
 ---
 title: 首页
 ---
-
-![cover](/assets/img/AboutMeCover1.jpg)
+<img :src="$withBase('/assets/img/AboutMeCover1.jpg')" alt="cover">
 
 ## 前言
 

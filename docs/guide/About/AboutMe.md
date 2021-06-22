@@ -2,7 +2,7 @@
 title: 关于我
 ---
 
-![HP](/assets/img/HP-1.jpg)
+<img :src="$withBase('/assets/img/HP-1.jpg')" alt="HP">
 
 ## 自我介绍
 

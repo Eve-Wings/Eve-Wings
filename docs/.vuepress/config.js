@@ -7,7 +7,7 @@ module.exports = {
 	head: [['link',
 		{
 			rel: 'icon',
-			href: 'favicon.icon'
+			href: 'public/favicon.png'
 		},
 	]],
 	//=================================================//
@@ -53,21 +53,21 @@ module.exports = {
 					{
 						text: '基础提升',
 						items: [{
-								text: 'JQuery',
-								link: '/guide/fornt-end-learn/promote/JQuery/'
-							},
-							{
-								text: 'Bootstrap',
-								link: '/guide/fornt-end-learn/promote/Bootstrap/'
-							},
-							{
-								text: 'SASS',
-								link: '/guide/fornt-end-learn/promote/SASS/'
-							},
-							{
-								text: 'Mockjs',
-								link: '/guide/fornt-end-learn/promote/Mockjs/'
-							}
+							text: 'JQuery',
+							link: '/guide/fornt-end-learn/promote/JQuery/'
+						},
+						{
+							text: 'Bootstrap',
+							link: '/guide/fornt-end-learn/promote/Bootstrap/'
+						},
+						{
+							text: 'SASS',
+							link: '/guide/fornt-end-learn/promote/SASS/'
+						},
+						{
+							text: 'Mockjs',
+							link: '/guide/fornt-end-learn/promote/Mockjs/'
+						}
 						]
 					},
 					{
@@ -187,8 +187,10 @@ module.exports = {
 
 	//============================================//
 	// 插件配置
-	plugins: [
-		['@vuepress/back-to-top'],
-		['@vuepress/medium-zoom']
-	]
+	plugins: {
+		'@vuepress/back-to-top': true,
+		'@vuepress/medium-zoom': {
+			selector: 'img'
+		}
+	}
 }

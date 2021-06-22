@@ -9,14 +9,14 @@ sidebar: auto
 
 技术交流——Bootstrap
 
-[网格系统](/guide/technical-docs/Bootstrap/网格系统)
+[网格系统](technical-docs/Bootstrap/网格系统.html)
 
 ### 2021/06/21
 
 技术交流——JavaScript
 
-[声明提升](/guide/technical-docs/JavaScript/声明提升)
+[声明提升](technical-docs/JavaScript/声明提升.html)
 
 技术交流——JavaScript
 
-[原型与原型链](/guide/technical-docs/JavaScript/原型与原型链)
+[原型与原型链](technical-docs/JavaScript/原型与原型链.html)
