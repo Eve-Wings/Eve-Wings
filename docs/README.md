@@ -24,7 +24,7 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [Bootstrap 网格系统(Grid System)](/guide/technical-docs/Bootstrap/网格系统)
+### [Bootstrap 网格系统(Grid System)](guide/technical-docs/Bootstrap/网格系统.html)
 
 技术交流——Bootstrap
 

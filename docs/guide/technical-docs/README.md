@@ -11,14 +11,14 @@ sidebar: auto
 
 ### [JavaScript](/guide/technical-docs/JavaScript/)
 
-- :link: [声明提升](/guide/technical-docs/JavaScript/声明提升)
-- :link: [原型与原型链](/guide/technical-docs/JavaScript/原型与原型链)
+- :link: [声明提升](JavaScript/声明提升.html)
+- :link: [原型与原型链](JavaScript/原型与原型链.html)
 
 ### [JQuery](/guide/technical-docs/JQuery/)
 
 ### [Bootstrap](/guide/technical-docs/Bootstrap/)
 
-- :link: [网格系统](/guide/technical-docs/Bootstrap/网格系统)
+- :link: [网格系统](Bootstrap/网格系统.html)
 
 ### [Mockjs](/guide/technical-docs/Mockjs/)
 
