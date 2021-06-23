@@ -128,11 +128,17 @@ module.exports = {
 			},
 			{
 				text: '日常随笔',
-				link: '/guide/informal-essay/'
+				items: [
+					{ text: '见闻录', link: '/guide/informal-essay/见闻录/'},
+					{ text: '生活与工作', link: '/guide/informal-essay/生活与工作/'}
+				]
 			},
 			{
 				text: '个人作品',
-				link: '/guide/personal-works/'
+				items: [
+					{ text: '画阁', link: '/guide/personal-works/画阁/'},
+					{ text: '书斋', link: '/guide/personal-works/书斋/'}
+				]
 			},
 			{
 				text: '关于',
@@ -154,9 +160,14 @@ module.exports = {
 				'AboutMe',
 				'info'
 			],
-			'/guide/technical-docs/Bootstrap/': [
+			'/guide/fornt-end-learn/promote/Bootstrap/':[
 				'',
 				'网格系统',
+				'图片类',
+				'表格类'
+			],
+			'/guide/technical-docs/Bootstrap/': [
+				''
 			],
 			'/guide/technical-docs/CSS/': [
 				''

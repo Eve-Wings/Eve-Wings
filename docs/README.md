@@ -24,9 +24,30 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [Bootstrap 网格系统(Grid System)](guide/technical-docs/Bootstrap/网格系统.html)
+### [Bootstrap 表格类](guide/fornt-end-learn/promote/Bootstrap/表格类)
 
-技术交流——Bootstrap
+前端学习笔记——Bootstrap
+
+更新时间:2021/06/23
+
+:::
+
+
+::: tip New
+
+### [Bootstrap 图片类](guide/fornt-end-learn/promote/Bootstrap/图片类.html)
+
+前端学习笔记——Bootstrap
+
+更新时间:2021/06/23
+
+:::
+
+::: tip New
+
+### [Bootstrap 网格系统(Grid System)](guide/fornt-end-learn/promote/Bootstrap/网格系统.html)
+
+前端学习笔记——Bootstrap
 
 更新时间:2021/06/22
 

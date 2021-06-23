@@ -30,6 +30,10 @@ sidebar: auto
 
 ### [Bootstrap](/guide/fornt-end-learn/promote/Bootstrap/)
 
+- :link: [网格系统](/guide/fornt-end-learn/promote/Boostrap/网格系统.html)
+- :link: [图片类](/guide/fornt-end-learn/promote/Boostrap/图片类.html)
+- :link: [表格类](/guide/fornt-end-learn/promote/Boostrap/表格类.html)
+
 ### [SASS](/guide/fornt-end-learn/promote/SASS/)
 
 ### [Mockjs](/guide/fornt-end-learn/promote/Mockjs/)

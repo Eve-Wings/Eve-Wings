@@ -18,8 +18,6 @@ sidebar: auto
 
 ### [Bootstrap](/guide/technical-docs/Bootstrap/)
 
-- :link: [网格系统](Bootstrap/网格系统.html)
-
 ### [Mockjs](/guide/technical-docs/Mockjs/)
 
 ### [Vue](/guide/technical-docs/Vue/)

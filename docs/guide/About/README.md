@@ -63,7 +63,7 @@ title: 首页
 
 祝您能够有良好的体验与收获
 
-- :link: [从零开始的前端学习之旅](/guide/fornt-end-learn/)
+### :link: [从零开始的前端学习之旅](/guide/fornt-end-learn/)
   - :link: [浏览器](/guide/fornt-end-learn/base/browser/)
   - :link: [HTML](/guide/fornt-end-learn/base/HTML/)
   - :link: [CSS](/guide/fornt-end-learn/base/CSS/)
@@ -74,8 +74,20 @@ title: 首页
   - :link: [Mockjs](/guide/fornt-end-learn/promote/Mockjs/)
   - :link: [Vue](/guide/fornt-end-learn/advanced/Vue)
   - :link: [Element-ui](/guide/fornt-end-learn/advanced/Element-ui)
-- :link: [技术分享](/guide/technical-docs/)
-- :link: [日常随笔](/guide/informal-essay/)
-- :link: [个人作品](/guide/personal-works/)
+### :link: [技术分享](/guide/technical-docs/)
+  - :link: [HTML](/guide/technical-docs/HTML/)
+  - :link: [CSS](/guide/technical-docs/CSS/)
+  - :link: [JavaScript](/guide/technical-docs/JavaScript/)
+  - :link: [JQuery](/guide/technical-docs/JQuery/)
+  - :link: [Bootstrap](/guide/technical-docs/Bootstrap/)
+  - :link: [Mockjs](/guide/technical-docs/Mockjs/)
+  - :link: [Vue](/guide/technical-docs/Vue/)
+  - :link: [Element-ui](/guide/technical-docs/Element-ui/)
+### 日常随笔
+  - :link: [见闻录](/guide/informal-essay/见闻录/)
+  - :link: [生活与工作](/guide/informal-essay/生活与工作)
+### 个人作品
+  - :link: [画阁](/guide/personal-works/画阁/)
+  - :link: [书斋](/guide/personal-works/书斋/)
 
 :::
