@@ -24,32 +24,35 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [Bootstrap 表格类](guide/fornt-end-learn/promote/Bootstrap/表格类)
+### [继承方式的区别](g/../guide/technical-docs/JavaScript/继承方式的区别)
 
-前端学习笔记——Bootstrap
+技术交流——JavaScript
 
-更新时间:2021/06/23
-
-:::
-
-
-::: tip New
-
-### [Bootstrap 图片类](guide/fornt-end-learn/promote/Bootstrap/图片类.html)
-
-前端学习笔记——Bootstrap
-
-更新时间:2021/06/23
+更新时间: 2021/06/24
 
 :::
 
 ::: tip New
 
-### [Bootstrap 网格系统(Grid System)](guide/fornt-end-learn/promote/Bootstrap/网格系统.html)
+### [ES6的继承](guide/technical-docs/JavaScript/ES6的继承)
 
-前端学习笔记——Bootstrap
+技术交流——JavaScript
 
-更新时间:2021/06/22
+更新时间: 2021/06/24
 
 :::
+
+::: tip New
+
+### [原型式继承](guide/technical-docs/JavaScript/原型式继承)
+
+技术交流——JavaScript
+
+更新时间：2021/06/24
+
+:::
+
+
+
+
 

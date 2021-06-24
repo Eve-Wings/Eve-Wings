@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.Bootstrap 图片类 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.d53a3cf1.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/19.ea6bab58.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.579c706c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.8b8d0e59.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.19a95198.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.6affa5d9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.9ec2c14a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.f6614497.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.168312d0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.4a4ea409.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.06eaa2fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.24b323c0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.9b81de59.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.a64d4cd6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.98a0791e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.7bb396da.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.661e2fed.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.d2d50752.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.c7fa4c98.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.a7ab32fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.631a9883.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.fc3d34bf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.fa544872.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.ccd09c99.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.0e8b0ec8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.824509d6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.c32423b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.5130fa7f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.cc0a6dab.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.1906a4ad.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.61fef774.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.fa41d6fb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.fa4fc938.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.58ed5c91.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.90f9c129.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.e81efa60.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.073aa3dd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.3a10c0d3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.7205cdcb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.01c92cd9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.7ce52ebf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.90fbd989.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link router-link-active">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link router-link-active">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" aria-current="page" class="sidebar-link">学习资料-Bootstrap</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/1.网格系统.html" class="sidebar-link">1.Bootstrap网格系统</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html" class="active sidebar-link">2.Bootstrap 图片类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html#默认样式-img-标签" class="sidebar-link">默认样式 img 标签</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html#响应式图片-img-fluid" class="sidebar-link">响应式图片 .img-fluid</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html#缩略图功能-img-thumbnail" class="sidebar-link">缩略图功能 .img-thumbnail</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html#圆角图片" class="sidebar-link">圆角图片</a></li></ul></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html" class="sidebar-link">3.Bootstrap 表格类</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="bootstrap-图片类"><a href="#bootstrap-图片类" class="header-anchor">#</a> Bootstrap 图片类</h1> <p>图片作为前端展示的主要主题之一，Bootstrap也为其准备了一些预设样式，不过相比于之前网格系统的内容，Bootstrap预设的图片类简单易懂，也不多。</p> <h2 id="默认样式-img-标签"><a href="#默认样式-img-标签" class="header-anchor">#</a> 默认样式 img 标签</h2> <p>直接上源码</p> <div class="language-CSS extra-class"><pre class="language-css"><code>
+  <span class="token selector">img</span><span class="token punctuation">{</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">border-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><p>vertical-align 属性，可用于设置元素的垂直对齐方式，设置为middle，将图片放置在父元素的中部，起到垂直居中的作用</p> <p>border-style 属性，用于设置边框样式，将其设置为none，取消样式</p> <h2 id="响应式图片-img-fluid"><a href="#响应式图片-img-fluid" class="header-anchor">#</a> 响应式图片 .img-fluid</h2> <p>作为一款具备响应式布局能力的框架，Bootstrap也为图片提供了图片响应式的样式预设，通过类 <strong>img-fluid</strong>实现</p> <p>上源码：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.img-fluid</span><span class="token punctuation">{</span>
+	<span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过设置百分比最大宽度以及自动高度，来实现图片随视口大小的变换而变化。</p> <h2 id="缩略图功能-img-thumbnail"><a href="#缩略图功能-img-thumbnail" class="header-anchor">#</a> 缩略图功能 .img-thumbnail</h2> <p>为图片添加一个圆角外边框，且限制图片的大小最大为父元素的100%，使其有缩略图的效果</p> <p>源码：</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.img-thumbnail</span><span class="token punctuation">{</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> .25rem<span class="token punctuation">;</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid #dee2e6<span class="token punctuation">;</span>
+	border-radius： .25rem<span class="token punctuation">;</span>
+	<span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>padding——内边距、会撑开元素，但不会让元素内的内容变形</p> <p>background-color——背景色也会作用域内边距中，这里设置背景色是填充了内边距里的颜色</p> <p>border——设置边框</p> <p>border-radius——设置边框的圆角</p> <h2 id="圆角图片"><a href="#圆角图片" class="header-anchor">#</a> 圆角图片</h2> <p>在Bootstrap3中，可以使用**.img-rounded**为图片添加圆角，但是在Bootstrap4中，该类被移除</p> <p>所有的圆角全部统一为了 <strong>.rounded</strong> 类</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.rounded</span><span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> .25rem <span class="token important">!important</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>同时，在Bootstrap3中的 .img-circle 将图片设置为圆形，在Bootstrap4中，被 <strong>.rounded-circle</strong> 取代</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.rounded-circle</span><span class="token punctuation">{</span>
+	<span class="token property">border-radius</span><span class="token punctuation">:</span> 50% <span class="token important">!important</span>
+<span class="token punctuation">}</span> 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/1.网格系统.html" class="prev">
+        1.Bootstrap网格系统
+      </a></span> <span class="next"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html">
+        3.Bootstrap 表格类
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.d53a3cf1.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/19.ea6bab58.js" defer></script>
+  </body>
+</html>

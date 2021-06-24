@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.jQuery基本使用 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.d53a3cf1.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/23.9b81de59.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.579c706c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.8b8d0e59.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.19a95198.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.6affa5d9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.9ec2c14a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.f6614497.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.168312d0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.ea6bab58.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.4a4ea409.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.06eaa2fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.24b323c0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.a64d4cd6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.98a0791e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.7bb396da.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.661e2fed.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.d2d50752.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.c7fa4c98.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.a7ab32fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.631a9883.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.fc3d34bf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.fa544872.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.ccd09c99.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.0e8b0ec8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.824509d6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.c32423b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.5130fa7f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.cc0a6dab.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.1906a4ad.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.61fef774.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.fa41d6fb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.fa4fc938.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.58ed5c91.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.90f9c129.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.e81efa60.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.073aa3dd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.3a10c0d3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.7205cdcb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.01c92cd9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.7ce52ebf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.90fbd989.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link router-link-active">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link router-link-active">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" aria-current="page" class="sidebar-link">学习资料-jQuery</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/1.jQuery概述.html" class="sidebar-link">1.jQuery概述</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html" class="active sidebar-link">2.jQuery基本使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-1-jquery的下载" class="sidebar-link">2.1 jQuery的下载</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-2-jquery的使用步骤" class="sidebar-link">2.2 jQuery的使用步骤</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-3-jquery的入口函数" class="sidebar-link">2.3 jQuery的入口函数</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-4-jquery-的顶级对象" class="sidebar-link">2.4 jQuery 的顶级对象 $</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-5-jquery对象和dom对象" class="sidebar-link">2.5 jQuery对象和DOM对象</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html#_2-6-dom对象与jquery对象的相互转换" class="sidebar-link">2.6 DOM对象与jQuery对象的相互转换</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-jquery基本使用"><a href="#_2-jquery基本使用" class="header-anchor">#</a> 2.jQuery基本使用</h1> <h2 id="_2-1-jquery的下载"><a href="#_2-1-jquery的下载" class="header-anchor">#</a> 2.1 jQuery的下载</h2> <p>官方网址：https://jquery.com/</p> <p>版本：</p> <ol><li>1x：兼容IE 678等低版本浏览器，不再更新</li> <li>2x：不兼容IE 678等低版本浏览器，不再更新</li> <li>3x：不兼容IE 678等低版本浏览器，持续更新</li></ol> <p>生产环节-production 与 开发版本-pevelopment</p> <p>选择production版本，打开之后全选，新建js文件，命名为:jQuery.min.js</p> <p>将内容全部拷贝进去</p> <h2 id="_2-2-jquery的使用步骤"><a href="#_2-2-jquery的使用步骤" class="header-anchor">#</a> 2.2 jQuery的使用步骤</h2> <p><strong>引入jQuery</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jQuery.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="_2-3-jquery的入口函数"><a href="#_2-3-jquery的入口函数" class="header-anchor">#</a> 2.3 jQuery的入口函数</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token operator">...</span> <span class="token comment">// 此处是页面DOM加载完成的入口</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token operator">...</span> <span class="token comment">// 此处是页面DOM加载完成的入口</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>DOM结构渲染完毕即可执行内部代码，不必等所有外部资源加载完成，jQuery帮我们完成了封装</p> <p>相当于原生JS中的DOMContentLoaded</p> <p>不同于原生js中的load时间是等页面文档、外部js文件、css文件、图片加载完毕才执行内部代码</p> <h2 id="_2-4-jquery-的顶级对象"><a href="#_2-4-jquery-的顶级对象" class="header-anchor">#</a> 2.4 jQuery 的顶级对象 $</h2> <ol><li>$ 是 jQuery 的别称，在代码中可以使用jQuery代替$，但一般为了方便，通常都直接使用 $</li> <li>$ 是 jQuery 的顶级对象，相当于原生JavaScript中的window。把元素利用$包装成jQuery对象，就可以调用jQuery的方法</li></ol> <h2 id="_2-5-jquery对象和dom对象"><a href="#_2-5-jquery对象和dom对象" class="header-anchor">#</a> 2.5 jQuery对象和DOM对象</h2> <ol><li>用原生js获取到的对象——DOM对象</li> <li>通过jQuery的方式获取的对象——jQuery对象</li> <li>jQuery对象的本质是：利用$ 对 DOM对象包装后产生的对象(伪数组形式存储)</li> <li>jQuery对象只能使用jQuery方法，DOM对象则使用原生的JavaScript属性和方法，不能混用！</li></ol> <h2 id="_2-6-dom对象与jquery对象的相互转换"><a href="#_2-6-dom对象与jquery对象的相互转换" class="header-anchor">#</a> 2.6 DOM对象与jQuery对象的相互转换</h2> <p><strong>DOM对象与jQuery对象之间是可以相互转换的</strong></p> <p>因为原生js比jQuery更大，原生的一些属性和方法jQuery没有封装，要想使用这些属性和方法需要把jQuery对象转换为DOM对象才能使用</p> <ol><li><p>DOM对象转换为jQuery对象：$(DOM对象)</p> <p>未使用原生js获取到的DOM对象：&lt;video&gt;&lt;/video&gt;</p> <p>$('video')</p> <p>已经使用原生js获取到的DOM对象: var myvideo = document....</p> <p>$(myvideo)</p></li> <li><p>把jQuery对象转换为DOM对象：jQuery对象[index] 或 jQuery对象.get(index)</p> <p>$('video')[0]</p> <p>$('video').get(0)</p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/1.jQuery概述.html" class="prev">
+        1.jQuery概述
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.d53a3cf1.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/23.9b81de59.js" defer></script>
+  </body>
+</html>

@@ -5,21 +5,44 @@ sidebar: auto
 
 ## 日志
 
+### 2021/06/24
+
+[继承方式的区别](technical-docs/JavaScript/继承方式的区别.html)
+
+技术交流——JavaScript
+
+[ES6的继承](technical-docs/JavaScript/ES6的继承)
+
+技术交流——JavaScript
+
+[原型式继承](technical-docs/JavaScript/原型式继承)
+
+技术交流——JavaScript
+
+
+[2.jQuery基本使用](fornt-end-learn/promote/JQuery/2.jQuery基本使用)
+
+前端学习笔记——jQuery
+
+[1.jQuery概述](fornt-end-learn/promote/JQuery/1.jQuery概述)
+
+前端学习笔记——jQuery
+
 ### 2021/06/23
 
 前端学习笔记——Bootstrap
 
-[表格类](fornt-end-learn/promote/Bootstrap/表格类)
+[3.表格类](fornt-end-learn/promote/Bootstrap/表格类)
 
 前端学习笔记——Bootstrap
 
-[图片类](fornt-end-learn/promote/Bootstrap/图片类.html)
+[2.图片类](fornt-end-learn/promote/Bootstrap/图片类.html)
 
 ### 2021/06/22
 
 前端学习笔记——Bootstrap
 
-[网格系统](technical-docs/Bootstrap/网格系统.html)
+[1.网格系统](technical-docs/Bootstrap/网格系统.html)
 
 ### 2021/06/21
 

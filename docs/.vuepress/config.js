@@ -53,7 +53,7 @@ module.exports = {
 					{
 						text: '基础提升',
 						items: [{
-							text: 'JQuery',
+							text: 'jQuery',
 							link: '/guide/fornt-end-learn/promote/JQuery/'
 						},
 						{
@@ -105,7 +105,7 @@ module.exports = {
 						link: '/guide/technical-docs/JavaScript/'
 					},
 					{
-						text: 'JQuery',
+						text: 'jQuery',
 						link: '/guide/technical-docs/JQuery/'
 					},
 					{
@@ -136,6 +136,7 @@ module.exports = {
 			{
 				text: '个人作品',
 				items: [
+					{ text: '程序', link: '/guide/personal-works/程序/'},
 					{ text: '画阁', link: '/guide/personal-works/画阁/'},
 					{ text: '书斋', link: '/guide/personal-works/书斋/'}
 				]
@@ -160,11 +161,16 @@ module.exports = {
 				'AboutMe',
 				'info'
 			],
+			'/guide/fornt-end-learn/promote/JQuery/':[
+				'',
+				'1.jQuery概述',
+				'2.jQuery基本使用'
+			],
 			'/guide/fornt-end-learn/promote/Bootstrap/':[
 				'',
-				'网格系统',
-				'图片类',
-				'表格类'
+				'1.网格系统',
+				'2.图片类',
+				'3.表格类'
 			],
 			'/guide/technical-docs/Bootstrap/': [
 				''
@@ -182,6 +188,9 @@ module.exports = {
 				'',
 				'声明提升',
 				'原型与原型链',
+				'原型式继承',
+				'ES6的继承',
+				'继承方式的区别'
 			],
 			'/guide/technical-docs/JQuery/': [
 				''

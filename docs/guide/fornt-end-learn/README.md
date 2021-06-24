@@ -28,11 +28,14 @@ sidebar: auto
 
 ### [JQuery](/guide/fornt-end-learn/promote/JQuery/)
 
+- :link: [1.jQuery概述](/guide/fornt-end-learn/promote/JQuery/1.jQuery概述.html)
+- :link: [2.jQuery基本使用](/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html)
+
 ### [Bootstrap](/guide/fornt-end-learn/promote/Bootstrap/)
 
-- :link: [网格系统](/guide/fornt-end-learn/promote/Boostrap/网格系统.html)
-- :link: [图片类](/guide/fornt-end-learn/promote/Boostrap/图片类.html)
-- :link: [表格类](/guide/fornt-end-learn/promote/Boostrap/表格类.html)
+- :link: [1.网格系统](/guide/fornt-end-learn/promote/Bootstrap/1.网格系统.html)
+- :link: [2.图片类](/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html)
+- :link: [3.表格类](/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html)
 
 ### [SASS](/guide/fornt-end-learn/promote/SASS/)
 
