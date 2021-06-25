@@ -36,6 +36,7 @@ sidebar: auto
 - :link: [1.网格系统](/guide/fornt-end-learn/promote/Bootstrap/1.网格系统.html)
 - :link: [2.图片类](/guide/fornt-end-learn/promote/Bootstrap/2.图片类.html)
 - :link: [3.表格类](/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html)
+- :link: [4.文本类](/guide/fornt-end-learn/promote/Bootstrap/4.文本类.html)
 
 ### [SASS](/guide/fornt-end-learn/promote/SASS/)
 

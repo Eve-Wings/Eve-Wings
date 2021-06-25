@@ -170,7 +170,8 @@ module.exports = {
 				'',
 				'1.网格系统',
 				'2.图片类',
-				'3.表格类'
+				'3.表格类',
+				'4.文本类'
 			],
 			'/guide/technical-docs/Bootstrap/': [
 				''
@@ -190,7 +191,8 @@ module.exports = {
 				'原型与原型链',
 				'原型式继承',
 				'ES6的继承',
-				'继承方式的区别'
+				'继承方式的区别',
+				'JavaScript作用域'
 			],
 			'/guide/technical-docs/JQuery/': [
 				''

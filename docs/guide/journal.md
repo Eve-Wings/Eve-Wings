@@ -5,7 +5,17 @@ sidebar: auto
 
 ## 日志
 
+### 2021/06/26
+
+[JavaScript作用域](technical-docs/JavaScript/JavaScript作用域.html)
+
+技术交流——JavaScript
+
 ### 2021/06/24
+
+[4.文本类](fornt-end-learn/promote/Bootstrap/4.文本类.html)
+
+前端学习笔记——Bootstrap
 
 [继承方式的区别](technical-docs/JavaScript/继承方式的区别.html)
 

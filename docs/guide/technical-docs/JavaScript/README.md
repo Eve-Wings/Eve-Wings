@@ -13,3 +13,5 @@ title: 技术交流——JavaScript
 ### [ES6的继承](ES6的继承.html)
 
 ### [继承方式的区别](继承方式的区别.html)
+
+### [JavaScript作用域](JavaScript作用域.html)

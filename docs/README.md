@@ -24,7 +24,29 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [继承方式的区别](g/../guide/technical-docs/JavaScript/继承方式的区别)
+### [JavaScript作用域](guide/technical-docs/JavaScript/JavaScript作用域)
+
+技术交流——JavaScript
+
+更新时间: 2021/06/26
+
+:::
+
+
+::: tip New
+
+### [4.文本类](guide/fornt-end-learn/promote/Bootstrap/4.文本类)
+
+前端学习笔记——Bootstrap
+
+更新时间: 2021/06/24
+
+:::
+
+
+::: tip New
+
+### [继承方式的区别](guide/technical-docs/JavaScript/继承方式的区别)
 
 技术交流——JavaScript
 
@@ -32,25 +54,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [ES6的继承](guide/technical-docs/JavaScript/ES6的继承)
-
-技术交流——JavaScript
-
-更新时间: 2021/06/24
-
-:::
-
-::: tip New
-
-### [原型式继承](guide/technical-docs/JavaScript/原型式继承)
-
-技术交流——JavaScript
-
-更新时间：2021/06/24
-
-:::
 
 
 
