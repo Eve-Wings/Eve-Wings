@@ -7,6 +7,10 @@ sidebar: auto
 
 ### 2021/06/26
 
+[4.jQuery事件](fornt-end-learn/promote/JQuery/4.jQuery事件.html)
+
+前端学习笔记——jQuery
+
 [3.jQuery常用API](fornt-end-learn/promote/JQuery/3.jQuery常用API.html)
 
 前端学习笔记——jQuery

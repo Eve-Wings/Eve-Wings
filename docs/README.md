@@ -22,6 +22,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ## 最新更新
 
+::: tip New
+
+### [4.jQuery事件](guide/fornt-end-learn/promote/JQuery/4.jQuery事件)
+
+前端学习笔记——jQuery
+
+更新时间: 2021/06/26
+
+:::
+
 
 ::: tip New
 
@@ -44,15 +54,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 :::
 
 
-::: tip New
-
-### [4.文本类](guide/fornt-end-learn/promote/Bootstrap/4.文本类)
-
-前端学习笔记——Bootstrap
-
-更新时间: 2021/06/24
-
-:::
 
 
 
