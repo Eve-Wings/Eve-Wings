@@ -22,6 +22,17 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ## 最新更新
 
+
+::: tip New
+
+### [3.jQuery常用API](guide/fornt-end-learn/promote/JQuery/3.jQuery常用API)
+
+前端学习笔记——jQuery
+
+更新时间: 2021/06/26
+
+:::
+
 ::: tip New
 
 ### [JavaScript作用域](guide/technical-docs/JavaScript/JavaScript作用域)
@@ -43,16 +54,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-
-::: tip New
-
-### [继承方式的区别](guide/technical-docs/JavaScript/继承方式的区别)
-
-技术交流——JavaScript
-
-更新时间: 2021/06/24
-
-:::
 
 
 

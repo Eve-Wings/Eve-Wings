@@ -7,6 +7,10 @@ sidebar: auto
 
 ### 2021/06/26
 
+[3.jQuery常用API](fornt-end-learn/promote/JQuery/3.jQuery常用API.html)
+
+前端学习笔记——jQuery
+
 [JavaScript作用域](technical-docs/JavaScript/JavaScript作用域.html)
 
 技术交流——JavaScript
