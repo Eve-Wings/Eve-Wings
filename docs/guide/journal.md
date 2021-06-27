@@ -5,6 +5,12 @@ sidebar: auto
 
 ## 日志
 
+### 2021/06/27
+
+[5.jQuery其他方法](fornt-end-learn/promote/JQuery/5.jQuery其他方法.html)
+
+前端学习笔记——jQuery
+
 ### 2021/06/26
 
 [4.jQuery事件](fornt-end-learn/promote/JQuery/4.jQuery事件.html)

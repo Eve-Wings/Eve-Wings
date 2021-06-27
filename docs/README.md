@@ -24,6 +24,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [5.jQuery其他方法](guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法)
+
+前端学习笔记——jQuery
+
+更新时间：2021/06/27
+
+:::
+
+::: tip New
+
 ### [4.jQuery事件](guide/fornt-end-learn/promote/JQuery/4.jQuery事件)
 
 前端学习笔记——jQuery
@@ -38,16 +48,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 ### [3.jQuery常用API](guide/fornt-end-learn/promote/JQuery/3.jQuery常用API)
 
 前端学习笔记——jQuery
-
-更新时间: 2021/06/26
-
-:::
-
-::: tip New
-
-### [JavaScript作用域](guide/technical-docs/JavaScript/JavaScript作用域)
-
-技术交流——JavaScript
 
 更新时间: 2021/06/26
 

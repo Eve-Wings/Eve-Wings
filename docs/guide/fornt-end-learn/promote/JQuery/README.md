@@ -11,3 +11,5 @@ title: 学习资料-jQuery
 ### [3.jQuery常用API](3.jQuery常用API.html)
 
 ### [4.jQuery事件](4.jQuery事件.html)
+
+### [5.jQuery其他方法](5.jQuery其他方法.html)

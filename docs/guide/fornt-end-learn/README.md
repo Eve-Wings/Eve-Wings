@@ -26,12 +26,13 @@ sidebar: auto
 
 ## 提升
 
-### [JQuery](/guide/fornt-end-learn/promote/JQuery/)
+### [jQuery](/guide/fornt-end-learn/promote/JQuery/)
 
 - :link: [1.jQuery概述](/guide/fornt-end-learn/promote/JQuery/1.jQuery概述.html)
 - :link: [2.jQuery基本使用](/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html)
 - :link: [3.jQuery常用API](/guide/fornt-end-learn/promote/JQuery/3.jQuery常用API.html)
 - :link: [4.jQuery事件](/guide/fornt-end-learn/promote/JQuery/4.jQuery事件.html)
+- :link: [5.jQuery其他方法](/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html)
 
 ### [Bootstrap](/guide/fornt-end-learn/promote/Bootstrap/)
 

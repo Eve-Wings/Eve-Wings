@@ -165,7 +165,9 @@ module.exports = {
 				'',
 				'1.jQuery概述',
 				'2.jQuery基本使用',
-				'3.jQuery常用API'
+				'3.jQuery常用API',
+				'4.jQuery事件',
+				'5.jQuery其他方法'
 			],
 			'/guide/fornt-end-learn/promote/Bootstrap/':[
 				'',
