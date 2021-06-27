@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5.jQuery其他方法 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.1f114168.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/27.745a80a2.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.28f945c5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.63e67328.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.5ad9f6a0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.e38a2334.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.91602d1e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.e1e450e6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.52738fad.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.33e45b0d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.bc7e1eb2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.e2310e00.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.da1da3e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.c543cef3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.9ebdf289.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.fbb5540c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.4821622a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.8b239dee.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.e567f9c5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.67789839.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.f26b2eaf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.f5be444f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.3f99bbc3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.291d19fe.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.b7b133b4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.3f04f424.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.61567761.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.7e55e4d6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.0dea7ac7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.92fbd56c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.ed118bd1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.09eb0046.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.52809590.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.6318ad45.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.660cb321.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.0dd26f8a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.71d0ceaa.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.fe19e36d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.3bc274f1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.0ae5de55.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.2776bc99.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.c862c675.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.70bbd392.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.053500a7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.21512a44.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.8ad4894c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.c80df329.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.7ce52ebf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.81559d37.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link router-link-active">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link router-link-active">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Mockjs/" class="nav-link">
+  Mockjs
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" aria-current="page" class="sidebar-link">学习资料-jQuery</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/1.jQuery概述.html" class="sidebar-link">1.jQuery概述</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/2.jQuery基本使用.html" class="sidebar-link">2.jQuery基本使用</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/3.jQuery常用API.html" class="sidebar-link">3.jQuery常用API</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/4.jQuery事件.html" class="sidebar-link">4.jQuery事件</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html" class="active sidebar-link">5.jQuery其他方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html#_5-1-jquery对象拷贝" class="sidebar-link">5.1 jQuery对象拷贝</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html#_5-2-多库共存" class="sidebar-link">5.2 多库共存</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html#_5-3-插件" class="sidebar-link">5.3 插件</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法.html#_5-4-尺寸、位置操作" class="sidebar-link">5.4 尺寸、位置操作</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_5-jquery其他方法"><a href="#_5-jquery其他方法" class="header-anchor">#</a> 5.jQuery其他方法</h1> <h2 id="_5-1-jquery对象拷贝"><a href="#_5-1-jquery对象拷贝" class="header-anchor">#</a> 5.1 jQuery对象拷贝</h2> <p>如果想要把某个对象拷贝(合并)给另外一个对象使用，此时可以使用 $.extend() 方法</p> <p>语法：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$<span class="token punctuation">.</span><span class="token function">exted</span><span class="token punctuation">(</span><span class="token punctuation">[</span>deep<span class="token punctuation">]</span><span class="token punctuation">,</span>target<span class="token punctuation">,</span>object1<span class="token punctuation">,</span><span class="token punctuation">[</span>objectN<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre></div><ol><li>deep：如果设为true为深拷贝，默认为false浅拷贝</li> <li>target：要拷贝的目标对象</li> <li>object1：待拷贝到第一个对象的对象</li> <li>objectN：待拷贝到第N个对象的对象</li> <li>浅拷贝是把被拷贝的对象复杂数据类型中的<strong>地址</strong>拷贝给目标对象，修改对象<strong>会影响</strong>拷贝对象</li> <li>深拷贝，前面加 true，完全克隆(拷贝的对象，而不是地址)，修改目标对象不会影响被拷贝对象</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">var</span> targetObj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'张三'</span>
+    <span class="token punctuation">}</span>
+    $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span>targetObj<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>targetObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 上述是 targetObj中没有内容的情况</span>
+    
+    <span class="token keyword">var</span> targetObj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'张三'</span>
+    <span class="token punctuation">}</span>
+    $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span>targetObj2<span class="token punctuation">,</span> obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 会覆盖原来的数据</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>targetObj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 浅拷贝，传地址</span>
+    <span class="token keyword">var</span> targetObj3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">var</span> obj3 <span class="token operator">=</span> <span class="token punctuation">{</span>
+        msg<span class="token operator">:</span> <span class="token punctuation">{</span>
+            subject<span class="token operator">:</span> <span class="token string">'犯罪心理学'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span>targetObj3<span class="token punctuation">,</span> obj3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    targetObj3<span class="token punctuation">.</span>msg<span class="token punctuation">.</span>subject <span class="token operator">=</span> <span class="token string">'刑法'</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj3<span class="token punctuation">.</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 深拷贝，完全克隆</span>
+    <span class="token keyword">var</span> targetObj4 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">var</span> obj4 <span class="token operator">=</span> <span class="token punctuation">{</span>
+        msg<span class="token operator">:</span> <span class="token punctuation">{</span>
+            subject<span class="token operator">:</span> <span class="token string">'犯罪心理学'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    $<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> targetObj4<span class="token punctuation">,</span> obj4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    targetObj4<span class="token punctuation">.</span>msg<span class="token punctuation">.</span>subject <span class="token operator">=</span> <span class="token string">'刑法'</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj4<span class="token punctuation">.</span>msg<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_5-2-多库共存"><a href="#_5-2-多库共存" class="header-anchor">#</a> 5.2 多库共存</h2> <p>jQuery 使用 $ 作为标识符，随着jQuery的流行，其他js库也可能会使用$作为标识符，这样一起使用会引起冲突</p> <p>解决方案：</p> <p>1.统一使用jQuery</p> <p>比如：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">jQuery</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>2.jQuery变量规定新的名称： $.noConflict()</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> suibian <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">noConflict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">suibian</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_5-3-插件"><a href="#_5-3-插件" class="header-anchor">#</a> 5.3 插件</h2> <p>jQuery功能比较有限，想要更复杂的特效效果，可以借助jQuery插件完成。</p> <p>注意：这些插件也依赖于jQuery完成，所以必须先引入jQuery文件，因此也称为jQuery插件。</p> <p>jQuery插件常用网站：</p> <ol><li>jQuery插件库 http://www.jq22.com</li> <li>jQuery之家 http://www.htmleaf.com</li></ol> <h3 id="_5-3-1懒加载插件"><a href="#_5-3-1懒加载插件" class="header-anchor">#</a> 5.3.1懒加载插件</h3> <p>图片使用延迟加载可提高网页下载速度，也能帮助减轻服务器负载</p> <p>当我们滑动到可视区域，再显示图片</p> <p>下载地址：https://www.jq22.com/jquery-info11629</p> <p>该插件必须在图片引入之后才引入</p> <h3 id="_5-3-2-全屏滚动插件-fullpage"><a href="#_5-3-2-全屏滚动插件-fullpage" class="header-anchor">#</a> 5.3.2 全屏滚动插件(fullpage)</h3> <p>gitHub : https://github.com/alvarotrigo/fullPage.js
+中文翻译网站: http://www.dowebok.com/demo/2014/77/</p> <h3 id="_5-3-3-bootstrap-js插件"><a href="#_5-3-3-bootstrap-js插件" class="header-anchor">#</a> 5.3.3 bootstrap JS插件</h3> <p>官网：https://v4.bootcss.com/</p> <h2 id="_5-4-尺寸、位置操作"><a href="#_5-4-尺寸、位置操作" class="header-anchor">#</a> 5.4 尺寸、位置操作</h2> <h3 id="_5-4-1-尺寸"><a href="#_5-4-1-尺寸" class="header-anchor">#</a> 5.4.1 尺寸</h3> <table><thead><tr><th>语法</th> <th>用法</th></tr></thead> <tbody><tr><td>width()/height()</td> <td>取得匹配元素宽度和高度</td></tr> <tr><td>innerWidth()/innerHeight()</td> <td>取得匹配元素宽度和高度，包含padding</td></tr> <tr><td>outerWidth()/outerHeight()</td> <td>取得匹配元素的宽度和高度，包含padding、border</td></tr> <tr><td>outerWidth(true)/outerHeight(true)</td> <td>取得匹配元素的宽度和高度，包含padding、border、margin</td></tr></tbody></table> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_5-4-2-位置"><a href="#_5-4-2-位置" class="header-anchor">#</a> 5.4.2 位置</h3> <p>位置主要有三个方法: <strong>offset()</strong> 、 position() 、 scrollTop()/scrollLeft()</p> <h4 id="offset-设置或获取元素便宜"><a href="#offset-设置或获取元素便宜" class="header-anchor">#</a> offset() 设置或获取元素便宜</h4> <ol><li>offset()方法设置或返回被选元素相对于文档的偏移坐标，跟父级没有关系</li> <li>该方法有2个属性：left、top。offset().top 用于获取距离文档顶部的举例，offset().left 用于获取距离文档左侧举例</li> <li>可以设置元素的偏移：offset({top: 10, left: 30});</li></ol> <h4 id="position-获取元素偏移"><a href="#position-获取元素偏移" class="header-anchor">#</a> position() 获取元素偏移</h4> <ol><li>position() 方法用于返回被选元素相对于带有定位的父级偏移坐标，如果父级都没有定位，则以文档为准</li> <li>只可获取，不可设置</li></ol> <h4 id="scrolltop-scrollleft-设置或获取元素被卷去的头部或左侧"><a href="#scrolltop-scrollleft-设置或获取元素被卷去的头部或左侧" class="header-anchor">#</a> scrollTop()/scrollLeft() 设置或获取元素被卷去的头部或左侧</h4> <ol><li>scrollTop() 方法设置或返回被选元素被卷去的头部</li></ol> <h4 id="返回顶部按钮案例"><a href="#返回顶部按钮案例" class="header-anchor">#</a> 返回顶部按钮案例</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.back-to-top'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'body, html'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        scrollTop<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">6/27/2021, 11:35:50 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/4.jQuery事件.html" class="prev">
+        4.jQuery事件
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.1f114168.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/27.745a80a2.js" defer></script>
+  </body>
+</html>
