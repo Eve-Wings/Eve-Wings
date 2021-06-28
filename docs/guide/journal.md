@@ -7,6 +7,18 @@ sidebar: auto
 
 ### 2021/06/28
 
+[闭包](technical-docs/JavaScript/闭包.html)
+
+技术交流——JavaScript
+
+[2.环境配置](fornt-end-learn/promote/AJAX/2.环境配置.html)
+
+前端学习笔记——AJAX
+
+[1.AJAX基础](fornt-end-learn/promote/AJAX/1.AJAX基础.html)
+
+前端学习笔记——AJAX
+
 [HTTP协议基础](fornt-end-learn/base/browser-Internet/HTTP协议基础.html)
 
 前端学习笔记——浏览器与网络

@@ -15,3 +15,5 @@ title: 技术交流——JavaScript
 ### [继承方式的区别](继承方式的区别.html)
 
 ### [JavaScript作用域](JavaScript作用域.html)
+
+### [闭包](闭包.html)

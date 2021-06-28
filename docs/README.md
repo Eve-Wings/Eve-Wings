@@ -24,19 +24,9 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [HTTP协议基础](guide/fornt-end-learn/base/browser-Internet/HTTP协议基础)
+### [闭包](guide/technical-docs/JavaScript/闭包)
 
-前端学习笔记——浏览器与网络
-
-更新时间: 2021/06/28
-
-:::
-
-::: tip New
-
-### [七层模型](guide/fornt-end-learn/base/browser-Internet/七层模型)
-
-前端学习笔记——浏览器与网络
+技术交流——闭包
 
 更新时间: 2021/06/28
 
@@ -44,13 +34,25 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [5.jQuery其他方法](guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法)
+### [2.环境配置](guide/fornt-end-learn/promote/AJAX/2.环境配置)
 
-前端学习笔记——jQuery
+前端学习笔记——AJAX
 
-更新时间：2021/06/27
+更新时间: 2021/06/28
 
 :::
+
+::: tip New
+
+### [1.AJAX基础](guide/fornt-end-learn/promote/AJAX/1.AJAX基础)
+
+前端学习笔记——AJAX
+
+更新时间: 2021/06/28
+
+:::
+
+
 
 
 

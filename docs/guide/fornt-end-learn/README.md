@@ -44,9 +44,12 @@ sidebar: auto
 - :link: [3.表格类](/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html)
 - :link: [4.文本类](/guide/fornt-end-learn/promote/Bootstrap/4.文本类.html)
 
-### [SASS](/guide/fornt-end-learn/promote/SASS/)
+### [AJAX](/guide/fornt-end-learn/promote/AJAX/)
 
-### [Mockjs](/guide/fornt-end-learn/promote/Mockjs/)
+- :link: [1.AJAX基础](/guide/fornt-end-learn/promote/AJAX/1.AJAX基础.html)
+- :link: [2.环境配置](/guide/fornt-end-learn/promote/AJAX/2.环境配置.html)
+
+### [SASS](/guide/fornt-end-learn/promote/SASS/)
 
 ## 进阶
 

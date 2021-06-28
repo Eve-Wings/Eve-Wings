@@ -61,12 +61,12 @@ module.exports = {
 							link: '/guide/fornt-end-learn/promote/Bootstrap/'
 						},
 						{
-							text: 'SASS',
-							link: '/guide/fornt-end-learn/promote/SASS/'
+							text: 'AJAX',
+							link: '/guide/fornt-end-learn/promote/AJAX/'
 						},
 						{
-							text: 'Mockjs',
-							link: '/guide/fornt-end-learn/promote/Mockjs/'
+							text: 'SASS',
+							link: '/guide/fornt-end-learn/promote/SASS/'
 						}
 						]
 					},
@@ -181,6 +181,11 @@ module.exports = {
 				'3.表格类',
 				'4.文本类'
 			],
+			'/guide/fornt-end-learn/promote/AJAX/':[
+				'',
+				'1.AJAX基础',
+				'2.环境配置'
+			],
 			'/guide/technical-docs/Bootstrap/': [
 				''
 			],
@@ -200,7 +205,8 @@ module.exports = {
 				'原型式继承',
 				'ES6的继承',
 				'继承方式的区别',
-				'JavaScript作用域'
+				'JavaScript作用域',
+				'闭包'
 			],
 			'/guide/technical-docs/JQuery/': [
 				''
