@@ -33,8 +33,8 @@ module.exports = {
 						text: '基础',
 						items: [
 							{
-								text: '浏览器',
-								link: '/guide/fornt-end-learn/base/browser/'
+								text: '浏览器与网络',
+								link: '/guide/fornt-end-learn/base/browser-Internet/'
 							},
 							{
 								text: 'HTML',
@@ -160,6 +160,11 @@ module.exports = {
 				'',
 				'AboutMe',
 				'info'
+			],
+			'/guide/fornt-end-learn/base/browser-Internet/':[
+				'',
+				'七层模型',
+				'HTTP协议基础'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',

@@ -16,7 +16,10 @@ sidebar: auto
 
 ## 基础
 
-### [浏览器](/guide/fornt-end-learn/browser/borwser)
+### [浏览器与网络](/guide/fornt-end-learn/base/browser-Internet/)
+
+- :link: [七层模型](/guide/front-end-learn/base/browser-Internet/七层模型.html)
+- :link: [HTTP协议基础](/guide/front-end-learn/base/browser-Internet/HTTP协议基础.html)
 
 ### [HTML](/guide/fornt-end-learn/base/HTML)
 

@@ -64,7 +64,7 @@ title: 首页
 祝您能够有良好的体验与收获
 
 ### :link: [从零开始的前端学习之旅](/guide/fornt-end-learn/)
-  - :link: [浏览器](/guide/fornt-end-learn/base/browser/)
+  - :link: [浏览器与网络](/guide/fornt-end-learn/base/browser-Internet/)
   - :link: [HTML](/guide/fornt-end-learn/base/HTML/)
   - :link: [CSS](/guide/fornt-end-learn/base/CSS/)
   - :link: [JavaScript](/guide/fornt-end-learn/base/JavaScript/)

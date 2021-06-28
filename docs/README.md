@@ -24,6 +24,26 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [HTTP协议基础](guide/fornt-end-learn/base/browser-Internet/HTTP协议基础)
+
+前端学习笔记——浏览器与网络
+
+更新时间: 2021/06/28
+
+:::
+
+::: tip New
+
+### [七层模型](guide/fornt-end-learn/base/browser-Internet/七层模型)
+
+前端学习笔记——浏览器与网络
+
+更新时间: 2021/06/28
+
+:::
+
+::: tip New
+
 ### [5.jQuery其他方法](guide/fornt-end-learn/promote/JQuery/5.jQuery其他方法)
 
 前端学习笔记——jQuery
@@ -32,26 +52,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [4.jQuery事件](guide/fornt-end-learn/promote/JQuery/4.jQuery事件)
-
-前端学习笔记——jQuery
-
-更新时间: 2021/06/26
-
-:::
-
-
-::: tip New
-
-### [3.jQuery常用API](guide/fornt-end-learn/promote/JQuery/3.jQuery常用API)
-
-前端学习笔记——jQuery
-
-更新时间: 2021/06/26
-
-:::
 
 
 
