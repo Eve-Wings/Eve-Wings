@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4.jQuery的AJAX | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.84e8c41a.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/23.03c6359c.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.29b4b38e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.f4fb9202.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.6affa5d9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.9ec2c14a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.e1568827.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.1728c47f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.10f4e4c9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.471fb00d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.b9afbc81.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.abb7371d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.870fb07c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.6b6e7fe2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.5fffda88.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.f2eaf441.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.c9d19efb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.2b8f32bb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.2fc277fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.7077f9d8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.12fb2a09.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.4b412c00.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.5a8c04b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.1837c884.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.8cc398ac.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.4096654f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.5511eec8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.e182532c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.f662a65b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.d759b8e8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.4d6dd1d7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.f67833df.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.0fac65c8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.9ed3c117.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.a0374099.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.d7f3e59f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.74841d63.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.c58efd32.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.e766eb76.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.4b630563.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.af8bdfff.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.eeb9a0ac.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.ab662ca8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.4438726c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.b5f5ee23.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.d50dd7f4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.fe55e580.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.6f2ab526.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.d239caa5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.f711440c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.b5da4895.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.75646c45.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.08074520.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.d156dc91.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.d4bace57.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link router-link-active">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link router-link-active">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/SASS/" class="nav-link">
+  SASS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" aria-current="page" class="sidebar-link">学习资料——AJAX</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/1.AJAX基础.html" class="sidebar-link">1.AJAX基础</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/2.环境配置.html" class="sidebar-link">2.环境配置</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/3.AJAX基本使用.html" class="sidebar-link">3.AJAX基本使用</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html" class="active sidebar-link">4.jQuery的AJAX</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html#_4-1-get-请求" class="sidebar-link">4.1 get 请求</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html#_4-2-post请求" class="sidebar-link">4.2 post请求</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html#_4-3-通用方法ajax" class="sidebar-link">4.3 通用方法ajax</a></li></ul></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/5.axios.html" class="sidebar-link">5.axios</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/6.其他.html" class="sidebar-link">6.其他</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_4-jquery的ajax"><a href="#_4-jquery的ajax" class="header-anchor">#</a> 4.jQuery的AJAX</h1> <h2 id="_4-1-get-请求"><a href="#_4-1-get-请求" class="header-anchor">#</a> 4.1 get 请求</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">// 三/四个参数 url 参数 回调函数(响应体) 响应体类型</span>
+	$<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'http://127.0.0.1:8000/jquery-server'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span> b<span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_4-2-post请求"><a href="#_4-2-post请求" class="header-anchor">#</a> 4.2 post请求</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	$<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'http://127.0.0.1:8000/jquery-server'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span> b<span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 回调函数</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_4-3-通用方法ajax"><a href="#_4-3-通用方法ajax" class="header-anchor">#</a> 4.3 通用方法ajax</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">// 三/四个参数 url 参数 回调函数(响应体)</span>
+	$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token comment">//url</span>
+        url<span class="token operator">:</span> <span class="token string">'http://127.0.0.1:8000/jquery-server'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 参数</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span>a<span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span> b<span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 请求类型</span>
+        type<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 响应体类型</span>
+        dataType<span class="token operator">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 成功的回调</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 超时时间</span>
+        timeout<span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+        <span class="token comment">// 失败的回调</span>
+        <span class="token function-variable function">error</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 头信息</span>
+        headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+            c<span class="token operator">:</span><span class="token number">300</span><span class="token punctuation">,</span>
+            d<span class="token operator">:</span> <span class="token number">400</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">6/29/2021, 4:20:37 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/3.AJAX基本使用.html" class="prev">
+        3.AJAX基本使用
+      </a></span> <span class="next"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/5.axios.html">
+        5.axios
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.84e8c41a.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/23.03c6359c.js" defer></script>
+  </body>
+</html>
