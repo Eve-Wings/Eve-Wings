@@ -179,7 +179,8 @@ module.exports = {
 				'1.网格系统',
 				'2.图片类',
 				'3.表格类',
-				'4.文本类'
+				'4.文本类',
+				'5.折叠窗与手风琴'
 			],
 			'/guide/fornt-end-learn/promote/AJAX/':[
 				'',
