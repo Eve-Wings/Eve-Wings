@@ -24,31 +24,31 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [闭包](guide/technical-docs/JavaScript/闭包)
+### [6.其他](guide/fornt-end-learn/promote/AJAX/6.其他)
 
-技术交流——闭包
+前端学习笔记——AJAX
 
-更新时间: 2021/06/28
+更新时间: 2021/06/29
 
 :::
 
 ::: tip New
 
-### [2.环境配置](guide/fornt-end-learn/promote/AJAX/2.环境配置)
+### [5.axios](guide/fornt-end-learn/promote/AJAX/5.axios)
 
 前端学习笔记——AJAX
 
-更新时间: 2021/06/28
+更新时间: 2021/06/29
 
 :::
 
 ::: tip New
 
-### [1.AJAX基础](guide/fornt-end-learn/promote/AJAX/1.AJAX基础)
+### [4.jQuery的AJAX](guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX)
 
 前端学习笔记——AJAX
 
-更新时间: 2021/06/28
+更新时间: 2021/06/29
 
 :::
 

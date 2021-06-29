@@ -5,6 +5,24 @@ sidebar: auto
 
 ## 六月(17)
 
+### 2021/06/29
+
+[6.其他](fornt-end-learn/promote/AJAX/6.其他.html)
+
+前端学习笔记——AJAX
+
+[5.axios](fornt-end-learn/promote/AJAX/5.axios.html)
+
+前端学习笔记——AJAX
+
+[4.jQuery的AJAX](fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html)
+
+前端学习笔记——AJAX
+
+[3.AJAX基本使用](fornt-end-learn/promote/AJAX/3.AJAX基本使用.html)
+
+前端学习笔记——AJAX
+
 ### 2021/06/28
 
 [闭包](technical-docs/JavaScript/闭包.html)

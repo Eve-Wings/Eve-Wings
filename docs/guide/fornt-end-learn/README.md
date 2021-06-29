@@ -48,6 +48,10 @@ sidebar: auto
 
 - :link: [1.AJAX基础](/guide/fornt-end-learn/promote/AJAX/1.AJAX基础.html)
 - :link: [2.环境配置](/guide/fornt-end-learn/promote/AJAX/2.环境配置.html)
+- :link: [3.AJAX基本使用](/guide/fornt-end-learn/promote/AJAX/3.AJAX基本使用.html)
+- :link: [4.jQuery的AJAX](/guide/fornt-end-learn/promote/AJAX/4.jQuery的AJAX.html)
+- :link: [5.axios](/guide/fornt-end-learn/promote/AJAX/5.axios.html)
+- :link: [6.其他](/guide/fornt-end-learn/promote/AJAX/6.其他.html)
 
 ### [SASS](/guide/fornt-end-learn/promote/SASS/)
 
