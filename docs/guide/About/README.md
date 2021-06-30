@@ -71,7 +71,7 @@ title: 首页
   - :link: [JQuery](/guide/fornt-end-learn/promote/JQuery/)
   - :link: [Bootstrap](/guide/fornt-end-learn/promote/Bootstrap/)
   - :link: [AJAX](/guide/fornt-end-learn/promote/AJAX/)
-  - :link: [SASS](/guide/fornt-end-learn/promote/SASS/)
+  - :link: [CSS预处理](/guide/fornt-end-learn/promote/CSS预处理/)
   - :link: [Vue](/guide/fornt-end-learn/advanced/Vue)
   - :link: [Element-ui](/guide/fornt-end-learn/advanced/Element-ui)
 ### :link: [技术分享](/guide/technical-docs/)
@@ -87,6 +87,7 @@ title: 首页
   - :link: [见闻录](/guide/informal-essay/见闻录/)
   - :link: [生活与工作](/guide/informal-essay/生活与工作)
 ### 个人作品
+  - :link: [程序](/guide/personal-works/程序/)
   - :link: [画阁](/guide/personal-works/画阁/)
   - :link: [书斋](/guide/personal-works/书斋/)
 

@@ -65,8 +65,8 @@ module.exports = {
 							link: '/guide/fornt-end-learn/promote/AJAX/'
 						},
 						{
-							text: 'SASS',
-							link: '/guide/fornt-end-learn/promote/SASS/'
+							text: 'CSS预处理',
+							link: '/guide/fornt-end-learn/promote/CSS预处理/'
 						}
 						]
 					},
@@ -190,6 +190,10 @@ module.exports = {
 				'4.jQuery的AJAX',
 				'5.axios',
 				'6.其他'
+			],
+			'/guide/fornt-end-learn/promote/CSS预处理/':[
+				'',
+				'less'
 			],
 			'/guide/technical-docs/Bootstrap/': [
 				''
