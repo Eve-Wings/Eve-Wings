@@ -220,12 +220,17 @@ module.exports = {
 			'/guide/technical-docs/JQuery/': [
 				''
 			],
-			'guide/technical-docs/Mockjs/': [
+			'/guide/technical-docs/Mockjs/': [
 				''
 			],
-			'guide/technical-docs/Vue/': [
+			'/guide/technical-docs/Vue/': [
 				''
+			],
+			'/guide/informal-essay/生活与工作/':[
+				'',
+				'笔记本收藏'
 			]
+			
 		},
 		smoothScroll: true
 	},

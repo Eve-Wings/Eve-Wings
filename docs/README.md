@@ -20,7 +20,29 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
+## 正在进行
+
+::: danger 施工中
+
+### :construction: [工作清单](guide/personal-works/程序/工作清单/)
+
+个人作品——程序
+
+更新时间: 2021/06/30
+
+:::
+
 ## 最新更新
+
+::: tip New
+
+### [笔记本收藏](guide/informal-essay/生活与工作/笔记本收藏)
+
+日常随笔——生活与工作
+
+更新时间: 2021/06/30
+
+:::
 
 ::: tip New
 
@@ -28,7 +50,7 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 前端学习笔记——CSS预处理
 
-更新时间: 2021/06/29
+更新时间: 2021/06/30
 
 :::
 
@@ -42,15 +64,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [6.其他](guide/fornt-end-learn/promote/AJAX/6.其他)
-
-前端学习笔记——AJAX
-
-更新时间: 2021/06/29
-
-:::
 
 
 
