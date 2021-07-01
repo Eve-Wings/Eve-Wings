@@ -140,6 +140,11 @@ user = {
 
 mattersList = {
     label: '',
+    classifications: []
+}
+
+classification = {
+    label: '',
     matters: []
 }
 
@@ -204,3 +209,56 @@ import { createStore } from 'vuex'
 
 :::
 
+
+
+### 6.2 全局数据准备
+
+鉴于暂不搭建后端的缘故、所以登录相关的操作暂不考虑，而相关数据也以本地存储的方式(localStorage)进行。
+
+为了让数据更加便于获取与更新，这里使用vuex进行数据的存储
+
+```javascript
+state:{
+	mattersList: {
+		classifications: []
+	}
+}
+```
+
+同时，我们也可以准备以下类，以便于添加数据。
+
+```javascript
+// classDefined.js
+export default{
+	// 分类
+	class Classification {
+		constructor(label) {
+		    this.label = label
+			this.matters = []
+		}
+	}
+	// 待办事项
+	class Matter {
+		constructor(label, describe, createTime, completionTime, priority, completion) {
+			this.label = label
+			this.describe = describe
+			this.createTime = createTime
+			this.completionTime = completionTime
+			this.priority = priority
+			this.completion = completion
+			this.matters_sons = []
+		}
+	}
+	// 代办子事项
+	class Matter_son {
+		constructor(label,describe,createTime,completionTime,priority,completion) {
+			this.label = label
+			this.describe = describe
+			this.createTime = createTime
+			this.completionTime = completionTime
+			this.priority = priority
+			this.completion = completion
+		}
+	}
+}
+```
