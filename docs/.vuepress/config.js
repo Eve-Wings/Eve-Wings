@@ -166,6 +166,13 @@ module.exports = {
 				'七层模型',
 				'HTTP协议基础'
 			],
+			'/guide/fornt-end-learn/base/JavaScript/':[
+				'',
+				'1.面向对象编程介绍',
+				'2.ES6中的类和对象',
+				'3.类的继承',
+				'4.ES6中类和对象注意点'
+			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',
 				'1.jQuery概述',

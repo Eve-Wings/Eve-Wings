@@ -71,3 +71,136 @@ toDoList——一个能够记录更多细节和更清晰更详细内容的待办
 
 <img :src="$withBase('/assets/img/toDoList/用例图.jpg')" alt="用例图">
 
+
+
+## 4.数据库设计
+
+### 4.1 E-R图
+
+<img :src="$withBase('/assets/img/toDoList/E-R图.jpg')" alt="E-R图">
+
+
+
+### 4.2 用户基础信息关系模式定义——userInfo
+
+| 字段名称 | 字段代码 |   字段类型    | 数据约束 |
+| :------: | :------: | :-----------: | :------: |
+| 用户账号 | account  | Varchar(6,16) |   主键   |
+| 用户密码 | password | Varchar(6,18) | Not Null |
+|  用户ID  |  userID  |      Int      |   外键   |
+
+### 4.3 代办事项列表关系模式定义——matterList
+
+| 字段名称 |    字段代码    | 字段类型 | 数据约束 |
+| :------: | :------------: | :------: | :------: |
+|  用户ID  |     userID     |   Int    |   主键   |
+|   分类   | classification |          |   Null   |
+
+### 4.4 分类关系模式定义——classification
+
+| 字段名称 | 字段代码 |   字段类型    | 数据约束 |
+| :------: | :------: | :-----------: | :------: |
+|  分类名  |  label   | Varchar(1,20) | Not Null |
+| 代办事项 | matters  |               |   Null   |
+
+### 4.5 代办事项关系模式定义——matters
+
+|  字段名称  |    字段代码    |   字段类型    | 数据约束 |
+| :--------: | :------------: | :-----------: | :------: |
+|   事项名   |     label      | Varchar(1,20) | Not Null |
+|  事项描述  |    describe    | Varchar(100)  |   Null   |
+|  创建时间  |   createTime   |   Datetime    | Not Null |
+| 拟完成时间 | completionTime |   Datetime    |   Null   |
+|   优先级   |    priority    |      Int      |   Null   |
+|  完成情况  |   completion   |      Bit      | Not Null |
+| 代办子事项 |  matter-sons   |               |          |
+
+### 4.6 代办子事项关系模式定义——matter-sons
+
+|  字段名称  |    字段代码     |   字段类型    | 数据约束 |
+| :--------: | :-------------: | :-----------: | :------: |
+|   事项名   |      label      | Varchar(1,20) | Not Null |
+|  事项描述  |    describle    | Varchar(100)  |   Null   |
+|  创建时间  |   createTime    |   Datetime    | Not Null |
+| 拟完成时间 | completionTime |   Datetime    |   Null   |
+|   优先级   |    priority     |      Int      |   Null   |
+|  完成情况  |   completion    |      Bit      | Not Null |
+
+
+
+### 4.7 数据结构设计
+
+```javascript
+user = {
+	account: '',
+	password: '',
+	userID: 0,
+	mattersLists: []
+}
+
+mattersList = {
+    label: '',
+    matters: []
+}
+
+matter = {
+	label: '',
+	describe: '',
+	createTime: '',
+	completionTime: '',
+	priority: 0,
+	completion: false,
+	matter-sons: []
+}
+
+matter-son = {
+	label: '',
+	describe: '',
+	createTime: '',
+	completionTime: '',
+	priority: 0,
+	completion: false
+}
+```
+
+
+
+## 5.页面设计
+
+简单线框图(因为工具的问题，暂不进行细化)
+
+<img :src="$withBase('/assets/img/toDoList/简单线框图.jpg')" alt="用例图">
+
+
+
+## 6.编程实现
+
+### 6.1 项目创建与依赖导入
+
+使用vue.js技术，vue版本为 3.0.0， @Vue/cli 版本为 4.5.13
+
+使用naive-ui框架——主要是对naive-ui的一次尝试
+
+naive-ui 官网：[https://www.naiveui.com/zh-CN/light](https://www.naiveui.com/zh-CN/light)
+
+同时使用 vuex，以支持数据的存储。
+
+::: danger 提示
+
+:warning: 因为暂不打算开发后端，所以所有的数据都是以本地缓存的方式进行存储
+
+:::
+
+::: warning 提示
+
+vuex的版本是4.0.2
+
+且在vue2与vue3中，vuex的使用方式不同
+
+```javascript
+// vue3 store/index.js
+import { createStore } from 'vuex'
+```
+
+:::
+

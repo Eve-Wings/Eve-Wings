@@ -36,33 +36,36 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [笔记本收藏](guide/informal-essay/生活与工作/笔记本收藏)
+### [4.ES6中类和对象注意点](guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点)
 
-日常随笔——生活与工作
+前端学习笔记——JavaScript
 
-更新时间: 2021/06/30
-
-:::
-
-::: tip New
-
-### [less](guide/fornt-end-learn/promote/CSS预处理/less)
-
-前端学习笔记——CSS预处理
-
-更新时间: 2021/06/30
+更新时间: 2021/07/01
 
 :::
 
 ::: tip New
 
-### [5.折叠窗与手风琴](guide/fornt-end-learn/promote/Bootstrap/5.折叠窗与手风琴)
+### [3.类的继承](guide/fornt-end-learn/base/JavaScript/3.类的继承)
 
-前端学习笔记——Bootstrap
+前端学习笔记——Javascript
 
-更新时间: 2021/06/29
+更新时间: 2021/07/01
 
 :::
+
+::: tip New
+
+### [2.ES6中的类和对象](guide/fornt-end-learn/base/JavaScript/2.ES6中的类和对象)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/01
+
+:::
+
+
+
 
 
 

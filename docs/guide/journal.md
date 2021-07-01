@@ -3,7 +3,27 @@ title: 日志
 sidebar: auto
 ---
 
-## 六月(26)
+## 七月(4)
+
+### 2021/07/01
+
+[4.ES6中类和对象注意点](fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点)
+
+前端学习笔记——JavaScript
+
+[3.类的继承](fornt-end-learn/base/JavaScript/3.类的继承)
+
+前端学习笔记——JavaScript
+
+[2.ES6中的类和对象](fornt-end-learn/base/JavaScript/2.ES6中的类和对象.html)
+
+前端学习笔记——JavaScript
+
+[1.面向对象编程介绍](fornt-end-learn/base/JavaScript/1.面向对象编程介绍.html)
+
+前端学习笔记——JavaScript
+
+## 六月(28)
 
 ### 2021/06/30
 
