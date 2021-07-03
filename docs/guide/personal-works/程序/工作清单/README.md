@@ -4,17 +4,36 @@ sidebar: auto
 ---
 # 工作清单开发文档
 
+
+
+**页面地址：[工作清单](https://eve-wings.github.io/toDoList/)**
+
+## 目录
+
+[toc]
+
+
+
+## *.更新日志
+
+| 版本 | 内容                     | 时间       |
+| ---- | ------------------------ | ---------- |
+| 0.9  | 完成了大体内容与主要功能 | 2021-07-03 |
+
+
+
+### 待完成事项：
+
+- 移动端适配
+- 回车键的交互效果
+- 删除按钮的二次确认
+- 交互的提示
+
+
+
 ## 0.前言
 
-本工具十分常见，几乎各种教学视频都会有相关的案例进行开发。
-
-虽然总体技术难度不难，但是还是要认真对待。
-
-原本从个人的角度来说是不太需要这个工具的，但是随着学习内容的不断增加，日程安排的不断复杂，该工具的重要性已经不是备忘录之类的可以替代的了——即使我有着一般严重的备忘录记录症……
-
-因此，该工具的开发被提了上来。
-
-一个能够记录更多细节和更清晰更详细的待办事项列表
+我原本想要写点什么东西……
 
 
 ## 1.系统规格说明
@@ -210,112 +229,142 @@ import { createStore } from 'vuex'
 
 
 
-### 6.2 全局数据准备
+### 6.2 全局数据准备 (版本：0.9)
 
 鉴于暂不搭建后端的缘故、所以登录相关的操作暂不考虑，而相关数据也以本地存储的方式(localStorage)进行。
 
 为了让数据更加便于获取与更新，这里使用vuex进行数据的存储
 
 ```javascript
-// store/index.js
-  state: {
-    mattersList: {
-      classifications: []
-    }
-  },
-  mutations: {
-    // 获取事项列表
-    getMattersList(state, List) {
-      state.mattersList = List
-    },
-    //============================================//
-    // 分类相关——增删改
-    // 添加新的分类
-    pushClassification(state, classification) {
-      state.mattersList.classifications.push(classification)
-    },
-    // 移除分类
-    removeClassification(state, classIndex) {
-      let classLength = state.mattersList.classifications.length
-      for (let i = classIndex; i < classLength - 1; i++) {
-        state.mattersList.classifications[i] = state.mattersList.classifications[i + 1]
-      }
-      state.mattersList.classifications.pop()
-    },
-    // 修改分类名
-    editClassification(state, editClassForm) {
-      let label = editClassForm.label
-      let index = editClassForm.index
-      state.mattersList.classifications[index].label = label
-    },
-    // 分类相关操作到此截至
+export default createStore({
+	state: {
+		mattersList: {
+			classifications: []
+		}
+	},
+	mutations: {
+		// 获取事项列表
+		getMattersList(state, List) {
+			state.mattersList = List
+		},
+		//============================================//
+		// 分类相关——增删改
+		// 添加新的分类
+		pushClassification(state, classification) {
+			state.mattersList.classifications.push(classification)
+		},
+		// 移除分类
+		removeClassification(state, classIndex) {
+			let classLength = state.mattersList.classifications.length
+			for (let i = classIndex; i < classLength - 1; i++) {
+				state.mattersList.classifications[i] = state.mattersList.classifications[i + 1]
+			}
+			state.mattersList.classifications.pop()
+		},
+		// 修改分类名
+		editClassification(state, editClassForm) {
+			let label = editClassForm.label
+			let index = editClassForm.index
+			state.mattersList.classifications[index].label = label
+		},
+		// 分类相关操作到此截至
 
-    //===============================================//
-    // 代办事项相关——增删改
-    // 增加新的代办事项
-    pushMatter(state, pushMatterForm) {
-      // classIndex, matter
-      let classIndex = pushMatterForm.classIndex
-      let matter = pushMatterForm.matter
-      state.mattersList.classifications[classIndex].matters.push(matter)
-    },
-    // 删除代办事项
-    removeMatter(state, removeMatterForm) {
-      // classIndex, matterIndex
-      let classIndex = removeMatterForm.classIndex
-      let matterIndex = removeMatterForm.matterIndex
-      let mattersLength = state.mattersList.classifications[classIndex].matters.length
-      for (let i = matterIndex; i < mattersLength - 1; i++) {
-        state.mattersList.classifications[classIndex].matters[i] = state.mattersList.classifications[
-          classIndex].matters[i + 1]
-      }
-      state.mattersList.classifications[classIndex].matters.pop()
-    },
-    // 修改代办事例
-    editMatter(state, editMatterForm) {
-      // classIndex, matterIndex, matter
-      let classIndex = editMatterForm.classIndex
-      let matterIndex = editMatterForm.matterIndex
-      let matter = editMatterForm.matter
-      state.mattersList.classifications[classIndex].matters[matterIndex] = matter
-    },
-    // 待办事项相关操作到此截至
+		//===============================================//
+		// 代办事项相关——增删改
+		// 增加新的代办事项
+		pushMatter(state, pushMatterForm) {
+			// classIndex, matter
+			let classIndex = pushMatterForm.classIndex
+			let matter = pushMatterForm
+			state.mattersList.classifications[classIndex].matters.push(matter)
+		},
+		// 删除代办事项
+		removeMatter(state, removeMatterForm) {
+			// classIndex, matterIndex
+			let classIndex = removeMatterForm.classIndex
+			let matterIndex = removeMatterForm
+			let mattersLength = state.mattersList.classifications[classIndex].matters.length
+			for (let i = matterIndex; i < mattersLength - 1; i++) {
+				state.mattersList.classifications[classIndex].matters[i] = state.mattersList.classifications[
+					classIndex].matters[i + 1]
+			}
+			state.mattersList.classifications[classIndex].matters.pop()
+		},
+		// 修改代办事例
+		editMatter(state, editMatterForm) {
+			// classIndex, matterIndex, matter
+			let classIndex = editMatterForm.classIndex
+			let matterIndex = editMatterForm.matterIndex
+			state.mattersList.classifications[classIndex].matters[matterIndex].label = editMatterForm.label
+			state.mattersList.classifications[classIndex].matters[matterIndex].describe = editMatterForm.describe
+			state.mattersList.classifications[classIndex].matters[matterIndex].completionTime = editMatterForm.completionTime
+			state.mattersList.classifications[classIndex].matters[matterIndex].priority = editMatterForm.priority
+		},
+		// 代办事例完成情况修改
+		complateMatter(state, form) {
+			let classIndex = form.classIndex
+			let matterIndex = form.matterIndex
+			let comp = state.mattersList.classifications[classIndex].matters[matterIndex].completion
+			if(comp === true){
+				state.mattersList.classifications[classIndex].matters[matterIndex].completion = false
+			} else {
+				state.mattersList.classifications[classIndex].matters[matterIndex].completion = true
+			}
+		},
+		
+		// 待办事项相关操作到此截至
 
-    //==================================================//
-    // 代办子事项相关——增删改
-    // 增加新的代办子事项
-    pushMatterSon(state, pushMatterSonForm) {
-      // classIndex, matterIndex, matter_son
-      let classIndex = pushMatterSonForm.classIndex
-      let matterIndex = pushMatterSonForm.matterIndex
-      let matter_son = pushMatterSonForm.matter_son
-      state.mattersList.classifications[classIndex].matters[matterIndex].matter_sons.push(matter_son)
-    },
-    // 删除代办子事项
-    removeMatterSon(state, removeMatterSonForm) {
-      // classIndex, matterIndex, matter_sonIndex
-      let classIndex = removeMatterSonForm.classIndex
-      let matterIndex = removeMatterSonForm.matterIndex
-      let matter_sonIndex = removeMatterSonForm.matter_sonIndex
-      let matterSonsLength = state.mattersList.classifications[classIndex].matters[matterIndex]
-        .matter_sons.length
-      for (let i = matter_sonIndex; i < matterSonsLength - 1; i++) {
-        state.mattersList.classifications[classIndex].matters[matterIndex].matter_sons[i] = state
-          .mattersList.classifications[classIndex].matters[matterIndex].matter_sons[i + 1]
-      }
-      state.mattersList.classifications[classIndex].matters[matterIndex].matter_sons.pop()
-    },
-    // 修改代办子事项
-    editMatterSon(state, editMatterSonForm) {
-      // classIndex, matterIndex, matter_sonIndex, matter_son
-      let classIndex = editMatterSonForm.classIndex
-      let matterIndex = editMatterSonForm.matterIndex
-      let matter_sonIndex = editMatterSonForm.matter_sonIndex
-      let matter_son = editMatterSonForm.matter_son
-      state.mattersList.classifications[classIndex].matters[matterIndex].matter_sons[matter_sonIndex] =
-        matter_son
-    }
-  }
+		//==================================================//
+		// 代办子事项相关——增删改
+		// 增加新的代办子事项
+		pushMatterSon(state, pushMatterSonForm) {
+			// classIndex, matterIndex, matterSon
+			let classIndex = pushMatterSonForm.classIndex
+			let matterIndex = pushMatterSonForm.matterIndex
+			let matterSon = pushMatterSonForm
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons.push(matterSon)
+		},
+		// 删除代办子事项
+		removeMatterSon(state, removeMatterSonForm) {
+			// classIndex, matterIndex, matterSonIndex
+			let classIndex = removeMatterSonForm.classIndex
+			let matterIndex = removeMatterSonForm.matterIndex
+			let matterSonIndex = removeMatterSonForm.matterSonIndex
+			let matterSonsLength = state.mattersList.classifications[classIndex].matters[matterIndex]
+				.matterSons.length
+			for (let i = matterSonIndex; i < matterSonsLength - 1; i++) {
+				state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[i] = state
+					.mattersList.classifications[classIndex].matters[matterIndex].matterSons[i + 1]
+			}
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons.pop()
+		},
+		// 修改代办子事项
+		editMatterSon(state, editMatterSonForm) {
+			// classIndex, matterIndex, matterSonIndex, matterSon
+			let classIndex = editMatterSonForm.classIndex
+			let matterIndex = editMatterSonForm.matterIndex
+			let matterSonIndex = editMatterSonForm.matterSonIndex
+			console.log(editMatterSonForm)
+			console.log(state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex])
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].label = editMatterSonForm.label
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].describe = editMatterSonForm.describe
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].completionTime = editMatterSonForm.completionTime
+			state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].priority = editMatterSonForm.priority
+		},
+        // 子事项完成情况修改
+		complateMatterSon(state,form) {
+			let classIndex = form.classIndex
+			let matterIndex = form.matterIndex
+			let matterSonIndex = form.matterSonIndex
+			let comp = state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].completion
+			if(comp === true) {
+				state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].completion = false
+			} else {
+				state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex].completion = true
+			}
+		}
+	}
+})
 ```
 
 同时，我们也可以准备以下类，以便于添加数据。
@@ -339,12 +388,12 @@ export class Matter {
 		this.completionTime = completionTime
 		this.priority = priority
 		this.completion = false
-		this.matters_sons = []
+		this.matterSons = []
 	}
 }
 // 代办子事项
-export class Matter_son {
-	constructor(classIndex, matterIndex, label, describe, createTime, completionTime, priority, completion) {
+export class matterSon {
+	constructor(classIndex, matterIndex, label, describe, createTime, completionTime, priority) {
 		this.classIndex = classIndex
 		this.matterIndex = matterIndex
 		this.label = label
@@ -352,7 +401,7 @@ export class Matter_son {
 		this.createTime = createTime
 		this.completionTime = completionTime
 		this.priority = priority
-		this.completion = completion
+		this.completion = false
 	}
 }
 ```
@@ -368,7 +417,7 @@ classtest () {
 
 
 
-### 6.3 主题
+### 6.3 主题 (版本：0.9)
 
 为了使用 naive-ui提供的主题样式，所以需要配置naive-ui的主题
 
@@ -424,11 +473,10 @@ export default defineComponent({
 因为打算切换主题，所以我们需要给背景添加样式
 
 ```less
-body{
-	background: black;
-	// 使用 transition 属性，实现主题切换时的过度
-    transition: all 1s;
-    color: rgba(255, 255, 255, 0.82)
+body {
+  background: black;
+  transition: all 1s;
+  color: white;
 }
 ```
 
@@ -436,14 +484,17 @@ body{
 
 ```javascript
 themetest () {
-	this.themeData = this.themeData === undefined?this.darkTheme:undefined
-	document.querySelector('body').style.background = document.querySelector('body').style.background === 'white'?'black':'white'
+	this.themeData = this.themeData === undefined ? this.darkTheme : undefined
+document.querySelector('body').style.background = document.querySelector('body').style
+	.background === 'rgb(255, 254, 240)' ? 'black' : 'rgb(255, 254, 240)'
+document.querySelector('body').style.color = document.querySelector('body').style.color ===
+	'black' ? 'white' : 'black'
 }
 ```
 
 
 
-### 6.4 页眉
+### 6.4 页眉 (版本：0.9)
 
 既然采用了naive-ui框架，那本着不重复造轮子的心态，打算直接采用……嗯？
 
@@ -453,41 +504,84 @@ naive-ui没有提供页眉或者顶部导航栏？
 
 那就只能动手自己做一个，虽然内容本身也不多
 
+#### 6.4.1 组件结构
+
 ```html
-<nav>
-    <!-- Logo -->
-	<div id="logo" style="display: inline-block;">
-		<n-image width="130" src="https://eve-wings.github.io/Eve-Wings/assets/img/icon.png" alt="Eve-Wings"></n-image>
+<!-- header.vue -->
+<div class="headerNav">
+	<div class="navContainer">
+        <!-- 个人logo -->
+		<div class="logo">
+			<img src="../assets/Logo.png">
+		</div>
+         <!-- 导航栏右侧内容 -->
+		<div class="navRight">
+			<n-button style="margin-right: 20px;" text v-if="isdark" @click="themechange()">浅色？</n-button>
+			<n-button style="margin-right: 20px;" text v-if="!isdark" @click="themechange()">深色？</n-button>
+			<a target="_blank"
+				href="https://eve-wings.github.io/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E5%B7%A5%E4%BD%9C%E6%B8%85%E5%8D%95/#_0-%E5%89%8D%E8%A8%80">
+				<n-icon size="25">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 496 512">
+                          <!-- 太长了所以svg内容略微省略了 -->
+						<path fill="currentColor"></path>
+					</svg>
+				</n-icon>
+			</a>
+		</div>
 	</div>
-    <!-- github链接 -->
-	<a href="https://eve-wings.github.io/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E5%B7%A5%E4%BD%9C%E6%B8%85%E5%8D%95/#_0-%E5%89%8D%E8%A8%80"
-		style="float: right;">
-		<n-icon size="25">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 512">
-                 <!-- svg图标样式的内容这里省略 -->
-				<path ></path>
-			</svg>
-		</n-icon>
-	</a>
-</nav>
+</div>
+
 ```
+
+#### 6.4.2 样式
 
 Logo的图片，是导入来自个人github的logo，然后再使用滤镜进行反色以适应暗色背景
 
 ```less
-nav{
-  padding: 0 1.5rem;
-  border-bottom: 1px solid #bbb;
-  .n-image > img {
-    transition: all 1s;
-    filter: invert();
-  }
-  a{
-    padding-top: 10px;
-    color: #aaa;
-    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
-    &:hover{
-      color: #ccc;
+.headerNav {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 50px;
+  border-bottom: 2px solid #bbb;
+  color: inherit;
+  background: inherit;
+  transition: all 1s;
+
+  .navContainer {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 15px;
+    // 使用弹性盒进行布局
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 60px;
+      display: flex;
+
+      img {
+        transition: all 1s;
+        max-height: 60px;
+        // 反色滤镜
+        filter: invert();
+      }
+    }
+
+    .navRight {
+      display: flex;
+      margin-left: auto;
+      margin-right: 5px;
+
+      a {
+        color: #aaa;
+
+        &:hover {
+          color: #363636
+        }
+      }
     }
   }
 }
@@ -495,26 +589,30 @@ nav{
 
 
 
-### 6.5 创建新分类
+### 6.5 创建新分类 (版本：0.9)
+
+#### 6.5.1 主体 main
 
 ```html
-<div id="header">
-    <nav></nav>
-</div>
+<headerNav></headerNav>
 <div id="main">
-    
+    <!-- transition 为过度做准备 -->
+    <transition name="Slide-left"  mode="out-in"></transition>
 </div>
 ```
 
 ```less
 // 主体内容，左右两侧适当留空，以便添加其他的内容
+// 当且尚未进行移动端适配
 #main{
-    width: 81.25%;
-    margin: 0 auto;
+  width: 70%;
+  margin: 20px auto;
 }
 ```
 
-使用naive-ui提供的card卡片组件作为容器，先写第一个“分类”
+#### 6.5.2 卡片card
+
+使用naive-ui提供的card卡片组件作为容器，先写没有内容的情况
 
 ```html
 <!-- 这个卡片将在没有任何分类的时候显示 -->
@@ -525,6 +623,8 @@ nav{
 	</template>
 </n-card>
 ```
+
+#### 6.5.3 遮罩层
 
 我们需要通过这个按钮，弹出“新建分类”的面板，同时需要遮罩层
 
@@ -566,7 +666,7 @@ createClass () {
 </transition>
 ```
 
-创建新分类的表单
+#### 6.5.4 添加新分类表单
 
 ```html
 <transition name="Slide-bottom">
@@ -597,77 +697,116 @@ createClass () {
 // 表单样式
 #createClassForm {
   border-radius: 3px;
-  width: 50%;
+  width: 45%;
   position: absolute;
-  left: 25%;
+  left: 28%;
   top: 25%;
   z-index: 999;
   box-shadow: darken(@lightGreen, 10%) 0px 0px 15px;
 }
 ```
 
-创建按钮绑定事件：
+#### 6.5.5 按钮绑定事件：
 
 ```javascript
-pushClass(){
+pushClass() {
 	let label = this.createClassForm.label
+    // 通过类创建实例对象
 	let classification = new Classification(label)
+    // 更改store数据
 	this.$store.commit('pushClassification', classification)
-	this.showClassForm()
+    // 表单初始化
+	this.createClassForm.label = ''
+	this.isShadow = !this.isShadow
+	this.isCreateClass = !this.isCreateClass
 }
+
 ```
 
 当分类被创建之后，是事项列表中的分类长度也不为零，不能再提示没有分类了
 
 ```html
 <!-- 当事项列表中没有任何事项时 -->
+<!-- 在这里因为一开始v-if没有写在div上导致动画效果出不来……太蠢了 -->
 <transition name="Slide-left" mode="out-in">
-	<n-card title="你尚未添加任何的分类，请您添加分类" v-if="$store.state.mattersList.classifications.length === 0">
-		<template #header-extra>
-			<n-button circle style="font-size: 1.5rem;" @click="showClassForm()">+</n-button>
-		</template>
-	</n-card>
+	<div v-if="$store.state.mattersList.classifications.length === 0">
+		<n-card title="你尚未添加任何的分类，请您添加分类">
+			<template #header-extra>
+				<n-button circle style="font-size: 1.5rem;" @click="showClassForm()">+</n-button>
+			</template>
+		</n-card>
+	</div>
 
 	<!-- 当事项列表中有事项时 -->
-	<n-card title="创建新的分类" v-else>
-		<template #header-extra>
-			<n-button circle style="font-size: 1.5rem;" @click="showClassForm()">+</n-button>
-		</template>
-	</n-card>
+	<div v-if="$store.state.mattersList.classifications.length !== 0">
+		<n-card>
+			<n-card v-for="(classification, classIndex) in $store.state.mattersList.classifications" :key="classIndex"
+				class="classification">
+				<n-collapse>
+					<n-collapse-item :title="classification.label" :name="classIndex">
+						<!-- 代办事项相关 -->
+					</n-collapse-item>
+					<!-- 用于修改分类的内容 -->
+					<div class="classEditBtns">
+						<n-button type="info" style="margin-right: 20px;" @click="showCreateMatterForm(classIndex)">+
+							添加事项
+						</n-button>
+						<n-button type="warning" style="margin-right: 20px;" @click="showEditClassForm(classIndex)">编辑
+						</n-button>
+						<n-button type="error" @click="removeClass(classIndex)">删除</n-button>
+					</div>
+				</n-collapse>
+			</n-card>
+			<n-card title="创建新的分类" style="margin-top: 30px;">
+				<template #header-extra>
+					<n-button circle style="font-size: 1.5rem;" @click="showClassForm()">+</n-button>
+				</template>
+			</n-card>
+		</n-card>
+	</div>
 </transition>
-
 ```
 
 
 
-### 6.6 展示代办事项列表
+### 6.6 展示代办事项列表 (版本：0.9)
 
-我们需要用到 naive-ui 提供的 Collapse 折叠面板组件
+#### 6.6.1 Collapse 折叠面板组件
 
 ```html
 <!-- 展示待办事项列表 -->
 <transition name="Slide-left">
-	<n-card v-if="$store.state.mattersList.classifications.length !== 0">
-		<n-card v-for="(classification, classIndex) in $store.state.mattersList.classifications" :key="classIndex"
-			class="classification">
-			<n-collapse>
-				<n-collapse-item :title="classification.label" :name="classIndex + 1">
-					<n-collapse>
-						<n-collapse-item></n-collapse-item>
-					</n-collapse>
-				</n-collapse-item>
-				<!-- 用于修改分类的内容 -->
-				<div class="classEditBtns">
-					<n-button type="warning" style="margin-right: 20px;" @click="showEditClassForm(classIndex)">编辑
-					</n-button>
-					<n-button type="error" @click="removeClass(classIndex)">删除</n-button>
-				</div>
-			</n-collapse>
+	<div v-if="$store.state.mattersList.classifications.length !== 0">
+		<n-card>
+			<n-card v-for="(classification, classIndex) in $store.state.mattersList.classifications" :key="classIndex"
+				class="classification">
+				<n-collapse>
+					<n-collapse-item :title="classification.label" :name="classIndex">
+						<!-- 代办事项相关 -->
+					</n-collapse-item>
+					<!-- 用于修改分类的内容 -->
+					<div class="classEditBtns">
+						<n-button type="info" style="margin-right: 20px;" @click="showCreateMatterForm(classIndex)">+
+							添加事项
+						</n-button>
+						<n-button type="warning" style="margin-right: 20px;" @click="showEditClassForm(classIndex)">编辑
+						</n-button>
+						<n-button type="error" @click="removeClass(classIndex)">删除</n-button>
+					</div>
+				</n-collapse>
+			</n-card>
+			<n-card title="创建新的分类" style="margin-top: 30px;">
+				<template #header-extra>
+					<n-button circle style="font-size: 1.5rem;" @click="showClassForm()">+</n-button>
+				</template>
+			</n-card>
 		</n-card>
-	</n-card>
+	</div>
+    
+    <!-- 省略 -->
 </transition>
 
-<!-- 编辑分类名表单 -->
+<!-- 编辑分类名 -->
 <transition name="Slide-bottom">
 	<div id="editClassForm" v-if="isEditClass">
 		<n-card title="修改分类名">
@@ -688,13 +827,9 @@ pushClass(){
 </transition>
 ```
 
-两个按钮绑定的事件：
+#### 6.6.2 按钮绑定的事件
 
 ```javascript
-// 移除分类
-removeClass(index) {
-	this.$store.commit('removeClassification', index)
-},
 // 修改分类
 showEditClassForm(index) {
 	this.editClassForm.index = index
@@ -702,9 +837,9 @@ showEditClassForm(index) {
 	this.isShadow = !this.isShadow
 	this.isEditClass = !this.isEditClass
 },
-editClass() {
     // 实际上写到这里想起，在vuex中，mutations中的方法，是不能传递两个以上的参数的
     // 知识点不牢固……回去重新修改mutations中的方法
+editClass() {
 	this.$store.commit('editClassification', this.editClassForm)
 	this.editClassForm = {
 		index: -1,
@@ -712,12 +847,16 @@ editClass() {
 	}
 	this.isShadow = !this.isShadow
 	this.isEditClass = !this.isEditClass
-}
+	this.saveLocal()
+},
+
 ```
 
 
 
-### 6.7 添加事项
+### 6.7 添加事项 (版本：0.9)
+
+#### 6.7.1 按钮与表单
 
 在分类上添加新的按钮，添加事项
 
@@ -740,9 +879,10 @@ editClass() {
 			</template>
 			<n-form :model="createMatterForm">
 				<n-form-item label="事项名" show-require-mark>
-					<n-input v-model:value="createMatterForm.label" placeholder="请输入事项名" maxlength="20" show-count
-						clearable></n-input>
+					<n-input v-model:value="createMatterForm.label" placeholder="请输入事项名——比如,我想吃白切鸡？" maxlength="20"
+						show-count clearable></n-input>
 				</n-form-item>
+                 <!-- 使用栅格系统 -->
 				<n-grid x-gap="12" :cols="2">
 					<n-grid-item>
 						<n-form-item label="优先级">
@@ -757,8 +897,8 @@ editClass() {
 					</n-grid-item>
 				</n-grid>
 				<n-form-item label="描述">
-					<n-input type="textarea" maxlength="100" show-count v-model:value="createMatterForm.describe">
-					</n-input>
+					<n-input type="textarea" maxlength="100" show-count v-model:value="createMatterForm.describe"
+						placeholder="不妨描述一下事项？当然,在这里不写任何东西也不会有任何影响,实际上,烤全鸡也不错"></n-input>
 				</n-form-item>
 				<n-form-item>
 					<n-button style="margin-left: auto;" @click="pushMatter()"
@@ -770,7 +910,7 @@ editClass() {
 </transition>
 ```
 
-数据：
+#### 6.7.2 数据
 
 我们需要获得当天的时间，因此在页面加载的时候，通过created钩子，获取当天时间
 
@@ -792,23 +932,30 @@ createMatterForm: {
 }
 ```
 
-按钮绑定的事件：
+#### 6.7.3按钮绑定的事件：
 
 ```javascript
-showCreateMatterForm(index) {
+// 添加事项
+	showCreateMatterForm(index) {
+         // 显示遮罩层和表单
 		this.isShadow = !this.isShadow
 		this.isCreateMatter = !this.isCreateMatter
+         // 同时获取所处分类的索引值
 		this.createMatterForm.classIndex = index
 	},
 	pushMatter() {
-		let createTime = new Date()
+		let createTime = new Date().setHours(0, 0, 0, 0)
 		let cMF = this.createMatterForm
-		let matter = new Matter(cMF.classIndex, cMF.label, cMF.describe, createTime, cMF.completion, cMF
-			.priority)
+         // 实例化对象
+		let matter = new Matter(cMF.classIndex, cMF.label, cMF.describe, createTime, cMF.completionTime,
+			cMF.priority)
+         // 修改数据
 		this.$store.commit('pushMatter', matter)
+         // 遮罩层和表单关闭
 		this.isShadow = !this.isShadow
 		this.isCreateMatter = !this.isCreateMatter
-		this.createClassForm = {
+         // 初始化
+		this.createMatterForm = {
 			classIndex: -1,
 			label: '',
 			describe: '',
@@ -816,12 +963,11 @@ showCreateMatterForm(index) {
 			priority: 0
 		}
 	}
-
 ```
 
 
 
-### 6.8 展示事项
+### 6.8 展示事项 (版本：0.9)
 
 在分类的基础上，通过v-for循环遍历classifications中的matters，从而获取所有的待办事项，并且进行展示
 
@@ -829,25 +975,31 @@ showCreateMatterForm(index) {
 <n-collapse-item :title="classification.label" :name="classIndex">
 	<!-- 代办事项相关 -->
 	<n-card v-for="(matter, matterIndex) in classification.matters" :key="matterIndex" class="matter"
-		:class="{compMatter:matter.completion}">
-		<n-collapse>
-			<n-collapse-item :title="matter.label" :name="matterIndex">
-				<!-- 代办子事项相关 -->
-			</n-collapse-item>
-			<div class="matterCompSwitch">
-				<n-switch :default-value="matter.completion" @update:value="matterComplet(matter.classIndex, matterIndex)"
+		:class="{compMatter:matter.completion}" :title="matter.label">
+		<!-- 待办事项操作相关 -->
+		<template #header-extra>
+			<div style="margin-right: 20px">
+				<n-switch :default-value="matter.completion" @update:value="matterComplet(classIndex, matterIndex)"
 					size="small" />
 			</div>
-			<div class="matterPr">
-				<n-rate size="small" style="margin-right: 200px;" :value="matter.priority" />
+			<div style="margin-right: 20px">
+				<n-rate size="small" :value="matter.priority" />
 			</div>
-			<div class="matterEditBtns">
-				<n-button type="info" style="margin-right: 20px;">+ 添加子事项</n-button>
+			<div>
+				<n-button type="info" style="margin-right: 20px;"
+					@click="showCreateMatterSonForm(classIndex, matterIndex)">+ 添加子事项
+				</n-button>
 				<n-button type="warning" style="margin-right: 20px;" @click="showEditMatter(matterIndex,matter)">编辑
 				</n-button>
 				<n-button type="error" @click="removeMatter(classIndex, matterIndex)">删除
 				</n-button>
 			</div>
+		</template>
+		<span v-if="matter.describe !== '' ">描述: {{matter.describe}}</span>
+		<n-collapse>
+			<n-collapse-item title="查看子事项" :name="matterIndex" v-if="matter.matterSons.length !== 0">
+				<!-- 代办子事项相关 -->
+			</n-collapse-item>
 		</n-collapse>
 	</n-card>
 	<!-- 代办事项结束 -->
@@ -1006,7 +1158,7 @@ showCreateMatterSonForm(classIndex, matterIndex) {
 
 
 
-### 6.10 本地缓存
+### 6.10 本地缓存 (版本：0.9)
 
 ```javascript
 // 本地缓存
@@ -1033,5 +1185,183 @@ if (obj !== null) {
 
 
 
-### 6.11 布局调整、内容细化
+### 6.11 布局调整、内容细化 (版本：0.9)
 
+#### 6.11.1过渡动画
+
+```less
+// 动画
+
+// 淡入淡出
+.fade-display-enter-active {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.fade-display-enter-to {
+  opacity: 1;
+}
+
+.fade-display-leave-active {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.fade-display-leave-to {
+  opacity: 0;
+}
+
+// 从下往上滑入、上往下滑出
+.Slide-bottom-enter-active {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+
+.Slide-bottom-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Slide-bottom-leave-active {
+  transition: all 1s;
+}
+
+.Slide-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+// 从左往右滑入、从右往左滑出
+.Slide-left-enter-active {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 1s;
+}
+
+.Slide-left-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.Slide-left-leave-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.Slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-80px);
+}
+```
+
+#### 6.11.2时钟组件
+
+```vue
+<template>
+	<div class="clock">
+		<transition name="clock-open">
+			<div v-if="timeMessage">
+				<n-card>
+					<n-gradient-text size="22" type="danger">已经{{time.getHours()}}点了哦</n-gradient-text>
+				</n-card>
+			</div>
+		</transition>
+		<transition name="clock-open" >
+			<div v-if="isOpenClock">
+				<n-card title="我的天啊,你都看看几点了" closable @close="openClock()"
+					:segmented="{content: 'hard'}">
+					<div style=" text-align: center; font-size: 16px;">
+						<n-gradient-text :size="24" type="success"><n-time :time="time" type="datetime " format="yyyy-MM-dd HH:mm:ss" /></n-gradient-text>
+					</div>
+				</n-card>
+			</div>
+		</transition>
+		<n-button text @click="openClock()">
+			<n-gradient-text :size="16" type="success"><n-time :time="time" type="datetime " format="yyyy-MM-dd HH:mm:ss" /></n-gradient-text>
+		</n-button>
+	</div>
+</template>
+
+<script>
+	import '../assets/css/clock.css'
+	import {
+		NCard,
+		NButton,
+		NTime,
+		NGradientText
+	} from 'naive-ui'
+	export default {
+		name: 'clock',
+		components: {
+			NCard,
+			NButton,
+			NTime,
+			NGradientText
+		},
+		data() {
+			return {
+				time: '',
+				isOpenClock: false,
+				timeMessage: false,
+			}
+		},
+		methods: {
+			openClock() {
+				this.isOpenClock = !this.isOpenClock
+			}
+		},
+		created() {
+			this.time = new Date()
+			setInterval(() => {
+				this.time = new Date()
+				if(this.time.getMinutes() === 0 && this.time.getSeconds() === 0){
+					this.timeMessage = true
+					setTimeout(() => {
+						this.timeMessage = false
+					},5000)
+				}
+			}, 500)
+		}
+	}
+</script>
+```
+
+```less
+.clock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+// 时钟打开
+.clock-open-enter-active {
+  opacity: 0;
+  transform: translateY(-300px);
+  transition: all 1s;
+}
+
+.clock-open-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clock-open-leave-active {
+  transition: all 1s;
+}
+
+.clock-open-leave-to {
+  opacity: 0;
+  transform: translateY(-300px);
+}
+```
+
+### 6.12 项目感想
+
+这里开始不正经了
+
+- 我原本是想着画那个么线框图之类的，但实际上我发现是我天真了……虽然有一定的美术基础，但是就那么几十分钟画的玩意加上又不是学设计的，线框图基本上就没有好好遵守，因为画的太差了……
+  - 所以导致移动端适配不是第一时间就进行开发
+- 真的！一定要好好思考数据到底是怎么一个结构……
+- 关于naive-ui ：我对这个框架还是比较看好，虽然部分内容不太好用，但是整体来说美观且复用性良好，而且，官方的文档写的十分的有趣。
