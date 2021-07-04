@@ -222,7 +222,7 @@ sidebar: auto
 
 ## 5.页面设计
 
-<img :src="$withBase('/assets/img/羽翼文件中心/出版线框图.jpg')" alt="img">
+<img :src="$withBase('/assets/img/羽翼文件中心/初版线框图.jpg')" alt="img">
 
 ## 6.编程实现与页面内容展示
 
