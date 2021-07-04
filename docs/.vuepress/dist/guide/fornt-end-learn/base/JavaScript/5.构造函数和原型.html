@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5.构造函数和原型 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.544f910a.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.0bd3fd92.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/20.79e53994.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.28f945c5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.1831e368.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.0c449402.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.de1e870d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.279e995d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.4798b077.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.34d1fa21.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.16556498.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.3788fd28.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.08a28be5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.b153bb5d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.06630ec8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.c520d25b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.efd0b95a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.ad60a5b8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.65dfe510.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.f37cf0f0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.aaeb4f45.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.f98c66bf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.45bdccd0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.f9ffdc34.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.758f1e2e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.3849aca7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.c12df822.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.20ef73f1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.bdadbab0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.6c443acf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.17915bd9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.0cb1ad8e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.ed04fd50.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.1560628e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.861601b7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.16a0425a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.14d6a710.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.245e0d64.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.e7d4145e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.5317e94f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.075a29f6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.32c482de.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.9628803f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.d775a69a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.d6cb1dc3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.9c4a8579.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.2eac205e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.098e2210.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.8815e6cd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.b0e94516.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.89661828.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.335f4bfb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.3ecfbf01.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.034c3f51.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.0ac153ba.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.de1c8ff2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/63.3215b189.js"><link rel="prefetch" href="/Eve-Wings/assets/js/64.50517630.js"><link rel="prefetch" href="/Eve-Wings/assets/js/65.066637fe.js"><link rel="prefetch" href="/Eve-Wings/assets/js/66.820eca38.js"><link rel="prefetch" href="/Eve-Wings/assets/js/67.894336f3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/68.e69ccf2b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/69.071b2b5a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.f1b0a2b8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/70.000f4fc2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/71.f5683b4b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.1f4a8fcf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.89e53503.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.544f910a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" aria-current="page" class="sidebar-link">学习资料-JavaScript</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/1.面向对象编程介绍.html" class="sidebar-link">1.面向对象编程介绍</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/2.ES6中的类和对象.html" class="sidebar-link">2.ES6中的类和对象</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/3.类的继承.html" class="sidebar-link">3.类的继承</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html" class="sidebar-link">4.ES6中类和对象注意点</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html" class="active sidebar-link">5.构造函数和原型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_1-概述" class="sidebar-link">1 .概述</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_2-构造函数" class="sidebar-link">2.构造函数</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_3-构造函数的问题" class="sidebar-link">3.构造函数的问题</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_4-构造函数原型-prototype" class="sidebar-link">4.构造函数原型 prototype</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_5-对象原型-proto" class="sidebar-link">5.对象原型 __proto__</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_6-constructor构造函数" class="sidebar-link">6.constructor构造函数</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_7-构造函数、实例、原型对象三者之间的关系" class="sidebar-link">7.构造函数、实例、原型对象三者之间的关系</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_8-原型链" class="sidebar-link">8.原型链</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_9-javascript-的成员查找机制" class="sidebar-link">9.JavaScript 的成员查找机制</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_10-原型对象this指向" class="sidebar-link">10.原型对象this指向</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html#_11-扩展内置对象" class="sidebar-link">11.扩展内置对象</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_5-构造函数和原型"><a href="#_5-构造函数和原型" class="header-anchor">#</a> 5.构造函数和原型</h1> <h2 id="_1-概述"><a href="#_1-概述" class="header-anchor">#</a> 1 .概述</h2> <p>在典型的OOP语言中(如java)，都存在类的概念，类就是对象的模板，对象就是实例，但是在ES6之前，JS中并没有引入类的概念</p> <p>ES6，全称ESMAScript 6.0</p> <p>在ES6之前，对象不是基于类创建的，而是用一种成为<strong>构造函数</strong>的特殊函数来定义对象和它的特征。</p> <p>创建对象可以通过以下三种方式：</p> <ol><li>对象字面量</li> <li>new Object()</li> <li>自定义构造函数</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 1. 使用 new Object()</span>
+<span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 2. 利用 对象字面量创建对象</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3.利用构造函数创建对象</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">drink</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'喝水'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> zhangsan <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'zhangsan'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_2-构造函数"><a href="#_2-构造函数" class="header-anchor">#</a> 2.构造函数</h2> <p>构造函数是一种特殊的函数，主<strong>要用来初始化对象</strong>，即为对象成员变量赋初始值，它总与new一起使用。</p> <p>我们可以把对象中一些<strong>公共的属性和方法</strong>抽取出来，然后封装到这个函数里面。</p> <p>在JS中，使用构造函数时需要注意以下两点：</p> <ol><li>构造函数用于创建某一类对象，<strong>其首字母要大写</strong></li> <li><strong>构造函数要和new一起使用</strong></li></ol> <p>new在执行时做的四件事情：</p> <ol><li>在内存中<strong>创建一个新的空对象</strong></li> <li>让<strong>this指向</strong>这个新的对象</li> <li>执行构造函数里面的代码，给这个新对象<strong>添加属性和方法</strong></li> <li><strong>返回这个新对象</strong>(所以构造函数里不需要return)</li></ol> <p>JavaScript 的构造函数中可以添加一些成员，可以在构造函数本身上添加，也可以在构造函数内部的this上添加。</p> <p>通过这两种方式添加的成员，就分别称为<strong>静态成员</strong>和<strong>实例成员</strong></p> <ul><li>静态成员：在构造函数上添加的成员称为<strong>静态成员，只能由构造函数本身访问</strong></li> <li>实例成员：在构造函数内部创建的对象成员成为<strong>实例成员，只能由实例化的对象来访问</strong>(就是通过this添加的成员)</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+    <span class="token comment">// 这两个都是实例成员</span>
+    <span class="token comment">// 只能通过实例化的对象来访问</span>
+<span class="token punctuation">}</span>
+Person<span class="token punctuation">.</span>sex <span class="token operator">=</span> <span class="token string">'男'</span>
+<span class="token comment">// 这个sex就是静态成员，只能通过构造函数访问</span>
+</code></pre></div><h2 id="_3-构造函数的问题"><a href="#_3-构造函数的问题" class="header-anchor">#</a> 3.构造函数的问题</h2> <p>构造函数方法很好用，但是存在<strong>浪费内存的问题</strong></p> <p>以上文的Person() 构造函数为例</p> <p>实例化的对象中，含有 drink 方法，方法属于复杂数据类型，会额外开辟内存空间用于存储</p> <p>而当现在实例化了 zhangsan 对象时，开辟了内存空间用于存储 drink 方法</p> <p>但现在再实例化 luoxiang 对象时，又会再开辟一个内存空间存储 luoxiang对象多的drink方法</p> <p>两个drink方法完全一致，但是却占了两个内存空间，且</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>luoxiang<span class="token punctuation">.</span>drink <span class="token operator">===</span> zhangsan<span class="token punctuation">.</span>drink	<span class="token comment">// false</span>
+</code></pre></div><p>这河里么.jpg</p> <h2 id="_4-构造函数原型-prototype"><a href="#_4-构造函数原型-prototype" class="header-anchor">#</a> 4.构造函数原型 prototype</h2> <p>原型是什么？——一个对象，称prototype为<strong>原型对象</strong></p> <p>原型的作用是什么？——共享方法</p> <p>构造函数<strong>通过原型分配</strong>的函数 是所有对象所<strong>共享的</strong></p> <p>JavaScript规定，每一个构造函数都有一个<strong>prototype属性</strong>，指向另一个对象。</p> <p>注意这个prototype 就是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span>
+</code></pre></div><p>可以把不变的方法，<strong>直接定义在prototype对象上</strong>，这样所有对象的实例就可以<strong>共享这些方法</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span> <span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age
+<span class="token punctuation">}</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">drink</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'喝水'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> zhangsan <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+zhangsan<span class="token punctuation">.</span><span class="token function">drink</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> luoxiang <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'罗翔'</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span>
+luoxiang<span class="token punctuation">.</span><span class="token function">drink</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>drink <span class="token operator">===</span> luoxiang<span class="token punctuation">.</span>drink<span class="token punctuation">)</span>	<span class="token comment">//true</span>
+</code></pre></div><p>一般情况下，公共属性定义到构造函数里面，公共方法定义在原型对象上</p> <h2 id="_5-对象原型-proto"><a href="#_5-对象原型-proto" class="header-anchor">#</a> 5.对象原型 __proto__</h2> <p>对象都会有一个属性__proto__ <strong>指向构造函数的prototype原型对象</strong>，之所以对象可以使用构造函数prototype原型对象的属性和方法，就是因为对象有__proto__原型的存在</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+</code></pre></div><p>方法的查找规则：</p> <ol><li>先在对象本事查找是否有该方法</li> <li>如果有，则调用</li> <li>如果没有，则顺着__proto__到构造函数原型对象prototype上查找</li></ol> <h2 id="_6-constructor构造函数"><a href="#_6-constructor构造函数" class="header-anchor">#</a> 6.constructor构造函数</h2> <p>对象原型(__proto__)和构造函数(prototype)原型对象中，都有一个 constructor 属性，constructor，称为构造函数，因为它指回<strong>构造函数本身</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>__proto__ <span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">===</span> zhangsan<span class="token punctuation">.</span>__proto__ <span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>	<span class="token comment">// true</span>
+</code></pre></div><p>constructor <strong>主要用于记录该对象引用于哪个构造函数</strong>，它可以让原型对象重新指向原来的构造函数</p> <p>很多情况下，需要手动利用constructor，重新指挥原来的构造函数</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">drink</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'喝水'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">eat</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'干饭'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 实例化省略</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>__proto__ <span class="token punctuation">.</span>constructor<span class="token punctuation">)</span>
+<span class="token comment">// 指回的不是Person了</span>
+<span class="token comment">// 这是因为通过对象将方法赋值到原型时，使用的是 = ，将原型覆盖了</span>
+<span class="token comment">// 所以需要重新指回 构造函数</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+    constructor<span class="token operator">:</span> Person<span class="token punctuation">,</span>
+    <span class="token function-variable function">drink</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'喝水'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">eat</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'干饭'</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_7-构造函数、实例、原型对象三者之间的关系"><a href="#_7-构造函数、实例、原型对象三者之间的关系" class="header-anchor">#</a> 7.构造函数、实例、原型对象三者之间的关系</h2> <div class="language- extra-class"><pre class="language-text"><code>Person.prototype --&gt; Person.prototype (原型对象)
+Person(构造函数) &lt;-- Person.prototype.constructor
+
+new Person() --&gt; 实例对象
+实例对象.__proto__ --&gt; Person.prototype
+实例对象.__proto__.constructor --&gt; Person
+== Person.prototype.constructor --&gt; Person
+</code></pre></div><h2 id="_8-原型链"><a href="#_8-原型链" class="header-anchor">#</a> 8.原型链</h2> <p>既然 prototype 是个对象……那……prototype里……会不会有 __proto__属性？</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+<span class="token comment">// true</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token class-name">__proto__</span><span class="token punctuation">.</span>constructor <span class="token operator">===</span> Object<span class="token punctuation">)</span>
+<span class="token comment">// true</span>
+<span class="token comment">// 既然Object.prototype也是对象……</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>__proto__<span class="token punctuation">)</span>
+<span class="token comment">// null</span>
+</code></pre></div><div class="language- extra-class"><pre><code>实例对象 --&gt; 原型对象 --&gt; 原型对象的原型对象 --&gt; ... --&gt; Object.prototype --&gt; null
+</code></pre></div><p>形成了一个链式结构——原型链</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>zhangsan<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype
+zhangsan<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype
+zhangsan<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__<span class="token punctuation">.</span>__proto__ <span class="token operator">===</span> <span class="token keyword">null</span>
+</code></pre></div><h2 id="_9-javascript-的成员查找机制"><a href="#_9-javascript-的成员查找机制" class="header-anchor">#</a> 9.JavaScript 的成员查找机制</h2> <ol><li>当访问一个对象的属性(包括方法)时，首先查找这个<strong>对象自身</strong>有没有该属性</li> <li>如果没有，则查找其原型(也就是__proto__ 指向的 <strong>prototype 原型对象</strong>)</li> <li>如果还是没有，就查找原型对象的原型(<strong>Object的原型对象</strong>)</li> <li>以此类推，一直查找到Object为止(因为Object.prototype.__proto__ === null)</li> <li>__proto__ 对象原型的意义在于为对象成员查找机制提供一个方向</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>zhangsan<span class="token punctuation">.</span>sex <span class="token operator">=</span> <span class="token string">'男'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>sex<span class="token punctuation">)</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>subject <span class="token operator">=</span> <span class="token string">'犯罪心理学'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>subject<span class="token punctuation">)</span>
+<span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>crime <span class="token operator">=</span> <span class="token string">'流氓罪'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>crime<span class="token punctuation">)</span>
+zhangsan<span class="token punctuation">.</span>teacher <span class="token operator">=</span> <span class="token string">'罗翔'</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>teacher <span class="token operator">=</span> <span class="token string">'李四'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zhangsan<span class="token punctuation">.</span>teacher<span class="token punctuation">)</span>
+<span class="token comment">// 就近原则</span>
+</code></pre></div><h2 id="_10-原型对象this指向"><a href="#_10-原型对象this指向" class="header-anchor">#</a> 10.原型对象this指向</h2> <ol><li>在构造函数中，this指向的是实例对象</li> <li>原型对象函数里的this，指向的是实例对象</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> that<span class="token punctuation">;</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">drink</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'喝水'</span><span class="token punctuation">)</span>
+	that <span class="token operator">=</span> <span class="token keyword">this</span>
+<span class="token punctuation">}</span>
+zhangsan<span class="token punctuation">.</span><span class="token function">drink</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>that <span class="token operator">===</span> zhangsan<span class="token punctuation">)</span>
+<span class="token comment">// true</span>
+</code></pre></div><h2 id="_11-扩展内置对象"><a href="#_11-扩展内置对象" class="header-anchor">#</a> 11.扩展内置对象</h2> <p>可以通过原型对象，对原来的内置对象进行扩展自定义的方法。</p> <p>比如，给数组添加求和的功能。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">num</span> <span class="token operator">=&gt;</span> sum<span class="token operator">+=</span>num<span class="token punctuation">)</span>
+    <span class="token comment">// return this.reduce((sum, n) =&gt; sum+n, 0)</span>
+    <span class="token keyword">return</span> sum
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> arr2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr2<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">7/4/2021, 12:56:37 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html" class="prev">
+        4.ES6中类和对象注意点
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.0bd3fd92.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/20.79e53994.js" defer></script>
+  </body>
+</html>
