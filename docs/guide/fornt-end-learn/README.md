@@ -31,6 +31,7 @@ sidebar: auto
 - :link: [2.ES6中的类和对象](/guide/front-end-learn/base/JavaScript/2.ES6中的类和对象.html)
 - :link: [3.类的继承](/guide/fornt-end-learn/base/JavaScript/3.类的继承.html)
 - :link: [4.ES6中类和对象注意点](/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html)
+- :link: [5.构造函数和原型](/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html)
 
 ## 提升
 

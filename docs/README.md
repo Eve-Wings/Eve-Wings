@@ -28,11 +28,23 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 个人作品——程序
 
+发布时间: 2021/06/30
+
 更新时间: 2021/07/03
 
 :::
 
 ## 最新更新
+
+::: tip New
+
+### [5.构造函数和原型](guide/fornt-end-learn/base/JavaScript/5.构造函数和原型)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/04
+
+:::
 
 ::: tip New
 
@@ -54,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [2.ES6中的类和对象](guide/fornt-end-learn/base/JavaScript/2.ES6中的类和对象)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/01
-
-:::
 
 
 

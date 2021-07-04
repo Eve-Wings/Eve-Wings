@@ -5,6 +5,12 @@ sidebar: auto
 
 ## 七月(4)
 
+### 2021/07/04
+
+[5.构造函数和原型](fornt-end-learn/base/JavaScript/5.构造函数和原型)
+
+前端学习笔记——JavaScript
+
 ### 2021/07/01
 
 [4.ES6中类和对象注意点](fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点)

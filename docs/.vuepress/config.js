@@ -171,7 +171,8 @@ module.exports = {
 				'1.面向对象编程介绍',
 				'2.ES6中的类和对象',
 				'3.类的继承',
-				'4.ES6中类和对象注意点'
+				'4.ES6中类和对象注意点',
+				'5.构造函数和原型'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',

@@ -85,6 +85,7 @@ title: 关于我
   - JavaScript基础  熟练
   - JQuery  熟悉
   - Bootstrap  熟练
+  - less 了解
   - Vue  了解
 
 
@@ -98,7 +99,7 @@ title: 关于我
 3. JavaScript基础:white_check_mark:
 4. JQuery:white_check_mark:
 5. Bootstrap:white_check_mark:
-6. Less\Sass​​
+6. Less\Sass​​:beginner:
 7. Vue、Vuex、Vue-router:beginner:
 8. Element-ui:beginner:
 9. axios:beginner:
