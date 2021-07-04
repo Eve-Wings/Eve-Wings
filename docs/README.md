@@ -38,6 +38,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [羽翼文件中心](guide/personal-works/程序/羽翼文件中心/)
+
+个人作品——程序
+
+更新时间: 2021/07/04
+
+:::
+
+::: tip New
+
 ### [5.构造函数和原型](guide/fornt-end-learn/base/JavaScript/5.构造函数和原型)
 
 前端学习笔记——JavaScript
@@ -56,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [3.类的继承](guide/fornt-end-learn/base/JavaScript/3.类的继承)
-
-前端学习笔记——Javascript
-
-更新时间: 2021/07/01
-
-:::
 
 
 
