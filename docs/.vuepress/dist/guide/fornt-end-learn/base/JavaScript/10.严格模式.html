@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10.严格模式 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.ffa97ae0.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/17.f61527c5.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.019cc124.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.e1cf09f6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.e38a2334.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.6affa5d9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.69d61623.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.8e9934c4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.8a56f0a4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.25c4fea8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.e0ae1a74.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.a34e1959.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.99990cd3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.23c58114.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.962089c1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.f33e214a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.766ecc90.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.36d8f896.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.1c9c92e5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.79c80c62.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.177cabdf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.16ba7c4c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.15a577ac.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.6b24f926.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.29193c11.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.5938a839.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.395bd1b5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.2ccb1bc9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.21577fb3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.9bf41590.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.4773ae68.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.99a934b7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.fe0041f6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.c4381712.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.9638c20e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.4060762f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.d578125b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.0902e8c9.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.23c1128d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.0661cb1c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.c0b5d5a8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.50b9607b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.9a5ea958.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.bc75009c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.9d28e1c4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.4e59fa8c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.babef849.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.12947ffa.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.8c5de4da.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.5362f45a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.d94b8858.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.5701a353.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.c641e8e2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/63.80aba4ca.js"><link rel="prefetch" href="/Eve-Wings/assets/js/64.6ebc5317.js"><link rel="prefetch" href="/Eve-Wings/assets/js/65.d22911f5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/66.8031812e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/67.ecca4063.js"><link rel="prefetch" href="/Eve-Wings/assets/js/68.2960b21e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/69.2dc3a74d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.f59735d6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/70.3a71565f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/71.24b1ce87.js"><link rel="prefetch" href="/Eve-Wings/assets/js/72.28690243.js"><link rel="prefetch" href="/Eve-Wings/assets/js/73.082a7a96.js"><link rel="prefetch" href="/Eve-Wings/assets/js/74.50127c82.js"><link rel="prefetch" href="/Eve-Wings/assets/js/75.72329486.js"><link rel="prefetch" href="/Eve-Wings/assets/js/76.250128fa.js"><link rel="prefetch" href="/Eve-Wings/assets/js/77.ea538e97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/78.24ab5030.js"><link rel="prefetch" href="/Eve-Wings/assets/js/79.131981ba.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.ed55dd70.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.303be145.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" aria-current="page" class="sidebar-link">学习资料-JavaScript</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/1.面向对象编程介绍.html" class="sidebar-link">1.面向对象编程介绍</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/2.ES6中的类和对象.html" class="sidebar-link">2.ES6中的类和对象</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/3.类的继承.html" class="sidebar-link">3.类的继承</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html" class="sidebar-link">4.ES6中类和对象注意点</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html" class="sidebar-link">5.构造函数和原型</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承.html" class="sidebar-link">6.构造函数与原型继承</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html" class="sidebar-link">7.ES5新增方法</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html" class="sidebar-link">8.函数的定义和调用</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/9.this.html" class="sidebar-link">9.this</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/10.严格模式.html" class="active sidebar-link">10.严格模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/10.严格模式.html#_1-严格模式的概念" class="sidebar-link">1.严格模式的概念</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/10.严格模式.html#_2-开启严格模式" class="sidebar-link">2.开启严格模式</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/10.严格模式.html#_3-严格模式中的变化" class="sidebar-link">3.严格模式中的变化</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_10-严格模式"><a href="#_10-严格模式" class="header-anchor">#</a> 10.严格模式</h1> <h2 id="_1-严格模式的概念"><a href="#_1-严格模式的概念" class="header-anchor">#</a> 1.严格模式的概念</h2> <p>JavaScript 除了正常模式外，提供了严格模式(strict mode)。</p> <p>ES5的严格模式是采用具有限制性 JavaScript变体的一种方式，即在严格的条件下运行JS代码</p> <p>严格模式在IE10以上版本的浏览器中才会被支持，旧版本浏览器中会被忽略</p> <p>严格模式对正常的JavaScript语义做了一些更改：</p> <ol><li>消除了JavaScript语法的一些不合理、不严谨之处，减少了一些怪异行为</li> <li>消除代码运行的一些不安全之处，保证代码运行的安全</li> <li>提高编译器效率，增加运行速度</li> <li>禁用了ECMAScript的未来版本中可能会定义的一些语法，为未来新版本的JavaScript做好铺垫。比如：class，enum，export，extends，import，super不可以作为变量名</li></ol> <h2 id="_2-开启严格模式"><a href="#_2-开启严格模式" class="header-anchor">#</a> 2.开启严格模式</h2> <p>严格模式可以应用到整个脚本或个别函数之中，因此在使用时，可以将严格模式分为：</p> <ol><li>为脚本开启严格模式</li> <li>为函数开启严格模式</li></ol> <h3 id="_2-1-为脚本开启严格模式"><a href="#_2-1-为脚本开启严格模式" class="header-anchor">#</a> 2.1 为脚本开启严格模式</h3> <p>为整个脚本文件开启严格模式，需要在所有语句之前放一个特定语句 &quot;use strict &quot; ;</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token string">&quot;user strict&quot;</span> <span class="token punctuation">;</span>
+<span class="token comment">// 'user strict' ;</span>
+</code></pre></div><h3 id="_2-2-为函数开启严格模式"><a href="#_2-2-为函数开启严格模式" class="header-anchor">#</a> 2.2 为函数开启严格模式</h3> <p>要给某个函数开启严格模式，需要把 这句语句 放在函数体中所有语句之前</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token string">'user strict'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-严格模式中的变化"><a href="#_3-严格模式中的变化" class="header-anchor">#</a> 3.严格模式中的变化</h2> <h3 id="_3-1变量规定"><a href="#_3-1变量规定" class="header-anchor">#</a> 3.1变量规定</h3> <ol><li>在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，变量都必须先用var命令声明，然后再使用</li> <li>严禁删除已经声明过的变量，比如：delete x; 是错误的</li></ol> <h3 id="_3-2-this指向问题"><a href="#_3-2-this指向问题" class="header-anchor">#</a> 3.2 this指向问题</h3> <ol><li>在没有使用严格模式的情况下，全局作用域函数的this指向window；严格模式下的this指向是 undefined</li> <li>在正常模式下，不加new也可以调用构造函数，当作普通函数，this指向全局对象 ； 严格模式下this指向是undefined</li> <li>new 实例化的构造函数指向创建的对象实例</li> <li>定时器指向的还是window</li></ol> <h3 id="_3-3-函数变化"><a href="#_3-3-函数变化" class="header-anchor">#</a> 3.3 函数变化</h3> <ol><li>函数中不能有重名的参数(也就是说……我第一次知道正常模式下能重名)</li> <li>函数必须声明在顶层，新版本的JavaScript会引入“块级作用域”(ES6已引入)。为了与新版本接轨，不允许在非函数的代码块内声明函数</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">7/5/2021, 11:04:06 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/9.this.html" class="prev">
+        9.this
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.ffa97ae0.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/17.f61527c5.js" defer></script>
+  </body>
+</html>
