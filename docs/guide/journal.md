@@ -3,7 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(7)
+## 七月(8)
+
+### 2021/07/05
+
+[7.ES5新增方法](fornt-end-learn/base/JavaScript/7.ES5新增方法)
+
+前端学习笔记——JavaScript
 
 ### 2021/07/04
 
