@@ -174,7 +174,9 @@ module.exports = {
 				'4.ES6中类和对象注意点',
 				'5.构造函数和原型',
 				'6.构造函数与原型继承',
-				'7.ES5新增方法'
+				'7.ES5新增方法',
+				'8.函数的定义和调用',
+				'9.this'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',

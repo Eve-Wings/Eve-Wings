@@ -34,6 +34,8 @@ sidebar: auto
 - :link: [5.构造函数和原型](/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html)
 - :link: [6.构造函数与原型继承](/guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承.html)
 - :link: [7.ES5新增方法](/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html)
+- :link: [8.函数的定义和调用](/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html)
+- :link: [9.this](/guide/fornt-end-learn/base/JavaScript/9.this.html)
 
 ## 提升
 
