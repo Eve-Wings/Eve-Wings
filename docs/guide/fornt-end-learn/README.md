@@ -36,6 +36,7 @@ sidebar: auto
 - :link: [7.ES5新增方法](/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html)
 - :link: [8.函数的定义和调用](/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html)
 - :link: [9.this](/guide/fornt-end-learn/base/JavaScript/9.this.html)
+- :link: [10.严格模式](/guide/fornt-end-learn/base/JavaScript/10.严格模式.html)
 
 ## 提升
 

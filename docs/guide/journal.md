@@ -3,9 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(10)
+## 七月(11)
 
 ### 2021/07/05
+
+[10.严格模式](fornt-end-learn/base/JavaScript/10.严格模式)
+
+前端学习笔记——JavaScript
 
 [9.this](fornt-end-learn/base/JavaScript/9.this)
 

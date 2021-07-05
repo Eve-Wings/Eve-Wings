@@ -36,6 +36,17 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ## 最新更新
 
+
+::: tip New
+
+### [10.严格模式](guide/fornt-end-learn/base/JavaScript/10.严格模式)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/05
+
+:::
+
 ::: tip New
 
 ### [9.this](guide/fornt-end-learn/base/JavaScript/9.this)
@@ -49,16 +60,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 ::: tip New
 
 ### [8.函数的定义和调用](guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/05
-
-:::
-
-::: tip New
-
-### [7.ES5新增方法](guide/fornt-end-learn/base/JavaScript/7.ES5新增方法)
 
 前端学习笔记——JavaScript
 
