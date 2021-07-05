@@ -11,6 +11,10 @@ sidebar: auto
 
 个人作品——程序
 
+[6.构造函数与原型继承](fornt-end-learn/base/JavaScript/6.构造函数与原型继承)
+
+前端学习笔记——JavaScript
+
 [5.构造函数和原型](fornt-end-learn/base/JavaScript/5.构造函数和原型)
 
 前端学习笔记——JavaScript

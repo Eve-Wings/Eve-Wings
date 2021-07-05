@@ -32,6 +32,7 @@ sidebar: auto
 - :link: [3.类的继承](/guide/fornt-end-learn/base/JavaScript/3.类的继承.html)
 - :link: [4.ES6中类和对象注意点](/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html)
 - :link: [5.构造函数和原型](/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html)
+- :link: [6.构造函数与原型继承](/guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承.html)
 
 ## 提升
 

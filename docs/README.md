@@ -48,6 +48,14 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [6.构造函数与原型继承](guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/04
+
+::: tip New
+
 ### [5.构造函数和原型](guide/fornt-end-learn/base/JavaScript/5.构造函数和原型)
 
 前端学习笔记——JavaScript
@@ -55,17 +63,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 更新时间: 2021/07/04
 
 :::
-
-::: tip New
-
-### [4.ES6中类和对象注意点](guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/01
-
-:::
-
 
 
 
