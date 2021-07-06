@@ -36,6 +36,15 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ## 最新更新
 
+::: tip New
+
+### [面经——纷享销客](guide/informal-essay/见闻录/面经——纷享销客)
+
+日常随笔——见闻录
+
+更新时间: 2021/07/07
+
+:::
 
 ::: tip New
 
@@ -57,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [8.函数的定义和调用](guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/05
-
-:::
 
 
 
