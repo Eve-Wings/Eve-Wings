@@ -3,7 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(12)
+## 七月(13)
+
+### 2021/07/08
+
+[手写一个trim()方法](technical-docs/JavaScript/手写一个trim()方法)
+
+技术交流——JavaScript
 
 ### 2021/07/07
 

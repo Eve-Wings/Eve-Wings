@@ -38,6 +38,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [手写一个trim()方法](guide/technical-docs/JavaScript/手写一个trim()方法)
+
+技术交流——JavaScript
+
+更新时间: 2021/07/08
+
+:::
+
+::: tip New
+
 ### [面经——纷享销客](guide/informal-essay/见闻录/面经——纷享销客)
 
 日常随笔——见闻录
@@ -56,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [9.this](guide/fornt-end-learn/base/JavaScript/9.this)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/05
-
-:::
 
 
 

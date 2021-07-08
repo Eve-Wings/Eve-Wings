@@ -17,3 +17,5 @@ title: 技术交流——JavaScript
 ### [JavaScript作用域](JavaScript作用域.html)
 
 ### [闭包](闭包.html)
+
+### [手写一个trim()方法](手写一个trim()方法)

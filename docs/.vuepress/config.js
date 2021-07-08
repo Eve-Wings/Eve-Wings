@@ -228,7 +228,8 @@ module.exports = {
 				'ES6的继承',
 				'继承方式的区别',
 				'JavaScript作用域',
-				'闭包'
+				'闭包',
+				'手写一个trim()方法'
 			],
 			'/guide/technical-docs/JQuery/': [
 				''

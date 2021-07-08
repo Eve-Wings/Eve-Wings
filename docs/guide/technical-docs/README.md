@@ -18,6 +18,7 @@ sidebar: auto
 - :link: [继承方式的区别](JavaScript/继承方式的区别.html)
 - :link: [JavaScript作用域](JavaScript/JavaScript作用域.html)
 - :link: [闭包](JavaScript/闭包.html)
+- :link: [手写一个trim()方法](JavaScript/手写一个trim()方法.html)
 
 ### [JQuery](/guide/technical-docs/JQuery/)
 
