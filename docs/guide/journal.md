@@ -3,9 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(14)
+## 七月(15)
 
 ### 2021/07/08
+
+[12.闭包](fornt-end-learn/base/JavaScript/12.闭包)
+
+前端学习笔记——JavaScript
 
 [11.高阶函数](fornt-end-learn/base/JavaScript/11.高阶函数)
 

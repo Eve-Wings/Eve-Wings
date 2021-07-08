@@ -38,11 +38,21 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [12.闭包](guide/fornt-end-learn/base/JavaScript/12.闭包)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/08
+
+:::
+
+::: tip New
+
 ### [11.高阶函数](guide/fornt-end-learn/base/JavaScript/11.高阶函数)
 
 前端学习笔记——JavaScript
 
-更新时间: 2021/07/05
+更新时间: 2021/07/08
 
 :::
 
@@ -53,16 +63,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 技术交流——JavaScript
 
 更新时间: 2021/07/08
-
-:::
-
-::: tip New
-
-### [面经——纷享销客](guide/informal-essay/见闻录/面经——纷享销客)
-
-日常随笔——见闻录
-
-更新时间: 2021/07/07
 
 :::
 

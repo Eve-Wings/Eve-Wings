@@ -38,6 +38,7 @@ sidebar: auto
 - :link: [9.this](/guide/fornt-end-learn/base/JavaScript/9.this.html)
 - :link: [10.严格模式](/guide/fornt-end-learn/base/JavaScript/10.严格模式.html)
 - :link: [11.高阶函数](/guide/fornt-end-learn/base/JavaScript/11.高阶函数.html)
+- :link: [12.闭包](/guide/fornt-end-learn/base/JavaScript/12.闭包.html)
 
 ## 提升
 
