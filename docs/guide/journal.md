@@ -3,9 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(13)
+## 七月(14)
 
 ### 2021/07/08
+
+[11.高阶函数](fornt-end-learn/base/JavaScript/11.高阶函数)
+
+前端学习笔记——JavaScript
 
 [手写一个trim()方法](technical-docs/JavaScript/手写一个trim()方法)
 

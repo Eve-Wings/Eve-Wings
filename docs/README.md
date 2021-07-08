@@ -38,6 +38,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [11.高阶函数](guide/fornt-end-learn/base/JavaScript/11.高阶函数)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/05
+
+:::
+
+::: tip New
+
 ### [手写一个trim()方法](guide/technical-docs/JavaScript/手写一个trim()方法)
 
 技术交流——JavaScript
@@ -56,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [10.严格模式](guide/fornt-end-learn/base/JavaScript/10.严格模式)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/05
-
-:::
 
 
 

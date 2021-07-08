@@ -37,6 +37,7 @@ sidebar: auto
 - :link: [8.函数的定义和调用](/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html)
 - :link: [9.this](/guide/fornt-end-learn/base/JavaScript/9.this.html)
 - :link: [10.严格模式](/guide/fornt-end-learn/base/JavaScript/10.严格模式.html)
+- :link: [11.高阶函数](/guide/fornt-end-learn/base/JavaScript/11.高阶函数.html)
 
 ## 提升
 

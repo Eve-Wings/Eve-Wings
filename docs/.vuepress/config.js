@@ -177,7 +177,8 @@ module.exports = {
 				'7.ES5新增方法',
 				'8.函数的定义和调用',
 				'9.this',
-				'10.严格模式'
+				'10.严格模式',
+				'11.高阶函数'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',
