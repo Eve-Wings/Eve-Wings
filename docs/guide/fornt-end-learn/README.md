@@ -27,6 +27,8 @@ sidebar: auto
 
 ### [JavaScript](/guide/fornt-end-learn/base/JavaScript)
 
+#### JavaScript 高级
+
 - :link: [1.面向对象编程介绍](/guide/front-end-learn/base/JavaScript/1.面向对象编程介绍.html)
 - :link: [2.ES6中的类和对象](/guide/front-end-learn/base/JavaScript/2.ES6中的类和对象.html)
 - :link: [3.类的继承](/guide/fornt-end-learn/base/JavaScript/3.类的继承.html)
@@ -42,6 +44,12 @@ sidebar: auto
 - :link: [13.递归](/guide/fornt-end-learn/base/JavaScript/13.递归.html)
 - :link: [14.浅拷贝与深拷贝](/guide/fornt-end-learn/base/JavaScript/14.浅拷贝与深拷贝.html)
 - :link: [15.正则表达式](/guide/fornt-end-learn/base/JavaScript/15.正则表达式.html)
+
+#### ES6新特性
+
+- :link: [1.ES6简介](/guide/fornt-end-learn/base/JavaScript/1.ES6简介.html)
+- :link: [2.ES6变量声明](/guide/fornt-end-learn/base/JavaScript/2.ES6变量声明.html)
+
 
 ## 提升
 

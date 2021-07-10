@@ -38,7 +38,7 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [15.正则表达式](guide/fornt-end-learn/base/JavaScript/15.正则表达式)
+### [2.ES6变量声明](guide/fornt-end-learn/base/JavaScript/2.ES6变量声明)
 
 前端学习笔记——JavaScript
 
@@ -48,23 +48,24 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [14.浅拷贝与深拷贝](guide/fornt-end-learn/base/JavaScript/14.浅拷贝与深拷贝)
+### [1.ES6简介](guide/fornt-end-learn/base/JavaScript/1.ES6简介)
 
 前端学习笔记——JavaScript
 
-更新时间: 2021/07/09
+更新时间: 2021/07/10
 
 :::
 
 ::: tip New
 
-### [13.递归](guide/fornt-end-learn/base/JavaScript/13.递归)
+### [15.正则表达式](guide/fornt-end-learn/base/JavaScript/15.正则表达式)
 
 前端学习笔记——JavaScript
 
-更新时间: 2021/07/09
+更新时间: 2021/07/10
 
 :::
+
 
 
 

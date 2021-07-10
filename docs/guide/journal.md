@@ -3,9 +3,17 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(18)
+## 七月(20)
 
 ### 2021/07/10
+
+[2.ES6变量声明](fornt-end-learn/base/JavaScript/2.ES6变量声明)
+
+前端学习笔记——JavaScript
+
+[1.ES6简介](fornt-end-learn/base/JavaScript/1.ES6简介)
+
+前端学习笔记——JavaScript
 
 [15.正则表达式](fornt-end-learn/base/JavaScript/15.正则表达式)
 
