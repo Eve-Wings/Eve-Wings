@@ -38,33 +38,35 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [12.闭包](guide/fornt-end-learn/base/JavaScript/12.闭包)
+### [15.正则表达式](guide/fornt-end-learn/base/JavaScript/15.正则表达式)
 
 前端学习笔记——JavaScript
 
-更新时间: 2021/07/08
+更新时间: 2021/07/10
 
 :::
 
 ::: tip New
 
-### [11.高阶函数](guide/fornt-end-learn/base/JavaScript/11.高阶函数)
+### [14.浅拷贝与深拷贝](guide/fornt-end-learn/base/JavaScript/14.浅拷贝与深拷贝)
 
 前端学习笔记——JavaScript
 
-更新时间: 2021/07/08
+更新时间: 2021/07/09
 
 :::
 
 ::: tip New
 
-### [手写一个trim()方法](guide/technical-docs/JavaScript/手写一个trim()方法)
+### [13.递归](guide/fornt-end-learn/base/JavaScript/13.递归)
 
-技术交流——JavaScript
+前端学习笔记——JavaScript
 
-更新时间: 2021/07/08
+更新时间: 2021/07/09
 
 :::
+
+
 
 
 

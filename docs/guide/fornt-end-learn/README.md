@@ -39,6 +39,9 @@ sidebar: auto
 - :link: [10.严格模式](/guide/fornt-end-learn/base/JavaScript/10.严格模式.html)
 - :link: [11.高阶函数](/guide/fornt-end-learn/base/JavaScript/11.高阶函数.html)
 - :link: [12.闭包](/guide/fornt-end-learn/base/JavaScript/12.闭包.html)
+- :link: [13.递归](/guide/fornt-end-learn/base/JavaScript/13.递归.html)
+- :link: [14.浅拷贝与深拷贝](/guide/fornt-end-learn/base/JavaScript/14.浅拷贝与深拷贝.html)
+- :link: [15.正则表达式](/guide/fornt-end-learn/base/JavaScript/15.正则表达式.html)
 
 ## 提升
 
