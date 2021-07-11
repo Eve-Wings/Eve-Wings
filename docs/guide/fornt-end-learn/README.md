@@ -49,6 +49,7 @@ sidebar: auto
 
 - :link: [1.ES6简介](/guide/fornt-end-learn/base/JavaScript/1.ES6简介.html)
 - :link: [2.ES6变量声明](/guide/fornt-end-learn/base/JavaScript/2.ES6变量声明.html)
+- :link: [3.解构赋值](/guide/fornt-end-learn/base/JavaScript/3.解构赋值.html)
 
 
 ## 提升

@@ -184,7 +184,8 @@ module.exports = {
 				'14.浅拷贝与深拷贝',
 				'15.正则表达式',
 				'1.ES6简介',
-				'2.ES6变量声明'
+				'2.ES6变量声明',
+				'3.解构赋值'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',

@@ -31,6 +31,7 @@ sidebar: auto
 
 - 删除按钮的二次确认
 - 交互的提示
+- 使用解构赋值优化代码
 
 ### Issue
 
@@ -50,6 +51,9 @@ sidebar: auto
   - 渐变字体无法正常展示渐变色(华为浏览器)
   - 按钮图标丢失(小米、safari)
   - 输入框背景色为白色(华为)
+- 事项修改优先级——Cannot read property 'matters' of undefined
+  - 当删除了分类、事项的时候
+    - 后续的分类、事项、子事项的ID需要进行修改
 
 
 
