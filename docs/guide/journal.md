@@ -3,9 +3,13 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(21)
+## 七月(22)
 
 ### 2021/07/11
+
+[4.箭头函数](fornt-end-learn/base/JavaScript/4.箭头函数)
+
+前端学习笔记——JavaScript
 
 [3.解构赋值](fornt-end-learn/base/JavaScript/3.解构赋值)
 

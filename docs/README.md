@@ -38,27 +38,27 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [4.箭头函数](guide/fornt-end-learn/base/JavaScript/4.箭头函数)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/11
+
+:::
+
+::: tip New
+
 ### [3.解构赋值](guide/fornt-end-learn/base/JavaScript/3.解构赋值)
 
 前端学习笔记——JavaScript
 
-更新时间： 2021/07/11
+更新时间: 2021/07/11
 
 :::
 
 ::: tip New
 
 ### [2.ES6变量声明](guide/fornt-end-learn/base/JavaScript/2.ES6变量声明)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/10
-
-:::
-
-::: tip New
-
-### [1.ES6简介](guide/fornt-end-learn/base/JavaScript/1.ES6简介)
 
 前端学习笔记——JavaScript
 

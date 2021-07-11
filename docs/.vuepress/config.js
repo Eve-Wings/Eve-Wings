@@ -185,7 +185,8 @@ module.exports = {
 				'15.正则表达式',
 				'1.ES6简介',
 				'2.ES6变量声明',
-				'3.解构赋值'
+				'3.解构赋值',
+				'4.箭头函数'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',
