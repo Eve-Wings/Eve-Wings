@@ -186,7 +186,9 @@ module.exports = {
 				'1.ES6简介',
 				'2.ES6变量声明',
 				'3.解构赋值',
-				'4.箭头函数'
+				'4.箭头函数',
+				'5.剩余参数',
+				'6.ES6内置对象扩展'
 			],
 			'/guide/fornt-end-learn/promote/JQuery/':[
 				'',

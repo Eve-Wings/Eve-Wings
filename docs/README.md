@@ -30,11 +30,31 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 发布时间: 2021/06/30
 
-更新时间: 2021/07/08
+更新时间: 2021/07/11
 
 :::
 
 ## 最新更新
+
+::: tip New
+
+### [6.ES6内置对象扩展](guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/11
+
+:::
+
+::: tip New
+
+### [5.剩余参数](guide/fornt-end-learn/base/JavaScript/5.剩余参数)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/11
+
+:::
 
 ::: tip New
 
@@ -46,25 +66,8 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
 
-### [7.Bootstrap卡片与延展链接](guide/fornt-end-learn/promote/Bootstrap/7.Bootstrap卡片与延展链接)
 
-前端学习笔记——Bootstrap
-
-更新时间: 2021/07/11
-
-:::
-
-::: tip New
-
-### [6.选项卡](guide/fornt-end-learn/promote/Bootstrap/6.选项卡)
-
-前端学习笔记——Bootstrap
-
-更新时间: 2021/07/11
-
-:::
 
 
 

@@ -3,9 +3,15 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(25)
+## 七月(27)
 
 ### 2021/07/11
+
+[6.ES6内置对象扩展](fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
+
+[5.剩余参数](fornt-end-learn/base/JavaScript/5.剩余参数)
+
+前端学习笔记——JavaScript
 
 [8.Bootstrap弹性盒与浮动布局](fornt-end-learn/promote/Bootstrap/8.Bootstrap弹性盒与浮动布局)
 

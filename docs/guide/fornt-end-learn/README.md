@@ -51,6 +51,8 @@ sidebar: auto
 - :link: [2.ES6变量声明](/guide/fornt-end-learn/base/JavaScript/2.ES6变量声明.html)
 - :link: [3.解构赋值](/guide/fornt-end-learn/base/JavaScript/3.解构赋值.html)
 - :link: [4.箭头函数](/guide/fornt-end-learn/base/JavaScript/4.箭头函数.html)
+- :link: [5.剩余参数](/guide/fornt-end-learn/base/JavaScript/5.剩余参数.html)
+- :link: [6.ES6内置对象扩展](/guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展.html)
 
 
 ## 提升
