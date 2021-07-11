@@ -38,19 +38,9 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [4.箭头函数](guide/fornt-end-learn/base/JavaScript/4.箭头函数)
+### [8.Bootstrap弹性盒与浮动布局](guide/fornt-end-learn/promote/Bootstrap/8.Bootstrap弹性盒与浮动布局)
 
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/11
-
-:::
-
-::: tip New
-
-### [3.解构赋值](guide/fornt-end-learn/base/JavaScript/3.解构赋值)
-
-前端学习笔记——JavaScript
+前端学习笔记——Bootstrap
 
 更新时间: 2021/07/11
 
@@ -58,14 +48,23 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [2.ES6变量声明](guide/fornt-end-learn/base/JavaScript/2.ES6变量声明)
+### [7.Bootstrap卡片与延展链接](guide/fornt-end-learn/promote/Bootstrap/7.Bootstrap卡片与延展链接)
 
-前端学习笔记——JavaScript
+前端学习笔记——Bootstrap
 
-更新时间: 2021/07/10
+更新时间: 2021/07/11
 
 :::
 
+::: tip New
+
+### [6.选项卡](guide/fornt-end-learn/promote/Bootstrap/6.选项卡)
+
+前端学习笔记——Bootstrap
+
+更新时间: 2021/07/11
+
+:::
 
 
 

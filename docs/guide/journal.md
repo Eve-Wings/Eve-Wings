@@ -3,9 +3,21 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(22)
+## 七月(25)
 
 ### 2021/07/11
+
+[8.Bootstrap弹性盒与浮动布局](fornt-end-learn/promote/Bootstrap/8.Bootstrap弹性盒与浮动布局)
+
+前端学习笔记——Bootstrap
+
+[7.Bootstrap卡片与延展链接](fornt-end-learn/promote/Bootstrap/7.Bootstrap卡片与延展链接)
+
+前端学习笔记——Bootstrap
+
+[6.选项卡](fornt-end-learn/promote/Bootstrap/6.选项卡)
+
+前端学习笔记——Bootstrap
 
 [4.箭头函数](fornt-end-learn/base/JavaScript/4.箭头函数)
 

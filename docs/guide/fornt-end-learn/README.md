@@ -70,6 +70,9 @@ sidebar: auto
 - :link: [3.表格类](/guide/fornt-end-learn/promote/Bootstrap/3.表格类.html)
 - :link: [4.文本类](/guide/fornt-end-learn/promote/Bootstrap/4.文本类.html)
 - :link: [5.折叠窗与手风琴](/guide/fornt-end-learn/promote/Bootstrap/5.折叠窗与手风琴.html)
+- :link: [6.选项卡](/guide/fornt-end-learn/promote/Bootstrap/6.选项卡.html)
+- :link: [7.Bootstrap卡片与延展链接](/guide/fornt-end-learn/promote/Bootstrap/7.Bootstrap卡片与延展链接.html)
+- :link: [8.Bootstrap弹性盒与浮动布局](/guide/fornt-end-learn/promote/Bootstrap/8.Bootstrap弹性盒与浮动布局.html)
 
 ### [AJAX](/guide/fornt-end-learn/promote/AJAX/)
 

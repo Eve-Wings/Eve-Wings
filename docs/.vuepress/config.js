@@ -202,7 +202,10 @@ module.exports = {
 				'2.图片类',
 				'3.表格类',
 				'4.文本类',
-				'5.折叠窗与手风琴'
+				'5.折叠窗与手风琴',
+				'6.选项卡',
+				'7.Bootstrap卡片与延展链接',
+				'8.Bootstrap弹性盒与浮动布局'
 			],
 			'/guide/fornt-end-learn/promote/AJAX/':[
 				'',
