@@ -1420,3 +1420,226 @@ export default{
 
 **Vuex状态管理**：Vuex是一个专为Vue.js 应用程序开发的**状态管理模式**。它采用**集中式存储**管理应用的所有组件的状态，并以**相应的规则**保证状态可以以**一种可预测的方式**发生变化
 
+
+
+## 7.Vue的两种路由模式
+
+*这道题实际上我也不懂，也看不懂到底会怎么考……*
+
+*关于vue-router 相关的知识点，这里也就不能像前面那样子详细讲解了，一个是本人能力有限学艺不精，一个是讲起来东西可能也比较多比较绕，不方便，还请见谅*
+
+[Vue的两种路由模式 - 简书 (jianshu.com)](https://www.jianshu.com/p/f7326622d49e)
+
+[vue-router的两种模式的区别_vue.js_脚本之家 (jb51.net)](https://www.jb51.net/article/162223.htm)
+
+
+
+hash、history
+
+默认是hash
+
+区别：
+
+hash的hashchange，只能改变#后面的url片段。而pushState设置的新URL可以是与当前URL同源的任意URL。
+
+history模式则会将URL修改得就和正常请求后端的URL一样,如后端没有配置对应/user/id的路由处理，则会返回404错误
+
+
+
+## 8.push和replace两种跳转的对比区别
+
+速记关键词：history
+
+### 1.this.$router.push()
+
+跳转到不同的url，但这个方法会向history栈添加一个记录，点击后退会返回到上一个页面。
+
+### 2.this.$router.replace()
+
+同样是跳转到指定的url，但是这个方法不会向history里面添加新的记录，点击返回，会跳转到上上一个页面。上一个记录是不存在的。
+
+### 总结：
+
+push会有history记录、replace没有
+
+
+
+### query和params的区别
+
+1. query传参配置的是path，params配置的是name，在params中配置path无效
+2. query在路由配置不需要设置参数，而params必须配置
+3. query传递的参数会显示在地址栏中
+4. params传递刷新会无效，但query会保存传递过来的值，刷新不变
+
+
+
+## 9.Vuex的核心属性
+
+**state、mutations、getters、actions、modules**
+
+(注意复数形式)
+
+```javascript
+// store.js
+export default new Vuex.Sotre({
+	state:{
+        // 基本状态、基本数据
+        // 可以理解为，数据、内容在这里进行定义、存储
+    },
+    mutations:{
+        // 提交更改状态、数据的方法，且该方法必须同步
+        // 可以理解为，在这里定义修改数据的同步方法
+    },
+    getters:{
+        // 从基本数据派生的数据
+        // 可以理解为，在这里定义对数据的操作并返回操作后的结果
+    },
+    actions:{
+        // 包裹mutations，一个装饰器作用，可以进行异步操作
+    },
+    modules:{
+        // 模块化的Vuex
+    }
+})
+```
+
+
+
+## 10.npm run dev 和 npm run build 的区别
+
+*这道题略显离谱*
+
+### npm run dev
+
+1. 引入插件和配置
+2. 创建express服务器和webpack编译器
+3. 配置开发中间件和热重载中间件
+4. 挂载代理服务和中间件
+5. 配置静态资源
+6. 启动服务器监听特定端口号
+7. 自动打开浏览器打开特定网址
+
+### npm run build
+
+webpack编译
+
+### 总结
+
+- npm run dev 将项目挂载于express服务器并配置开发中间件、热重载中间件
+- npm run build 就是webpack编译进行打包
+
+
+
+## 11.Element-ui 栅格系统
+
+直接上代码
+
+```vue
+<!-- :gutter 是用于设置边距的，可以删除 -->
+<el-row :gutter="10">
+    <!-- element-ui 栅格系统是分为24列 -->
+	<el-col :span="7">占7列</el-col>
+    <el-col :span="8">占8列</el-col>
+    <el-col :span="9">占9列</el-col>
+</el-row>
+
+<el-row>
+	<el-col :span="6"></el-col>
+    <!-- 设置偏移量 -->
+    <el-col :span="6" :offset="6"></el-col>
+</el-row>
+
+<el-row>
+	<!-- 响应式 -->
+    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8"></el-col>
+    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8"></el-col>
+    <el-col :xs="8" :sm="8" :md="8" :lg="8" :xl="8"></el-col>
+</el-row>
+
+<el-row>
+    <!-- 视点隐藏 -->
+	<el-col class="hidden-xs-and-down" :span="8">xs及以下时隐藏</el-col>
+    <el-col class="hidden-xs-and-up" :span="8">xs及以上隐藏</el-col>
+    <el-col class="hidden-xs-only">仅xs时隐藏</el-col>
+    <!-- 其他自行类推 -->
+</el-row>
+```
+
+
+
+## 12.src目录结构主要文件说明
+
+- assets：放置静态资源
+- components：放置通用模块组件
+- router：放置路由设置文件，指定路由对应的组件
+- App.vue：根组件
+- main.js：入口文件，影响全局，作用是引入全局使用的库、公共样式和方法、设置路由等
+
+
+
+## 13.axios的使用
+
+```javascript
+// get请求
+// axios.get(url,参数(可省),请求头信息(可省)).then(获取到响应后的回调函数).catch(获取到异常的回调函数)
+this.axios.get('/user/allUsers', {
+		// 参数
+		params: {
+			id: 0,
+			name: '张三'
+		}
+	})
+	// 获取响应之后的回调函数
+	.then(res => {
+		console.log(res)
+	})
+	// 捕捉异常之后的回调函数
+	.catch(err => {
+		console.log(err)
+	})
+
+// post请求
+// axios.post(url，请求体(可省)，参数(可省)).then().catch
+this.axios.post('/user/allUsers', {
+		// 请求体
+		username: 'admin'
+	}, {
+		// 参数
+		params: {
+			id: 0,
+			name: '张三'
+		}
+	}).then(res => {
+		console.log(res)
+	})
+	.catch(err => {
+		console.log(err)
+	})
+
+
+```
+
+简单来说
+
+```javascript
+this.axios.get('/user/allUsers')
+	.then(res => {
+		console.log(res)
+	})
+	.catch(err => {
+		console.log(err)
+	})
+	
+this.axios.post('/user/allUsers')
+	.then(res => {
+		console.log(res)
+	})
+	.catch(res => {
+		console.log(err)
+	})
+```
+
+- get不安全，传输过程中数据直接暴露在URL中
+- post所有的操作对于用户来说不可见
+- get传输数据量较小，受URL长度限制
+- get效率比Post好
