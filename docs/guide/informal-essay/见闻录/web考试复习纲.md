@@ -935,3 +935,486 @@ var age = 18
 
 
 
+# web考试复习纲——Vue
+
+## 1.单页面应用和多页面应用的区别及优缺点？
+
+速记关键词：**应用、一个主页面、加载所有、多个页面、整页刷新**
+
+单页面应用(SPA)，通俗一点说就是指**只有一个主页面的应用**，浏览器一开始要加载所有必须的html，js，css。所有页面内容**都包含在这个所谓的主页面之中**。
+
+多页面(MPA)，就是指一个应用中**有多个页面**，页面跳转时是**整页刷新**
+
+### 单页面的优点
+
+速记关键词：**体验好、快、不需要重新加载、服务器压力小、前后端分离、转场动画**
+
+1. 用户**体验好、快**
+2. 内容的改变**不需要重新加载整个页面**，对服务器**压力较小**
+3. **前后端分离**
+4. 页面切换可以设计**转场动画**
+
+### 单页面的缺点
+
+速记关键词：**seo、导航、初次加载、页面复杂度**
+
+1. 不利于**seo**
+2. **导航**不可用，如果一定要导航需要自行实现前进、后退
+3. **初次加载耗时多**
+4. **页面复杂度**提高很多
+
+
+
+## 2.什么是MVVM？
+
+速记关键词：**Model-View-ViewModel、设计思想、数据模型、数据修改和操作、UI组件、转换、同步、对象、没有直接联系、双向的、双向数据绑定、同步工作、自动、业务逻辑、不需要手动操作DOM、数据状态同步问题**
+
+MVVM 是 **Model-View-ViewModel** 的缩写。
+
+MVVM是一种**设计思想**。
+
+Model层代表**数据模型**，也可以在Model中定义**数据修改和操作**的业务逻辑
+
+View代表**UI组件**，它负责将**数据模型转换为UI**展现出来
+
+ViewModel是一个**同步View和Model的对象**
+
+<br>
+
+在MVVM架构下，View和Model之间并没有**直接联系**，而是通过ViewModel进行交互，Model和ViewModel之间的交互是**双向的**，因此View数据的变化会同步到Model中，而Model数据的变化也会立即反应到View上
+
+<br>
+
+ViewModel通过**双向数据绑定**把View层和Model层连接了起来，而View和Model之间的**同步工作**完全是**自动的**，无需人为干涉，因此开发者**只需要关注业务逻辑**，而**不需要手动操作DOM**，不需要关注**数据状态的同步问题**，复杂的数据状态维护完全由MVVM来统一管理
+
+
+
+## 3.Vue常用指令
+
+在对这道题的内容进行讲解之前，还是有必要了解一下Vue的基本使用，希望您能够耐心看下去
+
+正常来说，有两种基本用法
+
+第一种则是**外部引用Vue.js文件**，进行Vue项目的搭建
+
+```html
+<!-- 一个html文件 -->
+<body>
+    <!-- 将这个元素交由vue管理 -->
+    <div id="app">
+        <!-- vue的插值操作，这里就可以调用到在下文定义的message -->
+        <p>{{message}}</p>
+    </div>
+    <!-- 在这里导入vue.js文件，进行vue项目的搭建 -->
+    <script src="../vue.js"></script>
+    <script>
+        // 声明Vue实例
+    	const app = new Vue({
+            // 在这里就可以使用vue了
+            el: '#app',	// 用于声明挂载要进行管理的元素
+            data: {
+                // 这里可以声明数据
+                message: 'HelloWorld'
+            },
+            methods: {
+                // 这里可以声明方法
+                function say() {
+            		console.log(this.message)
+        		}
+            }
+        })
+    </script>
+</body>
+```
+
+第二种是使用**VueCLI**支持的**单文件组件**、以及vue文件
+
+```vue
+<!-- 在后续的内容中，将主要采用vue文件的形式进行讲解 -->
+<template>
+	<!-- 这里编写html内容 -->
+	<!-- 内容最好使用一个div进行包裹 -->
+	<div>
+        <p>{{message}}</p>
+    </div>
+</template>
+<script>
+	// 这里编写js内容
+    export default {
+        name: 'app',
+        data () {
+            return {
+                message: 'HelloWorld'
+            }
+        },
+        methods: {
+            say () {
+        		console.log(this.message)
+    		}
+        }
+    }
+</script>
+<style>
+	/* 这里编写css样式 */
+</style>
+```
+
+~~好了，你已经学会Vue了，去写一个支持Vue的UI框架吧~~
+
+
+
+### v-on：事件监听
+
+```vue
+<template>
+	<div>
+        <h2>{{number}}</h2>
+        <!-- 这里有一个按钮，每点击一次都会触发事件，让数字增1 -->
+        <!-- 括号实际上可省，个人习惯还是写上 -->
+        <!-- 我们通过v-on的方式，给click绑定了 increment() 这个事件 -->
+        <button type="button" v-on:click="increment()">自增</button>
+        
+        <!-- 语法糖写法，可以使用 @ 代替 v-on:-->
+        <button type="button" @click="increment()">自增</button>
+        
+        <!-- 除了绑定click之外，原生js的事件，基本都一直，双击、滚动、悬浮等 -->
+    </div>
+</template>
+<script>
+export default{
+    name: 'app',
+    data () {
+        return {
+            number: 0
+        }
+    },
+    methods: {
+        // 这里就是所绑定的事件
+        increment () {
+            this.number++
+        }
+    }
+}
+</script>
+```
+
+
+
+### v-bind：动态绑定属性值
+
+```vue
+<template>
+	<div>
+        <!-- 使用 v-bind可以对元素的属性进行动态绑定 -->
+        <a v-bind:href="aHref">这个超链是动态绑定的</a>
+        
+        <!-- 除了绑定href这种属性值之外，也可以绑定class -->
+        <!-- 对象方式的语法: v-bind:class="{类名:布尔值}" -->
+        <h2 v-bind:class="{redFont: false}">我现在是黑色的</h2>
+        <!-- v-bind 语法糖写法，直接 : -->
+        <!-- 比如 :class  :href -->
+        <h2 :class="{redFont:isRedFont, bigFont:true}">我现在就是超大红色形态了</h2>
+        
+        <!-- 除了对象方式外，还支持数组语法 -->
+        <h2 :class=[class1,class2]>我也是超大红色形态</h2>
+        
+        <!-- 同理，你也可以直接通过时间的方式把属性值返回回来 -->
+        <h2 :class="getClass()">没想到吧</h2>
+        
+        <!-- 除了class可以绑定之外，style也可以绑 -->
+        <!-- :style="{属性名:属性值}" -->
+        <!-- 属性值切记加上单引号，否则会被当做一个变量去解析 -->
+        <h2 :style="{color:'red'}">红色</h2>
+        <h2 :style="{color:redFont}">也是红色</h2>
+        <!-- 属性名驼峰命名 -->
+        <h2 :style="{fontSize: h2fontsize + 'px', color: redFont}">这个字又大又红</h2>
+    </div>
+</template>
+<script>
+export default{
+    name: 'app',
+    data () {
+        return {
+            // 因为超链接绑的就是这个值
+            // 通过各种方法进行修改，上面的超链接都会改变
+            aHref: 'www.baidu.com',
+            // class对象语法中的布尔值
+            isRedFont: true,
+            // class数组语法中的两个类
+            class1: 'redFont',
+            class2: 'bigFont',
+            // 样式绑定
+            redFont: 'red',
+            h2fontsize: 400
+        }
+    },
+    methods: {
+        getClass () {
+            return {redFont: true, bigFont:true}
+            // return [this.class1, this.class2]
+        }
+    }
+}
+</script>
+<style>
+    .redFont{
+        color:red
+    }
+    .bigFont{
+        font-weight: bold;
+    }
+</style>
+```
+
+
+
+### v-model：数据双向绑定
+
+v-model，一般用于input上
+
+```vue
+<template>
+	<div>
+        <input type="text" v-model="number"/>
+        <h2>{{number}}</h2>
+    </div>
+</template>
+<script>
+export default{
+    data () {
+        // 当在input中修改数值的时候，这个值也就会发生改变，然后h2标签中的值也会改变
+        number: 233
+    }
+}
+</script>
+```
+
+
+
+### v-if 和 v-show：元素的加载与否以及展示与否
+
+v-if 和 v-show 一般用于控制元素的加载及展示
+
+```html
+<template>
+	<div>
+        <!-- 语法: v-if="布尔值" -->
+        <h2 v-if="true">这个是显示出来的</h2>
+        <h2 v-else>这个是没有显示出来的，在dom树上也不存在的</h2>
+        <h2 v-if="false">v-if:false的元素，在开发者工具中看到的只是一个注释占位</h2>
+        
+        <h2 v-show="true">这个是显示出来的</h2>
+        <h2 v-show="false">这个没有显示出来，但是在dom树上,通过修改display实现的</h2>
+    </div>
+</template>
+```
+
+
+
+## 4.Vue生命周期钩子
+
+参考资料: [Vue官方文档](https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90)
+
+1. beforeCreate：Vue实例初始化之前，data、methods等尚未获取
+2. created：Vue实例已经完成创建
+3. beforeMount：在Vue实例挂载到DOM元素之前
+4. mounted：Vue实例完成挂载
+5. beforeUpdate：vm.data进行更新之前
+6. updated：vm.data进行了更新
+7. beforeDestroy：在实例被销毁之前
+8. destroyed：实例销毁
+
+
+
+## 5.Vue常用修饰符
+
+速记： **stop、 prevent、capture、self、once**
+
+- .stop：等同于 JavaScript 中的 event.stopPropagation()，防止事件传递(冒泡)
+
+```vue
+<template>
+	<div>
+        <div @click="divClick()">
+    		<button @click="buttonClick()">点击后div的点击事件也被触发</button>
+            <button @click.stop="buttonClick()">点击后div的点击事件不会触发</button>
+    	</div>
+    </div>
+</template>
+```
+
+
+
+- .prevent：等同于JavaScript 中的 event.preventDefault()，防止执行预设的行为(如果事件可取消则取消，而不停止事件的进一步传播)
+
+```vue
+<template>
+	<div>
+        <form action="baidu">
+            <!-- submit默认事件会提交表单内容/可能会跳转页面 -->
+        	<input type="submit" value="提交-会触发默认事件" @click="submitClick()"/>
+            <input type="submit" value="提交-不会触发默认事件" @click.prevent="submitClick()"/>
+    	</form>
+    </div>
+</template>
+```
+
+
+
+- .capture：与事件冒泡的方向相反，事件捕获由外到内(海景公司的事件冒泡定义)
+
+```vue
+<template>
+	<div>
+        <div @click="divClick()">
+            <button type="button" @click.capture="btnClick()">先触发div再触发这个</button>
+    	</div>
+    </div>
+</template>
+```
+
+
+
+- .self：只会触发自己范围内的事件，不包括子元素
+
+```vue
+<template>
+	<div>
+        <!-- 只有点击到div自身时才会触发事件 -->
+        <div @click.self="divClick()" style="width:200px;height:200px">
+    		<button type="button" @click="btnClick()">点击这个不会触发div的事件</button>
+    	</div>
+    </div>
+</template>
+```
+
+
+
+- .once：事件只会触发一次
+
+```vue
+<template>
+	<div>
+        <button type="button" @click.once="btnClick(s)">点了一次就没反应了</button>
+    </div>
+</template>
+```
+
+
+
+- 除此之外还有keyup用于监听键盘松开的事件的修饰符，此处不做过度描述
+
+
+
+## 6.Vue组件的通信方式
+
+### 1.父子组件通信
+
+速记关键词： **props、$emit**
+
+**父组件传给子组件**：子组件通过**props方法**接收数据
+
+```vue
+<!-- 这个是子组件 -->
+<template>
+	<div>
+        <h2>{{message}}</h2>
+    </div>
+</template>
+<script>
+export default{
+    name: 'sonComponent',
+    props: {
+        message: {
+            default: '这个是默认值'
+        }
+    }
+    // 也可以这样子写
+    // props: ['message']
+}
+</script>
+```
+
+```vue
+<!-- 这个是父组件 -->
+<template>
+	<div>
+        <!-- 将值传给子组件 -->
+        <sonComponent :message="HelloWorld"></sonComponent>
+    </div>
+</template>
+<script>
+// 导入组件
+import sonComponent from '../components'
+export default{
+    name: 'app',
+    // 声明组件
+    components:{
+        sonComponent
+    }
+}
+</script>
+```
+
+
+
+**子组件传给父组件**：$emit()方法进行传递
+
+```vue
+<!-- 子组件 -->
+<template>
+	<div>
+        <button @click="zouni()">点击按钮发送数据给父组件</button>
+    </div>
+</template>
+<script>
+export default{
+    name: 'sonComponent',
+    methods:{
+        zouni(){
+            this.$emit('dataFromSon', '这个数据是来自自组件的')
+            // 第一个参数，是父组件中，使用子组件时监听的事件
+            // 第二个参数是数据
+        }
+    }
+}
+</script>
+```
+
+```vue
+<!-- 父组件 -->
+<template>
+	<div>
+        <h2>{{message}}</h2>
+        <!-- 事件绑定获取数据 -->
+        <sonComponent @dataFromSon="getData"></sonComponent>
+    </div>
+</template>
+<script>
+import sonComponent from '../components'
+export default{
+    name: 'app',
+    components: { sonComponent },
+    data() {
+        return {
+            message: '现在数据还没来'
+        }
+    },
+    methods:{
+        // 事件绑定触发该事件，并且获取到参数—数据
+        getData (data) {
+            this.message = data
+        }
+    }
+}
+</script>
+```
+
+### 2.非父子组件通信
+
+速记关键词： **总线通信、空的vue实例、中央事件总线、自定义事件、$emit、$on、vuex、状态管理**
+
+**总线通信**：定义一个空的vue实例作为中央事件总线，利用vue的自定义事件机制，在触发的地方通过$emit向外发布一个事件，在需要监听的页面，通过$on监听事件
+
+**Vuex状态管理**：Vuex是一个专为Vue.js 应用程序开发的**状态管理模式**。它采用**集中式存储**管理应用的所有组件的状态，并以**相应的规则**保证状态可以以**一种可预测的方式**发生变化
+
