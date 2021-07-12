@@ -263,11 +263,13 @@ table标签的基本使用：
 
 拓展： :link:[个人博客](https://eve-wings.github.io/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/4.%E6%96%87%E6%9C%AC%E7%B1%BB.html)
 
-速记关键词: **font、text、justify、norwap**
+速记关键词: **font、text、justify、nowrap**
 
-设定**文本对齐**，段落中**超出屏幕部分自动换行**的类是 ： **.text-justify**
+段落中**超出屏幕部分自动换行**的类是 ： **.text-wrap**
 
-段落中超出屏幕部分**不换行**的类是： **.text-norwap**
+(根据题目意思，可能还需要对齐？ 所以也可能是 **.text-justify**)
+
+段落中超出屏幕部分**不换行**的类是： **.text-nowrap**
 
 
 
@@ -284,8 +286,8 @@ table标签的基本使用：
 | .text-left          | 左对齐                                                       | text-align: left                              |
 | .text-center        | 居中                                                         | text-align: center                            |
 | .text-right         | 右对齐                                                       | text-align: right                             |
-| **.text-justify**   | 设定文本对齐，段落中超出屏幕部分自动换行                     | text-align: justify                           |
-| **.text-norwap**    | 段落中超出屏幕部分不换行                                     | white-space: nowrap                           |
+| .text-justify       | 设定文本对齐，段落中超出屏幕部分自动换行                     | text-align: justify                           |
+| **.text-nowrap**    | 段落中超出屏幕部分不换行                                     | white-space: nowrap                           |
 | .text-lowercase     | 文本小写                                                     | text-transform: lowercase                     |
 | .text-uppercase     | 文本大写                                                     | text-transform: uppercase                     |
 | .text-capitalize    | 首字母大写                                                   | text-transform: capitalize                    |
