@@ -24,6 +24,7 @@ sidebar: auto
 | bug修复  | 添加子事项回车键无法使用的bug                                | 2021-07-08 |
 | 代码优化 | 使用数组方法 splice() 完成对数组的操作                       | 2021-07-08 |
 | 功能优化 | str.trim()                                                   | 2021-07-08 |
+| bug修复  | 删除分类、事项之后，对后续分类、事项、子事项进行操作时，出现目标错误的情况，由删除之后未重新定位序号导致的 | 2021-07-14 |
 
 
 
@@ -51,9 +52,10 @@ sidebar: auto
   - 渐变字体无法正常展示渐变色(华为浏览器)
   - 按钮图标丢失(小米、safari)
   - 输入框背景色为白色(华为)
-- 事项修改优先级——Cannot read property 'matters' of undefined
-  - 当删除了分类、事项的时候
-    - 后续的分类、事项、子事项的ID需要进行修改
+- ~~事项修改优先级——Cannot read property 'matters' of undefined~~
+  - ~~当删除了分类、事项的时候~~
+    - ~~后续的分类、事项、子事项的ID需要进行修改~~
+    - 已解决
 
 
 
@@ -1378,13 +1380,15 @@ if (obj !== null) {
 }
 ```
 
-#### 6.11.3 回车键触发提交(0.95版本)
+### 6.12 后续更新维护(2021/07/14)
+
+#### 6.12.1 回车键触发提交(0.95版本)
 
 实际上使用的是vue提供的 @keyup.enter 绑定事件
 
 绑定的事件可以在代码中搜索 keyup 关键字
 
-#### 6.11.4 移动端适配(0.95版本)
+#### 6.12.2 移动端适配(0.95版本)
 
 使用媒体监听基于原本的样式再整了一套移动端的样式
 
@@ -1392,11 +1396,11 @@ if (obj !== null) {
 @meadia screen and (max-width: 768px){}
 ```
 
-#### 6.11.5 变量名调整(0.95版本)
+#### 6.12.3 变量名调整(0.95版本)
 
 matter_son 统一改为 matterSon
 
-#### 6.11.6 bug修复——移动端下，输入框无法看到其输入的文本(2021/07/07)
+#### 6.12.4 bug修复——移动端下，输入框无法看到其输入的文本(2021/07/07)
 
 修改样式，媒体查询移动端
 
@@ -1420,20 +1424,51 @@ matter_son 统一改为 matterSon
 }
 ```
 
-#### 6.11.7 代码优化(2021/07/08)
+#### 6.12.5 代码优化(2021/07/08)
 
 ```javascript
 const matterSon = state.mattersList.classifications[classIndex].matters[matterIndex].matterSons[matterSonIndex]
 // 通过这种方式获取到对象之后，对matterSon操作即可，可以提高可读性
 ```
 
-#### 6.11.8 输入框输入空格的问题(2021/07/08)
+#### 6.12.6 输入框输入空格的问题(2021/07/08)
 
 ```javascript
 str.trim()	// 可以删除字符串中的前后空格串,返回新数组
 ```
 
-### 6.12 项目感想
+#### 6.12.7 删除分类、事项修改(2021/07/14)
+
+```javascript
+removeClassification(state, classIndex) {
+	state.mattersList.classifications.splice(classIndex, 1)
+	// 将分类之后的分类中所有的classID进行修改
+	state.mattersList.classifications.forEach((classification, classIndex) => {
+		classification.matters.forEach(matter => {
+			matter.classIndex = classIndex
+			matter.matterSons.forEach(matterSon => {
+				matterSon.classIndex = classIndex
+			})
+		})
+	})
+}
+
+removeMatter(state, removeMatterForm) {
+	// classIndex, matterIndex
+	let classIndex = removeMatterForm.classIndex
+	let matterIndex = removeMatterForm
+	const matters = state.mattersList.classifications[classIndex].matters
+	matters.splice(matterIndex, 1)
+	// 删除待办事项之后，对该事项之后的事项的ID进行修改
+	matters.forEach((matter, matterIndex) => {
+		matter.matterSons.forEach(matterSon => {
+			matterSon.matterIndex = matterIndex
+		})
+	})
+}
+```
+
+### 6.13 项目感想
 
 这里开始不正经了
 
