@@ -3,11 +3,19 @@ title: 日志
 sidebar: auto
 ---
 
-## 七月(27)
+## 七月(28)
+
+### 2021/07/22
+
+[7.ES6新增数据类型](fornt-end-learn/base/JavaScript/7.ES6新增数据类型.md)
+
+前端学习笔记——JavaScript
 
 ### 2021/07/11
 
 [6.ES6内置对象扩展](fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
+
+前端学习笔记——JavaScript
 
 [5.剩余参数](fornt-end-learn/base/JavaScript/5.剩余参数)
 

@@ -38,6 +38,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [7.ES6新增数据类型](guide/fornt-end-learn/base/JavaScript/7.ES6新增数据类型)
+
+前端学习笔记——JavaScript
+
+更新时间: 2021/07/22
+
+:::
+
+::: tip New
+
 ### [6.ES6内置对象扩展](guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
 
 前端学习笔记——JavaScript
@@ -56,15 +66,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 :::
 
-::: tip New
-
-### [8.Bootstrap弹性盒与浮动布局](guide/fornt-end-learn/promote/Bootstrap/8.Bootstrap弹性盒与浮动布局)
-
-前端学习笔记——Bootstrap
-
-更新时间: 2021/07/11
-
-:::
 
 
 

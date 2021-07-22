@@ -53,6 +53,7 @@ sidebar: auto
 - :link: [4.箭头函数](/guide/fornt-end-learn/base/JavaScript/4.箭头函数.html)
 - :link: [5.剩余参数](/guide/fornt-end-learn/base/JavaScript/5.剩余参数.html)
 - :link: [6.ES6内置对象扩展](/guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展.html)
+- :link: [7.ES6新增数据类型](/guide/fornt-end-learn/base/JavaScript/7.ES6新增数据类型.html)
 
 
 ## 提升
