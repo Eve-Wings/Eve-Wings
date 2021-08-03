@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据加载的问题 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.182b18b2.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/79.caf455fc.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.5661e2cd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.e38a2334.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.ab4b29b0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.99d82c84.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.86bb4309.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.9cd8778f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.47003207.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.b1a8fda8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.141ba62e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.55e7c209.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.0f9c6c8c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.ad68e1b6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.9b90aee4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.b6ce6ab7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.74e12983.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.c1bedcb2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.f071ac36.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.a5420d15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.bb7f0140.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.77b15133.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.7b6bd089.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.1a6dda72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.f6edbdef.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.18cd5967.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.6afcbf97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.7007c1a0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.8c6a5929.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.5b85c4c6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.b02d7bd3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.5cc28599.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.cc65f3b7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.249788f4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.fafcbdf2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.6a1862e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.39f56787.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.a00edb58.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.52182f37.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.67ded57b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.c4cd44e2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.ee9722e0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.ae5e3e64.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.b908337e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.13558c53.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.bc3271cb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.30722cbc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.3e6e7bf7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.e4d45111.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.a1815f97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.72ff61e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.eee9bf5f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.bbd26e4d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/63.e44afc95.js"><link rel="prefetch" href="/Eve-Wings/assets/js/64.6bb8891d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/65.e13ddac5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/66.532da8d7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/67.25d04c0a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/68.863c10c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/69.b285fb24.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.38c2331f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/70.12fa600a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/71.ec9f3231.js"><link rel="prefetch" href="/Eve-Wings/assets/js/72.4f4d4d57.js"><link rel="prefetch" href="/Eve-Wings/assets/js/73.c0a06844.js"><link rel="prefetch" href="/Eve-Wings/assets/js/74.9f855a3a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/75.6efb6da2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/76.792ab27f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/77.53da2d3c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/78.6d026946.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.1f4a8fcf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/80.717dc1bb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/81.346537d0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/82.f9d84aea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/83.f5da9313.js"><link rel="prefetch" href="/Eve-Wings/assets/js/84.45ba264a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/85.c716d018.js"><link rel="prefetch" href="/Eve-Wings/assets/js/86.2119993c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/87.6e5fe5c5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/88.fddcc72f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/89.4070630c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.89e53503.js"><link rel="prefetch" href="/Eve-Wings/assets/js/90.c6ce7f72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/91.d4b8ec15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/92.86210bfd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/93.893ba5dd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/94.f095f40a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/95.28ca0880.js"><link rel="prefetch" href="/Eve-Wings/assets/js/96.18a9921b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/97.4e1aa6b2.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数据加载的问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#原代码展示" class="sidebar-link">原代码展示</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#vue-js" class="sidebar-link">vue/js</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#html" class="sidebar-link">html</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#路由" class="sidebar-link">路由</a></li></ul></li><li><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#问题描述" class="sidebar-link">问题描述</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#判断问题" class="sidebar-link">判断问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#打开-localhost-8080-控制台输出" class="sidebar-link">打开 localhost:8080 控制台输出</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#在-localhost-8080-home-页面进行刷新" class="sidebar-link">在 localhost:8080/#/home 页面进行刷新</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#问题确定" class="sidebar-link">问题确定</a></li></ul></li><li><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#解决问题" class="sidebar-link">解决问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#思路" class="sidebar-link">思路</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/personal-works/%E7%A8%8B%E5%BA%8F/%E7%BE%BD%E7%BF%BC%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BF%83/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98.html#最后代码" class="sidebar-link">最后代码</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据加载的问题"><a href="#数据加载的问题" class="header-anchor">#</a> 数据加载的问题</h1> <p>在使用了mock.js进行数据填充之后，通过axios发送数据请求，而mock进行监听和拦截，并且根据请求发送数据</p> <p>但是在原本的代码结构中，出现了一些情况。</p> <h2 id="原代码展示"><a href="#原代码展示" class="header-anchor">#</a> 原代码展示</h2> <h3 id="vue-js"><a href="#vue-js" class="header-anchor">#</a> vue/js</h3> <p>这里是原 App.vue 和 store中的部分代码</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//... 代码省略</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'app.vue.created 执行了'</span><span class="token punctuation">)</span>
+    axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/allUsers'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'getAlluUsers'</span><span class="token punctuation">,</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>list<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">// ...后面类似，在此省略</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// store.js</span>
+<span class="token comment">//...</span>
+state<span class="token operator">:</span> <span class="token punctuation">{</span>
+  allUsers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+mutataions<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">getAllUsers</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> allUsers</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>allUsersReady <span class="token operator">=</span> <span class="token boolean">true</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'the allUsers is ready'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里是其他几个vue文件中的部分代码</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// homePage.vue</span>
+<span class="token comment">// ...</span>
+<span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'homePage.vue.created执行了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'homePage.vue.mounted执行了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token comment">// homePageMain.vue</span>
+<span class="token comment">// ...</span>
+<span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'homePageMain.vue.created执行了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'homePageMain.vue.mounted执行了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token comment">// carseAndComTab.vue</span>
+<span class="token comment">// ...</span>
+<span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'carseAndComTab.vue.mounted执行了'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 调用 store 中的数据，这里省略</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="html"><a href="#html" class="header-anchor">#</a> html</h3> <p>在html代码结构上如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- App.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>   <span class="token comment">&lt;!-- 这里是载入homePage.vue，后见路由结构 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- homePage.vue --&gt;</span>
+<span class="token comment">&lt;!-- ...省略 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>   <span class="token comment">&lt;!-- 这里是载入homePageMain.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- homePageMain.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>carseAndComTab</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>carseAndComTab</span><span class="token punctuation">&gt;</span></span>   <span class="token comment">&lt;!-- 这里是carseAndComTab组件--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="路由"><a href="#路由" class="header-anchor">#</a> 路由</h3> <p>路由结构如下:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// ...</span>
+routers<span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    redirect<span class="token operator">:</span> <span class="token string">'/home'</span> <span class="token comment">//默认跳转到/home</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> homePage<span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> homePageMain
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+</code></pre></div><h2 id="问题描述"><a href="#问题描述" class="header-anchor">#</a> 问题描述</h2> <p>到这里，得讲一下这样子出现的一个问题了。</p> <p>按照期望，我们希望得到的结果就是：</p> <p>1.打开页面(localhost:8080)</p> <p>2.获取到数据</p> <p>3.页面跳转到 localhost:8080/#/home, 该页面的内容在 App.vue中的<!---->标签中显示</p> <p>4.而homePage中的 router-view 标签中也载入了 homePageMain 的内容</p> <p>5.内容渲染出来</p> <p>但是实际上每一次打开页面，或在localhost:8080/#/home 刷新页面的时候，会出现这种情况</p> <p>所有应该渲染出来的数据都没有渲染出来，都为空白</p> <p>但是打开vue工具，查看vuex，可以看到数据是获取到的，axios也并没有报错。</p> <p>如果这个时候我面点开另外一个页面，比如 localhost:8080/#/search 这是另外一个页面</p> <p>然后我们回到home页面，会发现数据渲染出来了</p> <p>然后刷新页面，数据又没有渲染出来，这是一个比较恶劣的bug</p> <h2 id="判断问题"><a href="#判断问题" class="header-anchor">#</a> 判断问题</h2> <p>通过查看控制台</p> <h3 id="打开-localhost-8080-控制台输出"><a href="#打开-localhost-8080-控制台输出" class="header-anchor">#</a> 打开 localhost:8080 控制台输出</h3> <p>1.app.vue.created执行了</p> <p>2.homePage.vue.created执行了</p> <p>3.homePage.vue.mounted执行了</p> <p>4.homePageMain.vue.created执行了</p> <p>5.homePageMain.vue.mounted执行了</p> <p>6.carseAndComTab.vue.mounted执行了</p> <p>7.the allUsers is ready</p> <p>在这里就发现了问题：在后续的代码已经执行的情况之下，axios发送的请求还未得到返回</p> <p>$store.state.allUsers还未完成数据载入，因此是空数组</p> <p>渲染出来的页面数据也就为空，而之后数据才进行载入，没有触发更新，不触发响应，因此第一次进入页面时没有数据渲染出来</p> <p>而点进别的页面，而后退回来，因为已经载入了数据，所以数据正常渲染</p> <h3 id="在-localhost-8080-home-页面进行刷新"><a href="#在-localhost-8080-home-页面进行刷新" class="header-anchor">#</a> 在 localhost:8080/#/home 页面进行刷新</h3> <p>1.app.vue.created执行了</p> <p>2.homePage.vue.created执行了</p> <p>3.homePage.vue.mounted执行了</p> <p>4.homePageMain.vue.created执行了</p> <p>5.homePageMain.vue.mounted执行了</p> <p>6.the allUsers is ready</p> <p>7.carseAndComTab.vue.mounted执行了</p> <h3 id="问题确定"><a href="#问题确定" class="header-anchor">#</a> 问题确定</h3> <p>到这里基本上就可以确定问题的发生原因：第一次打开网页，页面渲染了但是数据还没载入(更新)</p> <p>进一步判断问题出处： axios.get('...').then(res =&gt; {...})</p> <p>这是一个异步请求。</p> <p>数据还没发送回来，还没载入，后面的代码就已经开跑了。</p> <h2 id="解决问题"><a href="#解决问题" class="header-anchor">#</a> 解决问题</h2> <h3 id="思路"><a href="#思路" class="header-anchor">#</a> 思路</h3> <p>既然我们要默认跳转到 /home 页面，那么首先为了保证代码能够执行，我们把路由中的 redirect: '/home' 去掉</p> <p>通过 this.$router.push({path: '/home'}) 来实现</p> <p>为了避免数据还未获取到就跳转页面，所以我们需要添加一个判断条件，来判断数据是否已经获取到，然后才跳转页面</p> <p>那么这个判断-跳转的方法应该添加在哪里？created? mounted? 实际上都不对，因为axios.get...then...是异步操作，数据获取到的时间我们不能确定到，除非我们写一个不断判断的方法，但显然这样子并不可取</p> <p>我们把这个判断-跳转的方法写在 axios.get...then(res =&gt; {这里面}),也就是写在回调函数之中，这样子便可精准的在数据获取到了之后进行判断，然后跳转</p> <p>在 $store.state 中， 添加一个状态: allUsersReady: false</p> <p>修改 mutations.getAllUsers ，添加语句 state.allUsersReady = true</p> <p>在axios.get..then 回调函数中，添加语句</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/allUsers'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'getAllUsers'</span><span class="token punctuation">,</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>list<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>allUsersReady<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/home'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>到这里，我们大体上解决了，打开 localhost:8080 时，数据全部为空的错误，但是接下来还有一个问题为解决</p> <p>那就是在 /home 页面刷新之后，数据依旧丢失的问题</p> <p>因为上述判断的是当满足条件之后才跳转到 home，但本身在home页面刷新之后数据依旧是比页面渲染慢的</p> <p>故技重施，我们再加一个判断，在homePage.vue 的div上，加上 v-if</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$store.state.allUsersReady<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 省略 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>这样子，在数据没有载入之前，不会进行渲染</p> <p>为了界面美观，我们也可以使用element-ui提供的loading组件或其他组件，这里就不加以描述</p> <h3 id="最后代码"><a href="#最后代码" class="header-anchor">#</a> 最后代码</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// App.vue</span>
+<span class="token comment">//...</span>
+<span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/allUsers'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'getAllusers'</span><span class="token punctuation">,</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>list<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toHome</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ...</span>
+methods<span class="token operator">:</span><span class="token punctuation">{</span>
+  <span class="token function">toHome</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>allUsersReady<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 路由 index.js</span>
+<span class="token comment">//...</span>
+<span class="token punctuation">{</span>
+  path<span class="token operator">:</span> <span class="token string">'/'</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- homePage.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-main</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$store.state.allPostsReady<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- ... --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-main</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">7/4/2021, 10:56:16 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.182b18b2.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/79.caf455fc.js" defer></script>
+  </body>
+</html>

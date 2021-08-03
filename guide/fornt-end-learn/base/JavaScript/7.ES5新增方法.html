@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7.ES5新增方法 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.182b18b2.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/34.f6edbdef.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.5661e2cd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.e38a2334.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.ab4b29b0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.99d82c84.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.86bb4309.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.9cd8778f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.47003207.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.b1a8fda8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.141ba62e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.55e7c209.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.0f9c6c8c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.ad68e1b6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.9b90aee4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.b6ce6ab7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.74e12983.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.c1bedcb2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.f071ac36.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.a5420d15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.bb7f0140.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.77b15133.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.7b6bd089.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.1a6dda72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.18cd5967.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.6afcbf97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.7007c1a0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.8c6a5929.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.5b85c4c6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.b02d7bd3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.5cc28599.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.cc65f3b7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.249788f4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.fafcbdf2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.6a1862e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.39f56787.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.a00edb58.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.52182f37.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.67ded57b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.c4cd44e2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.ee9722e0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.ae5e3e64.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.b908337e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.13558c53.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.bc3271cb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.30722cbc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.3e6e7bf7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.e4d45111.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.a1815f97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.72ff61e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.eee9bf5f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.bbd26e4d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/63.e44afc95.js"><link rel="prefetch" href="/Eve-Wings/assets/js/64.6bb8891d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/65.e13ddac5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/66.532da8d7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/67.25d04c0a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/68.863c10c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/69.b285fb24.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.38c2331f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/70.12fa600a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/71.ec9f3231.js"><link rel="prefetch" href="/Eve-Wings/assets/js/72.4f4d4d57.js"><link rel="prefetch" href="/Eve-Wings/assets/js/73.c0a06844.js"><link rel="prefetch" href="/Eve-Wings/assets/js/74.9f855a3a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/75.6efb6da2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/76.792ab27f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/77.53da2d3c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/78.6d026946.js"><link rel="prefetch" href="/Eve-Wings/assets/js/79.caf455fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.1f4a8fcf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/80.717dc1bb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/81.346537d0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/82.f9d84aea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/83.f5da9313.js"><link rel="prefetch" href="/Eve-Wings/assets/js/84.45ba264a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/85.c716d018.js"><link rel="prefetch" href="/Eve-Wings/assets/js/86.2119993c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/87.6e5fe5c5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/88.fddcc72f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/89.4070630c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.89e53503.js"><link rel="prefetch" href="/Eve-Wings/assets/js/90.c6ce7f72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/91.d4b8ec15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/92.86210bfd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/93.893ba5dd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/94.f095f40a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/95.28ca0880.js"><link rel="prefetch" href="/Eve-Wings/assets/js/96.18a9921b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/97.4e1aa6b2.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" aria-current="page" class="sidebar-link">学习资料-JavaScript</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/1.面向对象编程介绍.html" class="sidebar-link">1.面向对象编程介绍</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/2.ES6中的类和对象.html" class="sidebar-link">2.ES6中的类和对象</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/3.类的继承.html" class="sidebar-link">3.类的继承</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/4.ES6中类和对象注意点.html" class="sidebar-link">4.ES6中类和对象注意点</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.构造函数和原型.html" class="sidebar-link">5.构造函数和原型</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承.html" class="sidebar-link">6.构造函数与原型继承</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html" class="active sidebar-link">7.ES5新增方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html#_1-数组方法" class="sidebar-link">1.数组方法</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html#_2-字符串方法" class="sidebar-link">2.字符串方法</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES5新增方法.html#_3-对象方法" class="sidebar-link">3.对象方法</a></li></ul></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html" class="sidebar-link">8.函数的定义和调用</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/9.this.html" class="sidebar-link">9.this</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/10.严格模式.html" class="sidebar-link">10.严格模式</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/11.高阶函数.html" class="sidebar-link">11.高阶函数</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/12.闭包.html" class="sidebar-link">12.闭包</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/13.递归.html" class="sidebar-link">13.递归</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/14.浅拷贝与深拷贝.html" class="sidebar-link">14.浅拷贝与深拷贝</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/15.正则表达式.html" class="sidebar-link">15.正则表达式</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/1.ES6简介.html" class="sidebar-link">1.ES6简介</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/2.ES6变量声明.html" class="sidebar-link">2.ES6变量声明</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/3.解构赋值.html" class="sidebar-link">3.解构赋值</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/4.箭头函数.html" class="sidebar-link">4.箭头函数</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/5.剩余参数.html" class="sidebar-link">5.剩余参数</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展.html" class="sidebar-link">6.ES6内置对象扩展</a></li><li><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/7.ES6新增数据类型.html" class="sidebar-link">7.ES6新增数据类型</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_7-es5新增方法"><a href="#_7-es5新增方法" class="header-anchor">#</a> 7.ES5新增方法</h1> <h2 id="_1-数组方法"><a href="#_1-数组方法" class="header-anchor">#</a> 1.数组方法</h2> <h3 id="迭代-遍历-方法"><a href="#迭代-遍历-方法" class="header-anchor">#</a> 迭代(遍历)方法：</h3> <p>forEach()、map()、filter()、some()、every()</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// forEach()</span>
+array<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">currentValue<span class="token punctuation">,</span> index<span class="token punctuation">,</span> arr</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span>
+arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span> index<span class="token punctuation">,</span> arr1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 输出的是数组中每一个元素</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 输出的是索引值</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 输出的是数组本身</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// map() 映射</span>
+<span class="token comment">// 返回一个新的数组，新数组中的元素是通过修改后的元素，用于根据原有元素的基础上生成新的函数——与数学上的映射概念类似</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span>index<span class="token punctuation">,</span>arr1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> n<span class="token operator">+</span><span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>	<span class="token comment">// 2,3,4,5,6,7,8,9,10</span>
+
+<span class="token comment">// filter() 过滤器</span>
+<span class="token comment">// 返回一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素，用于筛选数组</span>
+array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">currentValue<span class="token punctuation">,</span> index<span class="token punctuation">,</span> arr</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span> index<span class="token punctuation">,</span> arr1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> n <span class="token operator">&gt;=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>	<span class="token comment">// 10 11</span>
+
+<span class="token comment">// some()</span>
+<span class="token comment">// 用于检测数组中的元素是否满足指定条件、即查找元素中是否有满足条件的元素</span>
+<span class="token comment">// 返回的是一个布尔值，而非是一个新数组，如果查找到该元素，则返回true，否则为false</span>
+<span class="token comment">// 在找到之后即停止循环</span>
+array<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">currentValue<span class="token punctuation">,</span> idnex<span class="token punctuation">,</span> arr</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span> index<span class="token punctuation">,</span> arr1</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span>
+   	<span class="token keyword">return</span> n <span class="token operator">&gt;</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>	<span class="token comment">// false</span>
+result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> n <span class="token operator">===</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>	<span class="token comment">//true</span>
+
+<span class="token comment">// every() 用来检测数组中所有元素是否满足指定条件</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> n <span class="token operator">&lt;</span> <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>	<span class="token comment">// false</span>
+
+result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> n <span class="token operator">&gt;</span> <span class="token number">0</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre></div><h2 id="_2-字符串方法"><a href="#_2-字符串方法" class="header-anchor">#</a> 2.字符串方法</h2> <p>trim() 方法会从一个字符串两端删除空白字符，且不会影响原字符串，返回一个新的字符串</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>str<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'  试试  '</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_3-对象方法"><a href="#_3-对象方法" class="header-anchor">#</a> 3.对象方法</h2> <p>Object.keys() 用于获取对象自身所有的属性</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+</code></pre></div><p>效果类似于 for... in ...</p> <p>返回一个由属性名组成的数组</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+	age<span class="token operator">:</span> <span class="token number">19</span><span class="token punctuation">,</span>
+	subject<span class="token operator">:</span> <span class="token string">'犯罪'</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">// [name,age,subject]</span>
+</code></pre></div><p>Object.defineProperty() 定义新属性或修改原有的属性</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj <span class="token punctuation">,</span>prop<span class="token punctuation">,</span> descriptor<span class="token punctuation">)</span>
+<span class="token comment">// obj 目标对象</span>
+<span class="token comment">// prop 需定义或修改的属性的名字</span>
+<span class="token comment">// descriptor 目标属性所拥有的特性,以对象的形式{}书写</span>
+<span class="token comment">//	value:设置属性的值，默认为undefined</span>
+<span class="token comment">//	writable: 是否可以重写，默认为false</span>
+<span class="token comment">//	enumerable：目标属性是否可以被枚举。默认为false</span>
+<span class="token comment">//	configurable：目标属性可否被删除或再次修改特性，默认为false</span>
+
+<span class="token comment">// 以前的属性修改</span>
+obj<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token comment">// 使用该方法修改属性</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>Obj<span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    value<span class="token operator">:</span> <span class="token number">20</span>
+    <span class="token comment">// 不允许修改该值</span>
+    writable<span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">7/5/2021, 4:43:32 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/6.构造函数与原型继承.html" class="prev">
+        6.构造函数与原型继承
+      </a></span> <span class="next"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/8.函数的定义和调用.html">
+        8.函数的定义和调用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.182b18b2.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/34.f6edbdef.js" defer></script>
+  </body>
+</html>

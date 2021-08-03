@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript 作用域 | 羽翼丶年华</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="public/favicon.png">
+    <meta name="description" content="一个简单的博客，记录自己的学习，记录自己的生活，记录自己的梦想，记录自己的创作">
+    
+    <link rel="preload" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css" as="style"><link rel="preload" href="/Eve-Wings/assets/js/app.182b18b2.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/2.7c039172.js" as="script"><link rel="preload" href="/Eve-Wings/assets/js/87.6e5fe5c5.js" as="script"><link rel="prefetch" href="/Eve-Wings/assets/js/10.16ecf05f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/11.5661e2cd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/12.1d63d2b1.js"><link rel="prefetch" href="/Eve-Wings/assets/js/13.e38a2334.js"><link rel="prefetch" href="/Eve-Wings/assets/js/14.3df282ea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/15.ab4b29b0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/16.99d82c84.js"><link rel="prefetch" href="/Eve-Wings/assets/js/17.86bb4309.js"><link rel="prefetch" href="/Eve-Wings/assets/js/18.9cd8778f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/19.47003207.js"><link rel="prefetch" href="/Eve-Wings/assets/js/20.b1a8fda8.js"><link rel="prefetch" href="/Eve-Wings/assets/js/21.141ba62e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/22.55e7c209.js"><link rel="prefetch" href="/Eve-Wings/assets/js/23.0f9c6c8c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/24.ad68e1b6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/25.9b90aee4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/26.b6ce6ab7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/27.74e12983.js"><link rel="prefetch" href="/Eve-Wings/assets/js/28.c1bedcb2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/29.f071ac36.js"><link rel="prefetch" href="/Eve-Wings/assets/js/3.a5420d15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/30.bb7f0140.js"><link rel="prefetch" href="/Eve-Wings/assets/js/31.77b15133.js"><link rel="prefetch" href="/Eve-Wings/assets/js/32.7b6bd089.js"><link rel="prefetch" href="/Eve-Wings/assets/js/33.1a6dda72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/34.f6edbdef.js"><link rel="prefetch" href="/Eve-Wings/assets/js/35.18cd5967.js"><link rel="prefetch" href="/Eve-Wings/assets/js/36.6afcbf97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/37.7007c1a0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/38.8c6a5929.js"><link rel="prefetch" href="/Eve-Wings/assets/js/39.5b85c4c6.js"><link rel="prefetch" href="/Eve-Wings/assets/js/4.e60618c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/40.b02d7bd3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/41.5cc28599.js"><link rel="prefetch" href="/Eve-Wings/assets/js/42.cc65f3b7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/43.249788f4.js"><link rel="prefetch" href="/Eve-Wings/assets/js/44.fafcbdf2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/45.6a1862e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/46.39f56787.js"><link rel="prefetch" href="/Eve-Wings/assets/js/47.a00edb58.js"><link rel="prefetch" href="/Eve-Wings/assets/js/48.52182f37.js"><link rel="prefetch" href="/Eve-Wings/assets/js/49.67ded57b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/5.df0105c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/50.c4cd44e2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/51.ee9722e0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/52.ae5e3e64.js"><link rel="prefetch" href="/Eve-Wings/assets/js/53.b908337e.js"><link rel="prefetch" href="/Eve-Wings/assets/js/54.13558c53.js"><link rel="prefetch" href="/Eve-Wings/assets/js/55.bc3271cb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/56.30722cbc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/57.3e6e7bf7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/58.e4d45111.js"><link rel="prefetch" href="/Eve-Wings/assets/js/59.a1815f97.js"><link rel="prefetch" href="/Eve-Wings/assets/js/6.c67fe5c2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/60.72ff61e3.js"><link rel="prefetch" href="/Eve-Wings/assets/js/61.eee9bf5f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/62.bbd26e4d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/63.e44afc95.js"><link rel="prefetch" href="/Eve-Wings/assets/js/64.6bb8891d.js"><link rel="prefetch" href="/Eve-Wings/assets/js/65.e13ddac5.js"><link rel="prefetch" href="/Eve-Wings/assets/js/66.532da8d7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/67.25d04c0a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/68.863c10c7.js"><link rel="prefetch" href="/Eve-Wings/assets/js/69.b285fb24.js"><link rel="prefetch" href="/Eve-Wings/assets/js/7.38c2331f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/70.12fa600a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/71.ec9f3231.js"><link rel="prefetch" href="/Eve-Wings/assets/js/72.4f4d4d57.js"><link rel="prefetch" href="/Eve-Wings/assets/js/73.c0a06844.js"><link rel="prefetch" href="/Eve-Wings/assets/js/74.9f855a3a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/75.6efb6da2.js"><link rel="prefetch" href="/Eve-Wings/assets/js/76.792ab27f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/77.53da2d3c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/78.6d026946.js"><link rel="prefetch" href="/Eve-Wings/assets/js/79.caf455fc.js"><link rel="prefetch" href="/Eve-Wings/assets/js/8.1f4a8fcf.js"><link rel="prefetch" href="/Eve-Wings/assets/js/80.717dc1bb.js"><link rel="prefetch" href="/Eve-Wings/assets/js/81.346537d0.js"><link rel="prefetch" href="/Eve-Wings/assets/js/82.f9d84aea.js"><link rel="prefetch" href="/Eve-Wings/assets/js/83.f5da9313.js"><link rel="prefetch" href="/Eve-Wings/assets/js/84.45ba264a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/85.c716d018.js"><link rel="prefetch" href="/Eve-Wings/assets/js/86.2119993c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/88.fddcc72f.js"><link rel="prefetch" href="/Eve-Wings/assets/js/89.4070630c.js"><link rel="prefetch" href="/Eve-Wings/assets/js/9.89e53503.js"><link rel="prefetch" href="/Eve-Wings/assets/js/90.c6ce7f72.js"><link rel="prefetch" href="/Eve-Wings/assets/js/91.d4b8ec15.js"><link rel="prefetch" href="/Eve-Wings/assets/js/92.86210bfd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/93.893ba5dd.js"><link rel="prefetch" href="/Eve-Wings/assets/js/94.f095f40a.js"><link rel="prefetch" href="/Eve-Wings/assets/js/95.28ca0880.js"><link rel="prefetch" href="/Eve-Wings/assets/js/96.18a9921b.js"><link rel="prefetch" href="/Eve-Wings/assets/js/97.4e1aa6b2.js">
+    <link rel="stylesheet" href="/Eve-Wings/assets/css/0.styles.dc209cc2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Eve-Wings/" class="home-link router-link-active"><img src="/Eve-Wings/assets/img/icon.png" alt="羽翼丶年华" class="logo"> <span class="site-name can-hide">羽翼丶年华</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Eve-Wings/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/fornt-end-learn/" class="nav-link">
+  总目录
+</a></li><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/browser-Internet/" class="nav-link">
+  浏览器与网络
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/base/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础提升
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/AJAX/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/promote/CSS预处理/" class="nav-link">
+  CSS预处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/Eve-Wings/guide/fornt-end-learn/advanced/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术分享" class="dropdown-title"><span class="title">技术分享</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术分享" class="mobile-dropdown-title"><span class="title">技术分享</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/" class="nav-link router-link-active">
+  总目录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/JQuery/" class="nav-link">
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Bootstrap/" class="nav-link">
+  Bootstrap
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Mockjs/" class="nav-link">
+  Mockjs
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/technical-docs/Element-ui/" class="nav-link">
+  Element-ui
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="日常随笔" class="dropdown-title"><span class="title">日常随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="日常随笔" class="mobile-dropdown-title"><span class="title">日常随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/见闻录/" class="nav-link">
+  见闻录
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/informal-essay/生活与工作/" class="nav-link">
+  生活与工作
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个人作品" class="dropdown-title"><span class="title">个人作品</span> <span class="arrow down"></span></button> <button type="button" aria-label="个人作品" class="mobile-dropdown-title"><span class="title">个人作品</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/程序/" class="nav-link">
+  程序
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/画阁/" class="nav-link">
+  画阁
+</a></li><li class="dropdown-item"><!----> <a href="/Eve-Wings/guide/personal-works/书斋/" class="nav-link">
+  书斋
+</a></li></ul></div></div><div class="nav-item"><a href="/Eve-Wings/guide/About/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/Eve-Wings/guide/journal.html" class="nav-link">
+  文档日志
+</a></div><div class="nav-item"><a href="https://github.com/Eve-Wings" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/" aria-current="page" class="sidebar-link">技术交流——JavaScript</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/声明提升.html" class="sidebar-link">声明提升(Hoisting)</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/原型与原型链.html" class="sidebar-link">原型与原型链</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/原型式继承.html" class="sidebar-link">原型式的继承</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/ES6的继承.html" class="sidebar-link">ES6 的基础继承</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/继承方式的区别.html" class="sidebar-link">继承方式的区别</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html" class="active sidebar-link">JavaScript 作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#作用域内部原理的过程" class="sidebar-link">作用域内部原理的过程</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#词法作用域" class="sidebar-link">词法作用域</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#遮蔽效应" class="sidebar-link">遮蔽效应</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#声明提升" class="sidebar-link">声明提升</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#作用域链" class="sidebar-link">作用域链</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#自由变量" class="sidebar-link">自由变量</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#执行环境与执行流" class="sidebar-link">执行环境与执行流</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#执行环境栈" class="sidebar-link">执行环境栈</a></li><li class="sidebar-sub-header"><a href="/Eve-Wings/guide/technical-docs/JavaScript/JavaScript作用域.html#关键词回忆" class="sidebar-link">关键词回忆：</a></li></ul></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/闭包.html" class="sidebar-link">闭包</a></li><li><a href="/Eve-Wings/guide/technical-docs/JavaScript/手写一个trim()方法.html" class="sidebar-link">手写一个trim()方法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript-作用域"><a href="#javascript-作用域" class="header-anchor">#</a> JavaScript 作用域</h1> <p>参考资料：<a href="https://www.bilibili.com/video/BV1AJ41137cW?from=search&amp;seid=9698873251630714606" target="_blank" rel="noopener noreferrer">视频1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="https://www.bilibili.com/video/BV1s7411v7Br?from=search&amp;seid=9698873251630714606" target="_blank" rel="noopener noreferrer">视频2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>作用域，是一套规则，用来确定在何处以及如何查找标识符</p> <p>在js中，作用域分为全局作用域和函数作用域，且可以相互嵌套</p> <h2 id="作用域内部原理的过程"><a href="#作用域内部原理的过程" class="header-anchor">#</a> 作用域内部原理的过程</h2> <p>内部原理分成 编译，执行，查询，嵌套，异常</p> <p>但在 js 脚本中，并没有编译阶段，是边解释边执行</p> <h3 id="编译阶段-了解"><a href="#编译阶段-了解" class="header-anchor">#</a> 编译阶段(了解)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre></div><p>1.1 分词</p> <p>将上述代码分成以下词法单元： var , a , = , 2 , ;</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token string">&quot;var&quot;</span><span class="token operator">:</span> <span class="token string">&quot;keyword&quot;</span><span class="token punctuation">,</span>	<span class="token comment">//关键字</span>
+	<span class="token string">&quot;a&quot;</span><span class="token operator">:</span> <span class="token string">&quot;indentifier&quot;</span><span class="token punctuation">,</span>	<span class="token comment">//标识符</span>
+	<span class="token string">&quot;=&quot;</span><span class="token operator">:</span> <span class="token string">'assignment'</span><span class="token punctuation">,</span>	<span class="token comment">//分配</span>
+	<span class="token string">&quot;2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;interger&quot;</span><span class="token punctuation">,</span>	<span class="token comment">//整数</span>
+	<span class="token string">&quot;;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eos&quot;</span>	<span class="token comment">// 结束语句</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>1.2 解析</p> <p>将上一个步骤分词出来的对象或数组进行解析，生成一个抽象语法树(AST Abstract Snatax Tree)</p> <p>1.3 代码生成</p> <p>将AST转换成可执行的代码的过程，转换成一组机器指令</p> <p>简言之，就是编译器把程序分解成词法单元，将词法单元解析成AST，再把AST转换成机器指令等待执行的过程</p> <p>再次强调，在JavaScript中，没有编译阶段。</p> <h3 id="执行阶段-了解"><a href="#执行阶段-了解" class="header-anchor">#</a> 执行阶段(了解)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span>
+</code></pre></div><p>引擎执行代码时，首先查找当前的作用域，检测变量 a 是否在当前的作用域下。</p> <p>如果是，引擎就会直接使用这个变量</p> <p>如果否，引擎会继续查找该变量</p> <p>​	如果找到了变量，就会将值 2 赋给当前的变量，否则会抛出异常</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 引擎执行该代码时，先查找当前的作用域，检测 a 是否存在于作用域下</span>
+<span class="token comment">// 答案是 是，所以输出结果是 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 查找当前作用域，没有查到 变量 b ，所以抛出异常</span>
+</code></pre></div><h3 id="查询阶段-了解"><a href="#查询阶段-了解" class="header-anchor">#</a> 查询阶段(了解)</h3> <p>LHS查询——赋值操作等</p> <p>RHS查询——函数调用等</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 1.foo()对foo函数对象进行RHS引用</span>
+<span class="token comment">// 2.函数传参a = 2， 对a 进行LHS引用</span>
+<span class="token comment">// 3. console.log(a) ； console对象进行RHS引用，并检查其是否有log()方法</span>
+<span class="token comment">// 4. console.log(a);对 a 进行RHS引用，并把值传给console.log(a)</span>
+</code></pre></div><h3 id="嵌套阶段-重要"><a href="#嵌套阶段-重要" class="header-anchor">#</a> 嵌套阶段(重要)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 输出结果为何能够为 6 ，function foo(a)... 中的 b 到底是怎么得到的？</span>
+<span class="token comment">// 在当前作用域下无法查找到某个变量时，引擎就会在外层嵌套作用域中继续查找，直到找到该变量或抵达最外层作用域(全局作用域)</span>
+<span class="token comment">// 且请看 变量声明提前</span>
+
+<span class="token comment">// 关于嵌套作用域巩固理解</span>
+<span class="token keyword">function</span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">foooo</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">+</span> a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">foooo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="异常阶段-了解"><a href="#异常阶段-了解" class="header-anchor">#</a> 异常阶段(了解)</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fn</span> <span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    <span class="token comment">// 查询不到 b --&gt; b is not defined</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// b 是一个变量而非函数，是通过LHS查询引用的</span>
+    <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 此处调用方法b，通过RHS查询，无法查询到该结果</span>
+    <span class="token comment">// 所以报错 -&gt; b is not function</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">fn3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 'use strict';</span>
+    a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// a is not defined</span>
+<span class="token comment">// 但是如果执行了fn3之后，却可以输出 1</span>
+<span class="token comment">// a 直接变成了全局变量</span>
+<span class="token comment">// 因此，我们需要在fn3() 中，添加一句 'use strict';</span>
+<span class="token function">fn3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="总结案例"><a href="#总结案例" class="header-anchor">#</a> 总结案例</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 对fn()进行 RHS查询，查询到了上文 function fn()的定义——true</span>
+<span class="token comment">// 对a 进行 LHS 查询,并且在fn()作用域下查询到a,将2赋值给a</span>
+<span class="token comment">// 对console进行RHS查询</span>
+<span class="token comment">// console是内置对象，属于全局对象，在fn()作用域中查询不到，便在其嵌套作用域中查询——即在全局作用域中查询</span>
+<span class="token comment">// 在consol对象中查询log方法</span>
+<span class="token comment">// 对 a 进行 RHS查询</span>
+<span class="token comment">// 将 a 的值 传给 console.log</span>
+</code></pre></div><h2 id="词法作用域"><a href="#词法作用域" class="header-anchor">#</a> 词法作用域</h2> <p>词法——分词</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token number">2</span>	<span class="token comment">// 第二执行：b = 2 * 2 = 4</span>
+    <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 最后执行： 2,4,12</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">bar</span><span class="token punctuation">(</span>b <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 第三执行：bar(12)</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//最先执行</span>
+<span class="token comment">// 这样子就生成了多个作用域</span>
+<span class="token comment">// 首先，最外层有一个全局作用域</span>
+<span class="token comment">// foo()函数中有一个foo函数作用域</span>
+<span class="token comment">// bar()函数中有一个bar函数作用域</span>
+<span class="token comment">// 这样子就行形成了三层作用域</span>
+<span class="token comment">// 而无论 foo() 函数在何处调用、执行</span>
+<span class="token comment">// 其作用域都是由其声明时的位置决定的</span>
+</code></pre></div><p>我们用嵌套作用域的角度分析一下这段代码</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 作用域我们这里以对象的形式表达</span>
+<span class="token comment">// 第一层：全局作用域</span>
+全局作用域<span class="token operator">:</span><span class="token punctuation">{</span>
+	<span class="token comment">// 各种各样的全局函数、变量</span>
+	<span class="token comment">// 第二层： foo</span>
+	foo<span class="token operator">:</span><span class="token punctuation">{</span>
+		a<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+		b<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+		<span class="token comment">// 第三层: bar</span>
+		bar<span class="token operator">:</span><span class="token punctuation">{</span>
+			c<span class="token operator">:</span> <span class="token number">12</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="遮蔽效应"><a href="#遮蔽效应" class="header-anchor">#</a> 遮蔽效应</h2> <p>作用域的查找，从运行时所处的最内部作用于开始，逐级向上进行，知道遇到第一个匹配的标识符为止</p> <p>在多层的嵌套作用域可以定义同名的标识符，这叫做遮蔽效应</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">test</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">function</span> <span class="token function">test2</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">233</span><span class="token punctuation">;</span>	<span class="token comment">// 直到遇到第一个匹配的标识符</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 所以输出的是233,这种现象叫做遮蔽效应</span>
+	<span class="token punctuation">}</span>
+    <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 1 233</span>
+</code></pre></div><h2 id="声明提升"><a href="#声明提升" class="header-anchor">#</a> 声明提升</h2> <p>可以查看 声明提升 文档</p> <p><a href="/Eve-Wings/guide/technical-docs/JavaScript/声明提升.html">声明提升</a></p> <h3 id="变量声明提升"><a href="#变量声明提升" class="header-anchor">#</a> 变量声明提升</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment">// 明明代码从上往下执行</span>
+<span class="token comment">// 但是为什么能够得到a,而不是报错</span>
+<span class="token comment">// 且得到的a是undefined，而不是2</span>
+<span class="token comment">// 预解释——变量提升</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 上述代码的内部实现如下:</span>
+<span class="token keyword">var</span> a<span class="token punctuation">;</span>
+<span class="token keyword">var</span> b<span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> c<span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> d<span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        d <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="函数声明提升"><a href="#函数声明提升" class="header-anchor">#</a> 函数声明提升</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'233'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 函数声明会提升</span>
+<span class="token comment">// 函数表达式不会提升</span>
+<span class="token comment">// 函数声明会在 变量声明之后</span>
+
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// bar is not a function</span>
+<span class="token keyword">var</span> <span class="token function-variable function">bar</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'233'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 生命表达式，提升的是 var bar;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// not a function</span>
+<span class="token function">test233</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// not a function</span>
+<span class="token keyword">var</span> <span class="token function-variable function">test</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">test233</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'test233'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h2> <p>各个作用域的嵌套关系，组成了一条作用域链。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> a <span class="token operator">*</span> <span class="token number">2</span>	<span class="token comment">// 第二执行：b = 2 * 2 = 4</span>
+    <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">c</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 最后执行： 2,4,12</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">bar</span><span class="token punctuation">(</span>b <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 第三执行：bar(12)</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 依旧以这个例子为例</span>
+<span class="token comment">// 例子中 bar的作用域链 bar -&gt; foo -&gt; 全局</span>
+<span class="token comment">// foo 作用域链 foo -&gt; 全局</span>
+</code></pre></div><p>使用作用域链主要是进行标识符的查询，标识符解析就是沿着作用域链一级一级地搜索标识符地过程，而作用域链就是保证对变量和函数地有序访问。</p> <h2 id="自由变量"><a href="#自由变量" class="header-anchor">#</a> 自由变量</h2> <p>在当前作用域中存在，但未在当前作用域中声明的变量</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment">// fn -&gt; 全局</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// bar -&gt; fn -&gt; 全局</span>
+	<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token comment">// 这里的b就是自由变量</span>
+        <span class="token comment">// 存在，当并未在当前作用域中声明</span>
+		b <span class="token operator">=</span> x <span class="token operator">+</span> a<span class="token punctuation">;</span>
+		<span class="token keyword">return</span> b<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>一旦存在自由变量，就肯定会有作用域链，再根据做根据作用域链查找机制，查找到对应的变量</p> <p>查找机制：在当前作用域中发现没有该变量，然后沿着作用域链往上级查找，直到查到对应的变量为止，如果查找不到，直接报错</p> <h2 id="执行环境与执行流"><a href="#执行环境与执行流" class="header-anchor">#</a> 执行环境与执行流</h2> <p>执行环境也叫执行上下文，执行上文环境</p> <p>每个执行环境，都有一个与之关联的变量对象，在环境中定义的函数和变量都保存在这个对象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment">// fn -&gt; 全局</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// arguments</span>
+    <span class="token comment">// this</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// bar -&gt; fn -&gt; 全局</span>
+	<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+		b <span class="token operator">=</span> x <span class="token operator">+</span> a<span class="token punctuation">;</span>
+		<span class="token keyword">return</span> b<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 当 fn(0) 执行时，执行的环境中保存着</span>
+<span class="token comment">/*
+	x:0,
+	a:undefined,
+	bar:function,
+	arguments: [0],
+	this: window
+*/</span>
+
+<span class="token comment">// 当bar(20)执行时，执行环境中保存着:</span>
+<span class="token comment">/*
+	x:20,
+	a:undefined,
+	arguments: [0],
+	this: window
+*/</span>
+</code></pre></div><p>执行流——即代码的执行顺序</p> <h2 id="执行环境栈"><a href="#执行环境栈" class="header-anchor">#</a> 执行环境栈</h2> <p>其实就是一个出栈、压栈的过程</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment">// fn -&gt; 全局</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// arguments</span>
+    <span class="token comment">// this</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token comment">// bar -&gt; fn -&gt; 全局</span>
+	<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+		b <span class="token operator">=</span> x <span class="token operator">+</span> a<span class="token punctuation">;</span>
+		<span class="token keyword">return</span> b<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>当fn(0)执行之前，全局执行环境会压入执行环境栈</p> <p>当fn(0)执行之时，fn执行环境会压入执行环境栈，且处于活跃状态</p> <p>而当fn(0)执行完成时，fn执行环境就会进行出栈，全局执行环境为活跃状态</p> <p>以bar(20)执行时为例：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 栈顶——活跃状态</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>执行环境<span class="token operator">:</span><span class="token punctuation">{</span>
+    x<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    a<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+    全局中b<span class="token operator">:</span> <span class="token number">2</span>，
+    <span class="token keyword">this</span><span class="token operator">:</span> window
+<span class="token punctuation">}</span>
+<span class="token comment">//</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>执行环境<span class="token operator">:</span><span class="token punctuation">{</span>
+    x<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    a<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">bar</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token operator">:</span> window
+<span class="token punctuation">}</span>
+<span class="token comment">// 栈底</span>
+全局执行环境<span class="token operator">:</span><span class="token punctuation">{</span>
+    a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">fn</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token operator">:</span> window
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="关键词回忆"><a href="#关键词回忆" class="header-anchor">#</a> 关键词回忆：</h2> <p>嵌套</p> <p>作用域</p> <p>遮蔽效应</p> <p>声明提升</p> <p>作用域链</p> <p>自由变量</p> <p>执行环境、执行环境栈</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">6/27/2021, 11:35:50 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Eve-Wings/guide/technical-docs/JavaScript/继承方式的区别.html" class="prev">
+        继承方式的区别
+      </a></span> <span class="next"><a href="/Eve-Wings/guide/technical-docs/JavaScript/闭包.html">
+        闭包
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/Eve-Wings/assets/js/app.182b18b2.js" defer></script><script src="/Eve-Wings/assets/js/2.7c039172.js" defer></script><script src="/Eve-Wings/assets/js/87.6e5fe5c5.js" defer></script>
+  </body>
+</html>
