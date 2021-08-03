@@ -38,6 +38,16 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
+### [啊噗鲁派！](guide/informal-essay/生活与工作/啊噗鲁派！)
+
+日常随笔——生活与工作
+
+更新时间: 2021/08/03
+
+:::
+
+::: tip New
+
 ### [7.ES6新增数据类型](guide/fornt-end-learn/base/JavaScript/7.ES6新增数据类型)
 
 前端学习笔记——JavaScript
@@ -49,16 +59,6 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 ::: tip New
 
 ### [6.ES6内置对象扩展](guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/11
-
-:::
-
-::: tip New
-
-### [5.剩余参数](guide/fornt-end-learn/base/JavaScript/5.剩余参数)
 
 前端学习笔记——JavaScript
 

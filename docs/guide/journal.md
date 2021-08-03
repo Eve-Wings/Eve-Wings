@@ -3,11 +3,19 @@ title: 日志
 sidebar: auto
 ---
 
+## 八月(1)
+
+### 2021/08/03
+
+[啊噗鲁派！](informal-essay/生活与工作/啊噗鲁派！)
+
+日常随笔——生活与工作
+
 ## 七月(28)
 
 ### 2021/07/22
 
-[7.ES6新增数据类型](fornt-end-learn/base/JavaScript/7.ES6新增数据类型.md)
+[7.ES6新增数据类型](fornt-end-learn/base/JavaScript/7.ES6新增数据类型)
 
 前端学习笔记——JavaScript
 

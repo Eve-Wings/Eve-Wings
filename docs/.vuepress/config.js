@@ -257,7 +257,8 @@ module.exports = {
 			],
 			'/guide/informal-essay/生活与工作/':[
 				'',
-				'笔记本收藏'
+				'笔记本收藏',
+				'啊噗鲁派！'
 			]
 			
 		},
