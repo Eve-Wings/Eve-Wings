@@ -80,6 +80,10 @@ module.exports = {
 							{
 								text: 'Element-ui',
 								link: '/guide/fornt-end-learn/advanced/Element-ui/'
+							},
+							{
+								text: 'node.js',
+								link: '/guide/fornt-end-learn/advanced/node/'
 							}
 						]
 					}
@@ -222,6 +226,14 @@ module.exports = {
 			'/guide/fornt-end-learn/promote/CSS预处理/':[
 				'',
 				'less'
+			],
+			'/guide/fornt-end-learn/advanced/node/':[
+				'',
+				'1.简介',
+				'2.fs',
+				'3.path',
+				'4.http',
+				'5.模块化'
 			],
 			'/guide/technical-docs/Bootstrap/': [
 				''

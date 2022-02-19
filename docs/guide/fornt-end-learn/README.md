@@ -95,3 +95,11 @@ sidebar: auto
 ### [Vue](/guide/fornt-end-learn/advanced/Vue/)
 
 ### [Element-ui](/guide/fornt-end-learn/advanced/Element-ui/)
+
+### [node.js](/guide/fornt-end-learn/advanced/node/)
+
+- :link: [1.简介](/guide/fornt-end-learn/advanced/node/1.简介.html)
+- :link: [2.fs](/guide/fornt-end-learn/advanced/node/2.fs.html)
+- :link: [3.path](/guide/fornt-end-learn/advanced/node/3.path.html)
+- :link: [4.http](/guide/fornt-end-learn/advanced/node/4.http.html)
+- :link: [5.模块化](/guide/fornt-end-learn/advanced/node/5.模块化.html)

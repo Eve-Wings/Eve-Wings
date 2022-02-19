@@ -24,13 +24,13 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: danger 施工中
 
-### :construction: [工作清单](guide/personal-works/程序/工作清单/)
+### :construction: [Node.js学习](guide/fornt-end-learn/advanced/node/)
 
-个人作品——程序
+前端学习笔记——Node.js
 
-发布时间: 2021/06/30
+发布时间: 2022/02/19
 
-更新时间: 2021/07/17
+更新时间: 2022/02/19
 
 :::
 
@@ -38,31 +38,31 @@ footer: MIT Licensed | Copyright © 2021 Eve-Wings |
 
 ::: tip New
 
-### [啊噗鲁派！](guide/informal-essay/生活与工作/啊噗鲁派！)
+### [5.模块化](guide/fornt-end-learn/advanced/node/5.模块化.md)
 
-日常随笔——生活与工作
+前端学习笔记——Node.js
 
-更新时间: 2021/08/03
-
-:::
-
-::: tip New
-
-### [7.ES6新增数据类型](guide/fornt-end-learn/base/JavaScript/7.ES6新增数据类型)
-
-前端学习笔记——JavaScript
-
-更新时间: 2021/07/22
+更新时间: 2022/02/19
 
 :::
 
 ::: tip New
 
-### [6.ES6内置对象扩展](guide/fornt-end-learn/base/JavaScript/6.ES6内置对象扩展)
+### [4.http](guide/fornt-end-learn/advanced/node/4.http.md)
 
-前端学习笔记——JavaScript
+前端学习笔记——Node.js
 
-更新时间: 2021/07/11
+更新时间: 2022/02/19
+
+:::
+
+::: tip New
+
+### [3.path](guide/fornt-end-learn/advanced/node/3.path.md)
+
+前端学习笔记——Node.js
+
+更新时间: 2022/02/19
 
 :::
 
